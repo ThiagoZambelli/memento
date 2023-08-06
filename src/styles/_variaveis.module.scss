@@ -1,0 +1,40 @@
+/* SCSS HEX */
+$black: #0a0908ff;
+$gunmetal: #22333bff;
+$gunmetal-sombra1:#4E7587;
+$almond: #eae0d5ff;
+$khaki: #c6ac8fff;
+$walnut-brown: #5e503fff;
+
+/* SCSS HSL */
+$black: hsla(30, 11%, 4%, 1);
+$gunmetal: hsla(199, 27%, 18%, 1);
+$almond: hsla(31, 33%, 88%, 1);
+$khaki: hsla(32, 33%, 67%, 1);
+$walnut-brown: hsla(33, 20%, 31%, 1);
+
+/* SCSS RGB */
+$black: rgba(10, 9, 8, 1);
+$black-shadow-opacit: rgba(10, 9, 8, .55);
+$gunmetal: rgba(34, 51, 59, 1);
+$almond: rgba(234, 224, 213, 1);
+$almond-shadow-opacit: rgba(234, 224, 213, .55);
+$khaki: rgba(198, 172, 143, 1);
+$walnut-brown: rgba(94, 80, 63, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5e503fff);
+$gradient-right: linear-gradient(90deg, #0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5e503fff);
+$gradient-bottom: linear-gradient(180deg, #0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5e503fff);
+$gradient-left: linear-gradient(270deg, #0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5e503fff);
+$gradient-top-right: linear-gradient(45deg, #0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5e503fff);
+$gradient-bottom-right: linear-gradient(135deg, #0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5e503fff);
+$gradient-top-left: linear-gradient(225deg, #0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5e503fff);
+$gradient-bottom-left: linear-gradient(315deg, #0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5e503fff);
+$gradient-radial: radial-gradient(#0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5e503fff);
+
+// Fontes
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$fonteTexto: 'Montserrat', sans-serif;

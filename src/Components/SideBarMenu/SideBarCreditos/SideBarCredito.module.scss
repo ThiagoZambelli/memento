@@ -1,0 +1,23 @@
+@import "styles/_variaveis.module.scss";
+
+.sideBarCredito{
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ width: 100%;
+ padding: .5rem;
+ columns: 2rem;
+ background-color: $black;
+
+ svg{
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    color: $almond;
+    transition: .5s;
+    &:hover{
+        filter: drop-shadow(0 0 10px $khaki);
+        transform: scale(1.1);
+    }
+ }
+}

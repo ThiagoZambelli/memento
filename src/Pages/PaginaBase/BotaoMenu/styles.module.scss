@@ -1,0 +1,72 @@
+@import 'styles/_variaveis.module.scss';
+
+.svg{
+  filter: drop-shadow(1px 1px 0 $almond);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: $gunmetal;
+    width: 24px;
+    height: 24px;
+    margin:1rem 0 0 1rem  ;    
+    z-index: 9;    
+    &:hover {
+      cursor: pointer;
+      animation: jelly 0.5s;
+    }
+    
+}
+
+.semBotao{
+  animation: semBotao .5s forwards;  
+}
+.comBotao{
+  animation: comBotao .3s forwards;   
+}
+
+@keyframes jelly {
+    0%,
+    100% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(0.9, 1.1);
+    }
+    50% {
+      transform: scale(1.1, 0.9);
+    }
+    75% {
+      transform: scale(0.95, 1.05);
+    }
+  }
+  @keyframes semBotao {
+    0%,
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  @keyframes comBotao {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);      
+    }
+    75% {
+      opacity: .7;
+      transform: scale(.7);
+    }
+    50% {
+      opacity: .5;
+      transform: scale(.5);
+    }
+    25% {
+      opacity: .2;
+      transform: scale(.2);
+    }
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+   
