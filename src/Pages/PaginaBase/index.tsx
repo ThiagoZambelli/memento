@@ -9,6 +9,7 @@ import Modal from "Components/Modal";
 import useAbreModalLogin from "state/hooks/useAbreModalLogin";
 import useAbreModalCadastro from "state/hooks/useAbreModalCadastro";
 import ModalLogin from "Components/ModalLogin";
+import ModalCadastro from "Components/ModalCadastro";
 
 function PaginaBase() {
 	const atomLogin = useEstadoModalLogin();
@@ -28,8 +29,8 @@ function PaginaBase() {
 
 	return (
 		<section className={styles.paginaBase}>
-			<Modal key={"cadastro"} closeModal={closeCadastro} aberto={cadastro} titulo="Cadastro" >{<div>cadastro</div>} </Modal>
-			<Modal key={"login"} closeModal={closeLogin}  aberto={login} titulo="Login" >{<ModalLogin />} </Modal>
+			<Modal key={"cadastro"} closeModal={closeCadastro} aberto={cadastro} titulo="Cadastro" >{<ModalCadastro />}</Modal>
+			<Modal key={"login"} closeModal={closeLogin}  aberto={login} titulo="Login" >{<ModalLogin />}</Modal>
 			<BotaoMenu />
 			<SideBarMenu />
 			<Outlet />

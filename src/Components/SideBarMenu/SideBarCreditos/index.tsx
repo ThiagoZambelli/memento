@@ -6,9 +6,8 @@ import styles from "./SideBarCredito.module.scss";
 function SideBarCreditos() {
 	return (
 		<section className={styles.sideBarCredito}>
-			<Link to={"https://github.com/ThiagoZambelli"}><AiFillGithub /></Link>
-			<Link to={"https://www.linkedin.com/in/thiagozambelli"}><AiFillLinkedin /></Link>
-            
+			<Link target="_blank" to={"https://github.com/ThiagoZambelli"}><AiFillGithub /></Link>
+			<Link target="_blank" to={"https://www.linkedin.com/in/thiagozambelli"}><AiFillLinkedin /></Link>            
 		</section>
 	);
 }
