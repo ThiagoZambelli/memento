@@ -6,10 +6,9 @@ import styles from "./SideBarItens.module.scss";
 function SideBarItens() {
 	return (
 		<section className={styles.itens}>
-			<ul>
-				<li><Link to={"/goblin-caolho"}>Goblin Caolho</Link></li>
-				<li><Link to={"/forja-de-lendas"}>Forja de Lendas</Link></li>
-			</ul>
+			<Link to={"/"}>Home</Link>
+			<Link to={"/goblin-caolho"}>Goblin Caolho</Link>
+			<Link to={"/forja-de-lendas"}>Forja de Lendas</Link>
 		</section>
 	);
 }
