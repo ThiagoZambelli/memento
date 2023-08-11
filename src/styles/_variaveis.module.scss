@@ -1,7 +1,8 @@
 /* SCSS HEX */
 $black: #0a0908ff;
+$black-vidro: hsla(30, 11%, 4%, 0.2);
 $gunmetal: #22333bff;
-$gunmetal-sombra1:#4E7587;
+$gunmetal-sombra1: #4E7587;
 $almond: #eae0d5ff;
 $khaki: #c6ac8fff;
 $walnut-brown: #5e503fff;
@@ -11,7 +12,7 @@ $black: hsla(30, 11%, 4%, 1);
 $gunmetal: hsla(199, 27%, 18%, 1);
 $almond: hsla(31, 33%, 88%, 1);
 $khaki: hsla(32, 33%, 67%, 1);
-    $khaki-opaciti-2: hsla(32, 33%, 67%, .2);
+$khaki-opaciti-2: hsla(32, 33%, 67%, .2);
 
 $walnut-brown: hsla(33, 20%, 31%, 1);
 
@@ -38,5 +39,9 @@ $gradient-radial: radial-gradient(#0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5
 // Fontes
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
 
+$fontMenu: 'Fredericka the Great', cursive;
 $fonteTexto: 'Montserrat', sans-serif;
+$fonteTextoForja: 'Delius Swash Caps', cursive;

@@ -1,3 +1,4 @@
+import IPersonagem from "interface/IPersonagem";
 import { atom } from "recoil";
 
 export const sideBar = atom<boolean>({
@@ -12,3 +13,14 @@ export const modalCadastro = atom<boolean>({
 	key: "modalCadastro",
 	default: false
 });
+export const personagemCriacao = atom<IPersonagem>({
+	key: "personagemCriacao",
+	default: {
+		nomePersonagem: '',
+		nomeJogador: '',
+		raca: '',
+		classe: '',
+		antecedente: ''
+	}
+});
+

@@ -1,4 +1,7 @@
-import ForjaDeLendas from "Pages/ForjaDeLendas";
+import Forja from "Pages/ForjaDeLendas/Forja";
+import ForjaComum from "Pages/ForjaDeLendas/ForjaComum";
+import ForjaHome from "Pages/ForjaDeLendas/ForjaHome";
+import ForjaPersonagens from "Pages/ForjaDeLendas/ForjaPersonagens";
 import GoblinCaolho from "Pages/GoblinCaolho";
 import Home from "Pages/Home";
 import PaginaBase from "Pages/PaginaBase";
@@ -11,7 +14,11 @@ function RouteAPP() {
 			<Route path="/" element={<PaginaBase />}>
 				<Route index element={<Home />} />
 				<Route path="goblin-caolho" element={<GoblinCaolho />} />
-				<Route path="forja-de-lendas" element={<ForjaDeLendas />} />
+				<Route path="forja-de-lendas" element={<ForjaComum />}>
+					<Route index element={<ForjaHome />} />
+					<Route path="forja" element={<Forja />} />
+					<Route path="personagens" element={<ForjaPersonagens />} />
+				</Route>
 			</Route>
 		</Routes>
 	);
