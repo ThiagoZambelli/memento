@@ -1,0 +1,26 @@
+@import 'styles/_variaveis.module.scss';
+
+.bannerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    border-radius: 1em;
+    padding: 1rem;
+    width: 500px;
+    max-width: 100%;
+    box-shadow: 0 0 12px $black;
+
+    &__titulo {
+        font-family: $fonteTituloForja;
+        font-size: 2.5rem;
+        padding: 1em;
+        font-weight: bold;
+    }
+
+    &__descricao {
+        font-size: 1.3rem;
+        line-height: 2em;
+        text-align: justify;
+    }
+}

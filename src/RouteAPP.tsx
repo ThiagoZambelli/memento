@@ -1,4 +1,8 @@
 import Forja from "Pages/ForjaDeLendas/Forja";
+import Antecedente from "Pages/ForjaDeLendas/Forja/ForjaCriacao/Antecedente";
+import Classe from "Pages/ForjaDeLendas/Forja/ForjaCriacao/Classe";
+import ForjaCriacao from "Pages/ForjaDeLendas/Forja/ForjaCriacao/ForjaCriacao";
+import Racas from "Pages/ForjaDeLendas/Forja/ForjaCriacao/Racas";
 import ForjaComum from "Pages/ForjaDeLendas/ForjaComum";
 import ForjaHome from "Pages/ForjaDeLendas/ForjaHome";
 import ForjaPersonagens from "Pages/ForjaDeLendas/ForjaPersonagens";
@@ -18,6 +22,11 @@ function RouteAPP() {
 					<Route index element={<ForjaHome />} />
 					<Route path="forja" element={<Forja />} />
 					<Route path="personagens" element={<ForjaPersonagens />} />
+				</Route>
+				<Route path="forja/cricao" element={<ForjaCriacao />}>
+					<Route path="raca" element={<Racas />}/>
+					<Route path="antecedente" element={<Antecedente />}/>
+					<Route path="class" element={<Classe />}/>
 				</Route>
 			</Route>
 		</Routes>

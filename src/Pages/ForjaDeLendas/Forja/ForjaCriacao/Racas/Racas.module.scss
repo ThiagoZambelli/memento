@@ -1,0 +1,14 @@
+@import 'styles/_variaveis.module.scss';
+
+.raca{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__opcoes{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+}

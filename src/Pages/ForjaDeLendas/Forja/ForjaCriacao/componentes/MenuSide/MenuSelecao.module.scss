@@ -1,0 +1,16 @@
+@import 'styles/_variaveis.module.scss';
+
+.menu {    
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+    font-size: 2rem;
+    max-width: 300px;
+    padding: 1rem;
+    font-family: $fonteTituloForja;
+    background-color: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    margin: .5rem;
+    box-shadow: 0 0 6px black;
+}

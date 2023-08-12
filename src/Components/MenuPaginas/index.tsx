@@ -14,7 +14,7 @@ interface link {
 function MenuPaginas({ links }: IMenuPaginasProps) {
     return (
         <nav className={styles.menuPaginas}>            
-            {links.map(e => <div><GiTopaz /><Link key={e.legenda} to={e.to}>{e.legenda}</Link><GiTopaz /></div>)}
+            {links.map(e => <div key={e.legenda}><GiTopaz /><Link to={e.to}>{e.legenda}</Link><GiTopaz /></div>)}
         </nav>
     )
 }

@@ -12,9 +12,9 @@
         padding: 3rem .5rem .4rem .5rem;
         font-weight: 600;
         color: $gunmetal;
-        text-shadow: 2px 2px $black;
-        text-transform: uppercase;
+        text-shadow: 2px 2px $black;        
         border-bottom: 2px solid;
+        font-family: $fonteTituloForja;
     }
 
     p {
@@ -22,6 +22,7 @@
         margin: 2rem;
         color: $walnut-brown;
         text-align: center;
+        max-width: 400px;
         line-height: 1.5em;
     }
 

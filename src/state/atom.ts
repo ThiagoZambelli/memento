@@ -16,6 +16,7 @@ export const modalCadastro = atom<boolean>({
 export const personagemCriacao = atom<IPersonagem>({
 	key: "personagemCriacao",
 	default: {
+		_id:'',
 		nomePersonagem: '',
 		nomeJogador: '',
 		raca: '',

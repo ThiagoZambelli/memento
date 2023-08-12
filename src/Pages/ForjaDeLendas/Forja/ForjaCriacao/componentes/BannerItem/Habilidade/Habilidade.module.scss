@@ -1,0 +1,22 @@
+@import 'styles/_variaveis.module.scss';
+
+.habilidade {
+    width: 100%;
+    font-family: $fonteTextoForja;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);   
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem 0;
+
+    h2{        
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: .5em 1em;
+    }
+    p{
+        line-height: 1.5em;
+        padding: 1em .5em;
+        text-align: justify;
+    }
+}

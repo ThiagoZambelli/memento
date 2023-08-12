@@ -7,6 +7,9 @@ $almond: #eae0d5ff;
 $khaki: #c6ac8fff;
 $walnut-brown: #5e503fff;
 
+// $glass: background-color: rgba(255, 255, 255, 0.25)
+// backdrop-filter: blur(15px);
+
 /* SCSS HSL */
 $black: hsla(30, 11%, 4%, 1);
 $gunmetal: hsla(199, 27%, 18%, 1);
@@ -41,7 +44,9 @@ $gradient-radial: radial-gradient(#0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
 
 $fontMenu: 'Fredericka the Great', cursive;
 $fonteTexto: 'Montserrat', sans-serif;
 $fonteTextoForja: 'Delius Swash Caps', cursive;
+$fonteTituloForja: 'Arapey', serif;
