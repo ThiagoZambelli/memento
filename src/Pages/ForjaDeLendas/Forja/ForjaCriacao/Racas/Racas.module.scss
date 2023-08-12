@@ -5,6 +5,19 @@
     flex-direction: column;
     align-items: center;
 
+    &__titulo{
+        font-family: $fonteTituloForja;
+        font-size: 3rem;
+        padding: .5em;
+    }
+    &__descricao{
+        font-family: $fonteTextoForja;
+        width: 500px;
+        max-width: 90%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
     &__opcoes{
         display: flex;
         width: 100%;

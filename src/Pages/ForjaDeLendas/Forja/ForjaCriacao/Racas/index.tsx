@@ -11,6 +11,8 @@ function Racas() {
   const [racas, setRacas] = useState<IRaca[]>([]);
   const itemMostrado = useBannerMostrado();
 
+  const telaPequena = window.innerWidth <= 780;
+
   useEffect(() => {
     pegaRacas();
   }, [])
@@ -21,11 +23,11 @@ function Racas() {
 
   return (
     <section className={styles.raca}>
-      <h2>Racas</h2>
-      <p>Sua Raça não define quem você é, mas mostra as habilidades que a vida te deu para enfrentar o mundo!</p>
-      <MenuTop Opcoes={racas} />
+      <h2 className={styles.raca__titulo}>Racas</h2>
+      <p className={styles.raca__descricao}>Sua Raça não define quem você é, mas mostra as habilidades que a vida te deu para enfrentar o mundo!</p>
+      {telaPequena ? <MenuTop Opcoes={racas} /> : ''}
       <section className={styles.raca__opcoes}>
-        <MenuSide Opcoes={racas} />
+        {telaPequena ? '' : <MenuSide Opcoes={racas} />}
         <BannerItem {...itemMostrado} />
       </section>
       <button></button>
