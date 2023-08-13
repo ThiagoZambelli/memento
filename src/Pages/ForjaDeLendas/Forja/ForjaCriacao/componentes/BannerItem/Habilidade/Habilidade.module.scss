@@ -19,5 +19,17 @@
         line-height: 1.5em;
         padding: 1em .5em;
         text-align: justify;
+        animation: fadeInScaleUp .5s ease-out;
     }
 }
+
+@keyframes fadeInScaleUp {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
