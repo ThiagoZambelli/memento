@@ -15,8 +15,10 @@ function MenuTop({ Opcoes }: MenuDeSelecaoProps) {
 
 
   useEffect(() => {
-    setLugarNaFila(0)
+    setLugarNaFila(0);    
   }, []);
+
+  
 
   useEffect(() => {
     setBanner(Opcoes[lugarNaFila!])
