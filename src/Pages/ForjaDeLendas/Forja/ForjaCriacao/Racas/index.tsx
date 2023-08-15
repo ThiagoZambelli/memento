@@ -7,6 +7,7 @@ import useBannerMostrado from '../../state/hooks/useBannerMostrado';
 import MenuTop from '../componentes/MenuTop';
 import styles from './Racas.module.scss';
 import Loader from 'Components/Loader';
+import { GiAnvil } from 'react-icons/gi'
 
 function Racas() {
   const [racas, setRacas] = useState<IRaca[]>([]);
@@ -33,6 +34,7 @@ function Racas() {
           <BannerItem {...itemMostrado} />
         </section>
         : <Loader />}
+        <button className={styles.raca__btn}><GiAnvil /></button>
     </section>
   )
 }

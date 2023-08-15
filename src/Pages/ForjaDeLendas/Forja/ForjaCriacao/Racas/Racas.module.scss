@@ -16,6 +16,11 @@
         max-width: 90%;
         text-align: center;
         margin-bottom: 2rem;
+        background-color: rgba(0, 0, 0, 0.10);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);   
+        border-radius: 10px;
+        font-size: 1.2rem;
+        padding: 1em;
     }
 
     &__opcoes{
@@ -23,5 +28,59 @@
         width: 100%;
         justify-content: space-around;
         align-items: flex-start;
+    }
+
+    &__btn {
+        margin: 4rem;
+        z-index: 1;
+        position: relative;
+        font-size: 3rem;
+        padding: .1em .6em;
+        border-radius: 1em 0 1em 0;
+        color: $gunmetal;
+        outline: none;
+        border: none;
+        background-color: $khaki;
+        overflow: hidden;
+        transition: color 0.8s ease-in-out;
+        transition: 1s;
+
+        &:disabled {
+            color: $khaki-opaciti-2;
+
+            &::before {
+                display: none;
+            }
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+
+        &::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background-color: $walnut-brown;
+            transform-origin: center;
+            transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+            transition: transform 0.45s ease-in-out;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $almond;
+            box-shadow: 0 0 9px $black;
+        }
+
+        &:hover::before {
+            transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+
+        }
     }
 }

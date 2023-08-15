@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styles from "./Forja.module.scss";
 import useAtualizaNomes from './state/hooks/useAtualizaNomes';
 import { useNavigate } from 'react-router-dom';
-
+import {GiAnvil} from 'react-icons/gi'
 
 function Forja() {
   const [nomeJogador, setNomeJogador] = useState('');
@@ -31,7 +31,7 @@ function Forja() {
           <LzInput corPrimaria='#22333bff' corSecundaria='#c6ac8fff' label='Nome do Jogador' value={nomeJogador} onChange={setNomeJogador} />
           <LzInput corPrimaria='#22333bff' corSecundaria='#c6ac8fff' label='Nome do Personagem' onChange={setNomePersonagem} value={nomePersonagem} />
         </fieldset>
-        <button disabled={!habilitaBotao} >Iniciar Forja</button>
+        <button className={styles.forja__btn} disabled={!habilitaBotao} ><GiAnvil /></button>
       </form>
     </section>
   )

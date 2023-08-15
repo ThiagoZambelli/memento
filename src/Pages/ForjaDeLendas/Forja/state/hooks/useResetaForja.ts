@@ -7,7 +7,10 @@ export default function useResetaForja() {
     return () => {
         resetaBanner({
             nome: '',
-            descricao: ''
+            descricao: '',
+            _id:'',
+            habilidades:[],
+            subRaca:[]
         })
     }
 }

@@ -12,7 +12,6 @@ interface MenuDeSelecaoProps {
 function MenuSide({Opcoes}: MenuDeSelecaoProps) {
     const setBanner = useSetBannerMostrado();
 
-
     return (
         <section className={styles.menu}>
             {Opcoes.map(e => (
