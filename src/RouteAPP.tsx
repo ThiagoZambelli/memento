@@ -1,4 +1,4 @@
-import Forja from "Pages/ForjaDeLendas/Forja";
+import Forja from "Pages/ForjaDeLendas/Forja/ForjaCriacao/Nomes";
 import Antecedente from "Pages/ForjaDeLendas/Forja/ForjaCriacao/Antecedente";
 import Classe from "Pages/ForjaDeLendas/Forja/ForjaCriacao/Classe";
 import ForjaCriacao from "Pages/ForjaDeLendas/Forja/ForjaCriacao/ForjaCriacao";

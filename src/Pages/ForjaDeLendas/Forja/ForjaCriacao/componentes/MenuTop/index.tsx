@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import IBannerItem from '../../interface/IBannerItem';
-import useSetBannerMostrado from 'Pages/ForjaDeLendas/Forja/state/hooks/useSetBannerMostrado';
 import styles from './MenuTop.module.scss';
 import { ImArrowLeft2, ImArrowRight2 } from 'react-icons/im';
+import useSetBannerMostrado from 'Pages/ForjaDeLendas/state/hooks/useSetBannerMostrado';
 
 interface MenuDeSelecaoProps {
   Opcoes: IBannerItem[];

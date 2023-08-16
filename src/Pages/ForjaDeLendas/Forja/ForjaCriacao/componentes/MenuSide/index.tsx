@@ -1,8 +1,9 @@
 import React from 'react'
 import ItemMenu from './ItemMenu'
 import styles from './MenuSelecao.module.scss';
-import useSetBannerMostrado from 'Pages/ForjaDeLendas/Forja/state/hooks/useSetBannerMostrado';
+
 import IBannerItem from '../../interface/IBannerItem';
+import useSetBannerMostrado from 'Pages/ForjaDeLendas/state/hooks/useSetBannerMostrado';
 
 
 interface MenuDeSelecaoProps {

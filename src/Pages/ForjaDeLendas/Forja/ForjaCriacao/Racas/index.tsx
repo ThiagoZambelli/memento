@@ -3,15 +3,25 @@ import IRaca from 'interface/IRaca';
 import React, { useState, useEffect } from 'react'
 import MenuSide from '../componentes/MenuSide';
 import BannerItem from '../componentes/BannerItem';
-import useBannerMostrado from '../../state/hooks/useBannerMostrado';
+
 import MenuTop from '../componentes/MenuTop';
 import styles from './Racas.module.scss';
 import Loader from 'Components/Loader';
 import { GiAnvil } from 'react-icons/gi'
+import useBannerMostrado from 'Pages/ForjaDeLendas/state/hooks/useBannerMostrado';
+import { useNavigate } from 'react-router-dom';
+import useAtualizaRaca from 'Pages/ForjaDeLendas/state/hooks/useAtualizaRace';
 
 function Racas() {
   const [racas, setRacas] = useState<IRaca[]>([]);
   const itemMostrado = useBannerMostrado();
+  const atualizaRaca = useAtualizaRaca();
+  const ir = useNavigate();
+
+  const escolher = () => {
+    atualizaRaca(itemMostrado._id);
+    ir('/forja/cricao/antecedente');
+  }
 
   const telaPequena = window.innerWidth <= 780;
 
@@ -34,7 +44,7 @@ function Racas() {
           <BannerItem {...itemMostrado} />
         </section>
         : <Loader />}
-        <button className={styles.raca__btn}><GiAnvil /></button>
+        <button onClick={escolher} className={styles.raca__btn}><GiAnvil /></button>
     </section>
   )
 }

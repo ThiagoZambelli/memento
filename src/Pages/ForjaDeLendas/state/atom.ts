@@ -1,5 +1,6 @@
 import { atom } from "recoil";
-import IBannerItem from "../ForjaCriacao/interface/IBannerItem";
+import IBannerItem from "../Forja/ForjaCriacao/interface/IBannerItem";
+
 
 export const bannerMostrado = atom<IBannerItem>({
     key: "bannerMostrado",
