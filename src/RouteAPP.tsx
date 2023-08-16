@@ -26,7 +26,7 @@ function RouteAPP() {
 				<Route path="forja/cricao" element={<ForjaCriacao />}>
 					<Route path="raca" element={<Racas />}/>
 					<Route path="antecedente" element={<Antecedente />}/>
-					<Route path="class" element={<Classe />}/>
+					<Route path="classe" element={<Classe />}/>
 				</Route>
 			</Route>
 		</Routes>

@@ -6,5 +6,10 @@ export default interface IBannerItem {
     descricao: string,
     habilidades?: IHabilidade[],
     subRaca?: ISubRaca[],
-    _id: string
+    _id: string,
+    dadoVida?: number,
+    armaduraProf?: string,
+    armaProf?: string,
+    testeResistencia?: string[],
+    listaPericias?: string,
 }

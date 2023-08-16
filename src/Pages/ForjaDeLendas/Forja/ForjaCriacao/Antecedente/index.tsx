@@ -19,7 +19,7 @@ function Antecedente() {
 
   const escolher = () => {
     atualizaRaca(itemMostrado._id);
-    ir('/forja/cricao/antecedente');
+    ir('/forja/cricao/classe');
   }
 
   const telaPequena = window.innerWidth <= 780;
