@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import styles from "./ModalLogin.module.scss";
 import { LzInput, LzBotao } from "lithtlez-ds";
+import { login } from "Services/login";
+import useLogar from "state/hooks/useLogar";
+import useAbreModalLogin from "state/hooks/useAbreModalLogin";
 
 function ModalLogin() {
 	const [senha, setSenha] = useState<string>("");
 	const [email, setEmail] = useState<string>("");
+	const logarSite = useLogar();
+	const fechar = useAbreModalLogin();
 
-	const logar = (event: React.FormEvent<HTMLFormElement>) => {
+
+
+	const logar = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
+		const teste = await login({ email, senha });
+		if (teste !== undefined) {
+			logarSite();
+			setSenha("");
+			setEmail("");
+			fechar();
+		}
 	};
 
 	return (

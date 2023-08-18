@@ -10,16 +10,23 @@ import {GiAnvil} from 'react-icons/gi'
 import MenuTop from '../componentes/MenuTop';
 import MenuSide from '../componentes/MenuSide';
 import BannerItem from '../componentes/BannerItem';
+import { useRecoilValue } from 'recoil';
+import { personagemCriacao } from 'state/atom';
+import { postPersonagem } from 'Services/personagem';
+
 
 function Classe() {
   const [classe, setClasse] = useState<IClasse[]>([]);
   const itemMostrado = useBannerMostrado();
-  const atualizaRaca = useAtualizaClasse();
+  const atualizaClasse= useAtualizaClasse();
   const ir = useNavigate();
+  const personagemAtual = useRecoilValue(personagemCriacao);
+  
 
-  const escolher = () => {
-    atualizaRaca(itemMostrado._id);
-    ir('/forja/cricao/antecedente');
+  const escolher = async () => {
+    atualizaClasse(itemMostrado._id);        
+    await postPersonagem(personagemAtual);
+    ir('/forja-de-lendas/personagens');
   }
 
   const telaPequena = window.innerWidth <= 780;

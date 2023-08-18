@@ -12,14 +12,16 @@ import useBannerMostrado from 'Pages/ForjaDeLendas/state/hooks/useBannerMostrado
 import { useNavigate } from 'react-router-dom';
 import useAtualizaRaca from 'Pages/ForjaDeLendas/state/hooks/useAtualizaRace';
 
+
 function Racas() {
   const [racas, setRacas] = useState<IRaca[]>([]);
   const itemMostrado = useBannerMostrado();
   const atualizaRaca = useAtualizaRaca();
-  const ir = useNavigate();
+  const ir = useNavigate();  
+   
 
   const escolher = () => {
-    atualizaRaca(itemMostrado._id);
+    atualizaRaca(itemMostrado._id);    
     ir('/forja/cricao/antecedente');
   }
 

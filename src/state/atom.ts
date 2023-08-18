@@ -13,10 +13,13 @@ export const modalCadastro = atom<boolean>({
 	key: "modalCadastro",
 	default: false
 });
+export const logado = atom<boolean>({
+	key: "logado",
+	default: false
+});
 export const personagemCriacao = atom<IPersonagem>({
 	key: "personagemCriacao",
-	default: {
-		_id:'',
+	default: {		
 		nomePersonagem: '',
 		nomeJogador: '',
 		raca: '',
