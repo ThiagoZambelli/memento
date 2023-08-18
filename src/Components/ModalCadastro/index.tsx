@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from "./ModalCadastro.module.scss";
 import { LzBotao, LzInput } from 'lithtlez-ds';
+import { postUser } from 'Services/usuario';
 
 function ModalCadastro() {
     const [nome, setNome] = useState<string>("");
@@ -8,8 +9,20 @@ function ModalCadastro() {
     const [confSenha, setConfSenha] = useState<string>("");
     const [email, setEmail] = useState<string>("");
 
-    const cadastrar = (event: React.FormEvent<HTMLFormElement>) => {
+
+    const cadastrar = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        let novoUser = {
+            nome:nome,
+            email: email,
+            senha:senha
+        }
+        setNome("");
+        setSenha("");
+        setConfSenha("");
+        setEmail("");
+        const resposta = await postUser(novoUser);
+        console.log(resposta);
     };
 
     return (

@@ -12,10 +12,10 @@ export async function login({ email, senha }: ILogin) {
   }
   try {
     const response = await logarAPI.post('', usuarioLogin);
-    sessionStorage.setItem('token', response.data.token);
     if (response.status !== 200) {
       alert(response.data);
     } else {      
+      sessionStorage.setItem('token', response.data.token);      
       alert("Logado");
       return "logar";
     }    

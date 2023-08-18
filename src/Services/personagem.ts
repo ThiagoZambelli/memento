@@ -10,7 +10,7 @@ const config = {
 };
 
 export async function postPersonagem(personagem: IPersonagem) {
-    try{
+    try{        
         await classeAPI.post('', personagem, config);
     }
     catch(err){
