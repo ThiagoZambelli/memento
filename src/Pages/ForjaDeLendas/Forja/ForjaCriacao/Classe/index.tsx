@@ -26,14 +26,19 @@ function Classe() {
   const cadastrar = async () => {    
     await postPersonagem(personagemAtual);
   }
-  const escolher = () => {    
-    atualizaClasse(itemMostrado._id);
+
+  const escolher = () => {   
     if(personagemAtual._id !== ''){
       cadastrar();
       ir('/forja-de-lendas');
     }
     
   }
+
+  useEffect(() => {
+    atualizaClasse(itemMostrado._id);
+  }, [itemMostrado])
+  
 
   const telaPequena = window.innerWidth <= 780;
 
