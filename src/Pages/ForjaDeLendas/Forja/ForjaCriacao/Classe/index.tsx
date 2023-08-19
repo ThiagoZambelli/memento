@@ -10,25 +10,29 @@ import { GiAnvil } from 'react-icons/gi'
 import MenuTop from '../componentes/MenuTop';
 import MenuSide from '../componentes/MenuSide';
 import BannerItem from '../componentes/BannerItem';
+import { postPersonagem } from 'Services/personagem';
 import { useRecoilValue } from 'recoil';
 import { personagemCriacao } from 'state/atom';
-import { postPersonagem } from 'Services/personagem';
 
 
 function Classe() {
-  const [classe, setClasse] = useState<IClasse[]>([]);
+  const [classe, setClasse] = useState<IClasse[]>([]);  
   const itemMostrado = useBannerMostrado();
   const atualizaClasse = useAtualizaClasse();
   const ir = useNavigate();
   const personagemAtual = useRecoilValue(personagemCriacao);
+  
 
-  const cadastrar = async () => {
+  const cadastrar = async () => {    
     await postPersonagem(personagemAtual);
   }
-  const escolher = () => {
+  const escolher = () => {    
     atualizaClasse(itemMostrado._id);
-    cadastrar();
-    ir('/forja-de-lendas/personagens');
+    if(personagemAtual._id !== ''){
+      cadastrar();
+      ir('/forja-de-lendas');
+    }
+    
   }
 
   const telaPequena = window.innerWidth <= 780;
@@ -36,6 +40,7 @@ function Classe() {
   useEffect(() => {
     pegaClasse();
   }, [])
+  
 
   const pegaClasse = async () => {
     setClasse(await getClasses());

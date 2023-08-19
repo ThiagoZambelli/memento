@@ -5,8 +5,10 @@ const usuarioAPI = axios.create({ baseURL: "https://lithlez-api.onrender.com/use
 
 export async function postUser(novoUser: INovoUser) {
     try {
-        const response = await usuarioAPI.post('', novoUser)
-        return await response.data.menssage
+        const response = await usuarioAPI.post('', novoUser)        
+        
+        return await response
+        
     }
     catch (err) {
         alert(err);

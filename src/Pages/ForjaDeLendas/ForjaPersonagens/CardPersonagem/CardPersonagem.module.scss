@@ -1,0 +1,59 @@
+@import "styles/_variaveis.module.scss";
+
+.card{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 9px black;   
+    border-radius: 1em;
+    cursor: pointer;
+    transition: .5s;
+    
+    &:hover{
+        transform: scale(1.05);
+    }
+
+    header{
+        background-color: $almond-vidro;
+        border-radius: 1em 1em 0 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3{
+            font-family: $fontMenu;
+            font-size: 3rem;
+            color: $gunmetal;
+            text-decoration: underline;
+        }
+        h4{
+            padding: .5em 0;
+            font-size: 1.6rem;
+            color: $almond;            
+            span{
+                text-transform: uppercase;
+                color: $walnut-brown;
+                text-decoration: none;
+                padding: 0 1em;
+            }
+        }
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 1em;
+        width: 100%;
+        font-family: $fonteTextoForja;
+        font-size: 1.4rem;
+        row-gap: 1em;
+        text-transform: uppercase;
+        color: $gunmetal;
+    }
+}
