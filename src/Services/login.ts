@@ -1,27 +1,23 @@
 import axios from "axios";
 import ILogin from "interface/ILogin";
 
-const logarAPI = axios.create({ baseURL: "https://lithlez-api.onrender.com/login" });
+const loginAPI = axios.create({ baseURL: "https://lithlez-api.onrender.com/login" })
 
-
-
-export async function login({ email, senha }: ILogin) {
-  const usuarioLogin = {
-    email: email,
-    senha: senha
+export async function login({senha, email}:ILogin) {
+  const credenciais = {
+    senha:senha,
+    email:email
   }
   try {
-    const response = await logarAPI.post('', usuarioLogin);
-    if (response.status !== 200) {
-      alert(response.data);
-    } else {      
-      sessionStorage.setItem('token', response.data.token);      
-      alert("Logado");
-      return "logar";
-    }    
+    const response = await loginAPI.post('',credenciais);
+    if(response.status === 200){
+      sessionStorage.setItem('token',await response.data.token)
+      return "log"
+    }else{
+      alert(response.data.message)
+    }
   }
   catch (err) {
-    alert(err)
+    console.log(err)
   }
 }
-

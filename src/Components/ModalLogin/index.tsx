@@ -15,8 +15,8 @@ function ModalLogin() {
 
 	const logar = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		const teste = await login({ email, senha });
-		if (teste !== undefined) {
+		const response = await login({ email, senha });
+		if (response !== undefined) {
 			logarSite();
 			setSenha("");
 			setEmail("");

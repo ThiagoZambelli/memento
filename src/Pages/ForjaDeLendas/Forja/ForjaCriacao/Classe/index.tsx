@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import styles from './Classe.module.scss';
 import Loader from 'Components/Loader';
-import {GiAnvil} from 'react-icons/gi'
+import { GiAnvil } from 'react-icons/gi'
 import MenuTop from '../componentes/MenuTop';
 import MenuSide from '../componentes/MenuSide';
 import BannerItem from '../componentes/BannerItem';
@@ -18,14 +18,16 @@ import { postPersonagem } from 'Services/personagem';
 function Classe() {
   const [classe, setClasse] = useState<IClasse[]>([]);
   const itemMostrado = useBannerMostrado();
-  const atualizaClasse= useAtualizaClasse();
+  const atualizaClasse = useAtualizaClasse();
   const ir = useNavigate();
   const personagemAtual = useRecoilValue(personagemCriacao);
-  
 
-  const escolher = async () => {
-    atualizaClasse(itemMostrado._id);        
+  const cadastrar = async () => {
     await postPersonagem(personagemAtual);
+  }
+  const escolher = () => {
+    atualizaClasse(itemMostrado._id);
+    cadastrar();
     ir('/forja-de-lendas/personagens');
   }
 
@@ -50,7 +52,7 @@ function Classe() {
           <BannerItem {...itemMostrado} />
         </section>
         : <Loader />}
-        <button onClick={escolher} className={styles.classe__btn}><GiAnvil /></button>
+      <button onClick={escolher} className={styles.classe__btn}><GiAnvil /></button>
     </section>
   )
 }
