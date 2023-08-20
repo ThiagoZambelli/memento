@@ -18,6 +18,7 @@ function Racas() {
   const atualizaRaca = useAtualizaRaca();
   const ir = useNavigate();  
    
+  const habilita = itemMostrado._id !== '';
 
   const escolher = () => {
     atualizaRaca(itemMostrado._id);    
@@ -45,7 +46,7 @@ function Racas() {
           <BannerItem {...itemMostrado} />
         </section>
         : <Loader />}
-        <button onClick={escolher} className={styles.raca__btn}><GiAnvil /></button>
+        <button onClick={escolher} disabled={!habilita}  className={styles.raca__btn}><GiAnvil />  Forjar...</button>
     </section>
   )
 }

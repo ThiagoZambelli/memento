@@ -33,12 +33,16 @@
     }
 
     &__btn {
-        margin: 8rem;
+        display: flex;
+        align-items: center;
+        column-gap: 1em;
+        border: 2px solid $gunmetal;
+
+        margin: 5rem;
         z-index: 1;
         position: relative;
         font-size: 3rem;
-        padding: .1em .6em;
-        border-radius: 1em 0 1em 0;
+        padding: .1em .6em;        
         color: $gunmetal;
         outline: none;
         border: none;

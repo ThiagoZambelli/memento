@@ -4,17 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    font-size: 14px;
     width: 100%;
     padding: .5rem;
     columns: 2rem;
     background-color: $black;
-    color: $almond;
-    a{
-        text-decoration: none;
-        color: $almond;
-        &:hover{
-            filter: drop-shadow(0 0 10px $khaki);
-            transform: scale(1.1);
-        }
-    }
+    color: $almond;    
 }

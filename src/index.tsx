@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import RouteAPP from "./RouteAPP";
-
+import ScrollToTop from "Components/ScrollToTop";
 
 
 const root = ReactDOM.createRoot(
@@ -13,8 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
+			<ScrollToTop />
 			<RecoilRoot>
-				<RouteAPP/>
+				<RouteAPP />
 			</RecoilRoot>
 		</BrowserRouter>
 	</React.StrictMode>

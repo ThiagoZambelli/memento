@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
     min-height: 60vh;
     font-family: $fonteTituloForja;
@@ -15,6 +16,16 @@
         font-weight: bold;
         color: $gunmetal;
         line-height: 1.5em;
-        text-shadow: 2px 2px $walnut-brown, -1px -1px $almond;
+        text-shadow: -1px -1px $almond;
+    }
+    h4{
+        max-width: 70%;
+        text-align: center;
+        font-weight: bold;
+        color: $gunmetal;
+        font-size: 1.8rem;
+        text-decoration: underline;
+        line-height: 1.5em;
+        text-shadow:-1px -1px $almond;
     }
 }

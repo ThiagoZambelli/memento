@@ -23,6 +23,8 @@ function Classe() {
   const personagemAtual = useRecoilValue(personagemCriacao);
   const telaPequena = window.innerWidth <= 780;
 
+  const habilita = itemMostrado._id !== '';
+
 
   const cadastrar = () => {
     postPersonagem(personagemAtual);
@@ -59,7 +61,7 @@ function Classe() {
           <BannerItem {...itemMostrado} />
         </section>
         : <Loader />}
-      <button onClick={escolher} className={styles.classe__btn}><GiAnvil /></button>
+      <button onClick={escolher} disabled={!habilita}  className={styles.classe__btn}><GiAnvil /> Forjar...</button>
     </section>
   )
 }

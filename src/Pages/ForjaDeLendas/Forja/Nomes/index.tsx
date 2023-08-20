@@ -39,7 +39,7 @@ function Forja() {
           <LzInput corPrimaria='#22333bff' corSecundaria='#c6ac8fff' label='Nome do Jogador' value={nomeJogador} onChange={setNomeJogador} />
           <LzInput corPrimaria='#22333bff' corSecundaria='#c6ac8fff' label='Nome do Personagem' onChange={setNomePersonagem} value={nomePersonagem} />
         </fieldset>
-        <button className={styles.forja__btn} disabled={!habilitaBotao} ><GiAnvil /></button>
+        <button className={styles.forja__btn} disabled={!habilitaBotao} ><GiAnvil /> Forjar...</button>
       </form>
     </section> : <NaoLogado />
   )

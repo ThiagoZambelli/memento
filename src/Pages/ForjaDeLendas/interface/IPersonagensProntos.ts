@@ -6,7 +6,7 @@ export default interface IPersonagensProntos {
     _id: string,
     nomePersonagem: string,
     nomeJogador: string,
-    raca: IRaca,
-    classe: IClasse,
-    antecedente: IAntecedente
+    raca?: IRaca,
+    classe?: IClasse,
+    antecedente?: IAntecedente
 }

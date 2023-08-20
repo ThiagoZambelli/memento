@@ -1,0 +1,26 @@
+.erro{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    img{
+        max-width: 40%;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        span{
+            font-size: 1.3rem;
+            margin: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .erro{
+        flex-direction: column;
+    }
+    
+}
