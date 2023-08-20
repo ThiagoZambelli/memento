@@ -7,8 +7,10 @@
 
     &__titulo {
         font-family: $fonteTituloForja;
-        font-size: 3rem;
+        font-size: 4rem;
         padding: .5em;
+        color: $walnut-brown;
+        text-shadow: 1px 1px $almond, -1px -1px $black;
     }
 
     &__descricao {
@@ -32,7 +34,7 @@
     }
 
     &__btn {
-        margin: 4rem;
+        margin: 8rem;
         z-index: 1;
         position: relative;
         font-size: 3rem;

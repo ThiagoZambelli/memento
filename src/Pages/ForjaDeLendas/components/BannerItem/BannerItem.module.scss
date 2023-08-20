@@ -10,13 +10,16 @@
   max-width: 100%;
   animation: fadeInScaleUp 1s ease-out;
   max-width: 95%;
+  background-image: url('../../../../assets/stardust.png');
 
 
   &__titulo {
     font-family: $fonteTituloForja;
     font-size: 2.5rem;
     padding: 1em;
-    font-weight: bold;    
+    font-weight: bold;
+    color: $gunmetal;
+    text-shadow: 1px 1px $almond, -1px -1px $black;  
   }
 
   &__descricao {

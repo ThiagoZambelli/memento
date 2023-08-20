@@ -8,6 +8,7 @@ import Loader from 'Components/Loader';
 import CardPersonagem from './CardPersonagem';
 import { useLocation } from 'react-router-dom';
 import IPersonagensProntos from '../interface/IPersonagensProntos';
+import ListaVazia from './ListaVazia';
 
 function ForjaPersonagens() {
   const [lista, setLista] = useState<IPersonagensProntos[]>([]);
@@ -36,7 +37,7 @@ function ForjaPersonagens() {
           : <div className={styles.personagens__carregados}>
             {lista.length > 0
               ? lista.map(e => <CardPersonagem key={e._id} {...e} />)
-              : "Lista vazia"}
+              : <ListaVazia />}
           </div>}
 
       </section>

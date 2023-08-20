@@ -34,10 +34,10 @@ function ModalCadastro() {
                 setSenha("");
                 setConfSenha("");
                 setEmail("");
-                alert(resposta.data.menssage);                
+                alert(resposta.data.menssage);
                 setCarregando(false);
                 fechar();
-            } else{
+            } else {
                 setNome("");
                 setSenha("");
                 setConfSenha("");
@@ -59,8 +59,8 @@ function ModalCadastro() {
             <LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Senha" value={senha} onChange={setSenha} type='password' />
             <LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Confirmar Senha" value={confSenha} onChange={setConfSenha} type='password' />
             <div className={styles.modalCadastro__containerbtn}>
-				{!carregando ? <LzBotao corSecundaria="#eae0d5ff" corPrimaria="#5e503fff" corHover="#22333bff">Cadastrar</LzBotao> : <Loader />}
-			</div>
+                {!carregando ? <LzBotao corSecundaria="#eae0d5ff" corPrimaria="#5e503fff" corHover="#22333bff">Cadastrar</LzBotao> : <Loader />}
+            </div>
         </form>
     )
 }

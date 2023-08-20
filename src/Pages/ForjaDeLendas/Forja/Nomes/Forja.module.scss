@@ -58,6 +58,7 @@
         overflow: hidden;
         transition: color 0.8s ease-in-out;
         transition: 1s;
+        margin: 2rem 0;
 
         &:disabled {
             color: $khaki-opaciti-2;

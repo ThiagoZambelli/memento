@@ -36,7 +36,7 @@ function Racas() {
 
   return (
     <section className={styles.raca}>
-      <h2 className={styles.raca__titulo}>Racas</h2>
+      <h2 className={styles.raca__titulo}>Raças</h2>
       <p className={styles.raca__descricao}>Sua Raça não define quem você é, mas mostra as habilidades que a vida te deu para enfrentar o mundo!</p>
       {racas.length > 0 ? telaPequena ? <MenuTop Opcoes={racas} /> : '' : <Loader />}
       {racas.length > 0

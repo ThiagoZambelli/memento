@@ -14,12 +14,15 @@
         font-weight: 500;
         padding: .5em 1em;
         font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     p{
         line-height: 1.5em;
-        padding: 1em .5em;
+        padding: 1em 1.5em;
         text-align: justify;
-        animation: fadeInScaleUp .5s ease-out;
+        animation: fadeInScaleUp .5s ease-out;        
     }
 }
 
