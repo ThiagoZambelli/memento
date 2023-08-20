@@ -28,18 +28,20 @@ function ModalLogin() {
 			setNome(response);
 			setCarregando(false);
 			fechar();
-		} else{
+		} else {
 			setSenha("");
 			setCarregando(false);
 		}
-		
+
 	};
 
 	return (
 		<form className={styles.modalLogin} onSubmit={logar}>
 			<LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Email" value={email} onChange={setEmail} type="email" />
 			<LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Senha" value={senha} onChange={setSenha} type="password" />
-			{!carregando ? <LzBotao corSecundaria="#c6ac8fff" corPrimaria="#22333bff" forma="gota" tipo="secundario" >Logar</LzBotao> : <Loader />}
+			<div className={styles.modalLogin__containerbtn}>
+				{!carregando ? <LzBotao corSecundaria="#eae0d5ff" corPrimaria="#5e503fff" corHover="#22333bff">Logar</LzBotao> : <Loader />}
+			</div>
 		</form>
 	);
 }
