@@ -1,19 +1,24 @@
 import { LzInput } from 'lithtlez-ds'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./Forja.module.scss";
 import { useNavigate } from 'react-router-dom';
 import { GiAnvil } from 'react-icons/gi'
 import useAtualizaNomes from 'Pages/ForjaDeLendas/state/hooks/useAtualizaNomes';
 import { useRecoilValue } from 'recoil';
-import { logado } from 'state/atom';
+import { logado, userLogado } from 'state/atom';
 import NaoLogado from 'Components/NaoLogado';
 
 function Forja() {
+  const nomeLogado = useRecoilValue(userLogado);
   const [nomeJogador, setNomeJogador] = useState('');
   const [nomePersonagem, setNomePersonagem] = useState('');
   const att = useAtualizaNomes();
   const ir = useNavigate();
   const estadoLogado = useRecoilValue(logado);
+
+  useEffect(()=>{
+    setNomeJogador(nomeLogado);
+  }, [])
 
   const atualizacao = (event: React.FormEvent<HTMLFormElement>) => {
     event?.preventDefault();
