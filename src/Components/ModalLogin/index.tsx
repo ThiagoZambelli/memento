@@ -5,6 +5,7 @@ import { login } from "Services/login";
 import useLogar from "state/hooks/useLogar";
 import useAbreModalLogin from "state/hooks/useAbreModalLogin";
 import Loader from "Components/Loader";
+import useSetUserLogado from "state/hooks/useSetUserLogado";
 
 function ModalLogin() {
 	const [senha, setSenha] = useState("");
@@ -12,6 +13,7 @@ function ModalLogin() {
 	const [carregando, setCarregando] = useState(false);
 	const logarSite = useLogar();
 	const fechar = useAbreModalLogin();
+	const setNome = useSetUserLogado();
 
 
 
@@ -23,6 +25,7 @@ function ModalLogin() {
 			logarSite();
 			setSenha("");
 			setEmail("");
+			setNome(response);
 			setCarregando(false);
 			fechar();
 		} else{

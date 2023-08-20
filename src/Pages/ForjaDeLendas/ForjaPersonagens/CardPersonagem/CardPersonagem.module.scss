@@ -30,6 +30,17 @@
             font-size: 3rem;
             color: $gunmetal;
             text-decoration: underline;
+            justify-content: space-evenly;
+            display: flex;
+            align-items: center;
+            column-gap: 1em;
+            padding: .3em 0;
+            p{
+                box-sizing: border-box;
+                flex-wrap: wrap;
+                text-align: center;
+                max-width: 60%;
+            }
         }
         h4{
             padding: .5em 0;
@@ -55,5 +66,10 @@
         row-gap: 1em;
         text-transform: uppercase;
         color: $gunmetal;
+        p{
+            display: flex;
+            align-items: center;
+            column-gap: 1em;
+        }
     }
 }

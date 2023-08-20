@@ -13,47 +13,64 @@
   flex-direction: column;
   justify-content: space-between;
   /* Esconde o conteúdo quando a largura é 0 */
-  border-radius:0 10px 10px 0;
+  border-radius: 0 10px 10px 0;
 
   -webkit-box-shadow: 6px 0px 12px 3px $black-shadow-opacit;
   -moz-box-shadow: 6px 0px 12px 3px $black-shadow-opacit;
   box-shadow: 6px 0px 12px 3px $black-shadow-opacit;
 
   &__header {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: flex-end;
-    background-color:$khaki;
+    &__top {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $khaki;
 
-    button{
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-      width: 40%;
-      font-size: 1.3rem;
-      padding: .5em 1em;
-      color: $gunmetal;
-      font-weight: 600;         
-      &:hover{
-        background-color: $almond;
-        color:$walnut-brown ;
-      }
-
-    }
-    svg {    
-      filter: drop-shadow(1px 1px 0 $gunmetal);  
-      color: $gunmetal;      
-      z-index: 9;
-      cursor: pointer;
-      flex: 1;
-      width: 26px;
-      height: 26px;      
-      
-      &:hover {
+      button {
+        background-color: transparent;
+        border: none;
         cursor: pointer;
-        animation: jelly 0.5s;
+        width: 40%;
+        font-size: 1.3rem;
+        padding: .5em 1em;
+        color: $gunmetal;
+        font-weight: 600;
+
+        &:hover {
+          background-color: $almond;
+          color: $walnut-brown ;
+        }
+
       }
+
+      svg {
+        filter: drop-shadow(1px 1px 0 $gunmetal);
+        color: $gunmetal;
+        z-index: 9;
+        cursor: pointer;
+        width: 26px;
+        height: 26px;
+        margin: 0 15px;
+
+        &:hover {
+          cursor: pointer;
+          animation: jelly 0.5s;
+        }
+      }
+    }
+
+    &__nome {
+      display: flex;
+      width: 100%;
+      font-size: 2rem;
+      column-gap: .5em;
+      padding: .2em;
+      color: $walnut-brown;
+      text-transform: uppercase;
+      background-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+      animation: jelly .6s;
     }
   }
 }

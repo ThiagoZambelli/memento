@@ -17,6 +17,10 @@ export const logado = atom<boolean>({
 	key: "logado",
 	default: false
 });
+export const userLogado = atom<string>({
+	key: "userLogado",
+	default: ''
+});
 export const personagemCriacao = atom<IPersonagem>({
 	key: "personagemCriacao",
 	default: {		

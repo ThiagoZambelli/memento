@@ -3,6 +3,7 @@ import ILogin from "interface/ILogin";
 
 const loginAPI = axios.create({ baseURL: "https://lithlez-api.onrender.com/login" })
 
+
 export async function login({senha, email}:ILogin) {
   const credenciais = {
     senha:senha,
@@ -12,7 +13,7 @@ export async function login({senha, email}:ILogin) {
     const response = await loginAPI.post('',credenciais);
     if(response.status === 200){
       sessionStorage.setItem('token',await response.data.token)
-      return "log"
+      return response.data.nome;
     }else{
       alert(response.data.message)
     }

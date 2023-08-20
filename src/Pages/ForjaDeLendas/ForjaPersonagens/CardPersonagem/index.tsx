@@ -1,18 +1,19 @@
 import React from 'react'
 import styles from "./CardPersonagem.module.scss";
+import {GiBookmarklet, GiDna1, GiDramaMasks,GiMasterOfArms} from "react-icons/gi"
 import IPersonagensProntos from 'Pages/ForjaDeLendas/Forja/ForjaCriacao/interface/IPersonagensProntos';
 
 function CardPersonagem(personagem: IPersonagensProntos) {
   return (
     <section className={styles.card}>
         <header>
-            <h3>{personagem.nomePersonagem}</h3>
+            <h3><GiDramaMasks /><p>{personagem.nomePersonagem}</p></h3>
             <h4><span>Jogador:</span>{personagem.nomeJogador}</h4>
         </header>
         <div>
-            <p>{personagem.raca.nome}</p>
-            <p>{personagem.antecedente.nome}</p>
-            <p>{personagem.classe.nome}</p>            
+            <p><GiDna1 />{personagem.raca.nome}</p>
+            <p><GiBookmarklet />{personagem.antecedente.nome}</p>
+            <p><GiMasterOfArms />{personagem.classe.nome}</p>            
         </div>
     </section>
   )
