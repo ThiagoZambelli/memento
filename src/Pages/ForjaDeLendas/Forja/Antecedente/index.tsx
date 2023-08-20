@@ -17,7 +17,7 @@ function Antecedente() {
   const atualizaRaca = useAtualizaAntecedente();
   const ir = useNavigate();
 
-  const habilita = itemMostrado._id !== '';
+  
 
   const escolher = () => {
     atualizaRaca(itemMostrado._id);
@@ -45,7 +45,7 @@ function Antecedente() {
           <BannerItem {...itemMostrado} />
         </section>
         : <Loader />}
-        <button onClick={escolher} disabled={!habilita} className={styles.antecedente__btn}><GiAnvil /> Forjar...</button>
+        <button onClick={escolher} className={styles.antecedente__btn}><GiAnvil /> Forjar...</button>
     </section>
   )
 }
