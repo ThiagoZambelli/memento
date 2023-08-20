@@ -2,4 +2,46 @@
 
 .forjaHome {
     display: flex;
+    flex-wrap: wrap;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 2rem 0;
+        flex-wrap: wrap;
+
+        img{
+            max-width: 350px;
+            border-radius: 1rem;
+            box-shadow: 0 0 12px $black;
+            opacity: .8;            
+        }
+
+        div{
+            max-width: 500px;
+            text-align: center;
+            
+
+            h2{
+                font-family: $fonteTituloForja;
+                font-size: 2rem;
+                padding: 1em;
+                font-weight: bold;
+                color: $gunmetal;
+            }
+            p{
+                font-family: $fonteTextoForja;
+                font-size: 1.5rem;
+                line-height: 1.2em;
+                color: $walnut-brown;
+                text-shadow: 1px 1px $black;
+            }
+        }
+    }
+}
+
+.invertido{
+    order: 2;
 }

@@ -9,11 +9,11 @@ function CardPersonagem(personagem: IPersonagensProntos) {
             <h3>{personagem.nomePersonagem}</h3>
             <h4><span>Jogador:</span>{personagem.nomeJogador}</h4>
         </header>
-        <body>
+        <div>
             <p>{personagem.raca.nome}</p>
             <p>{personagem.antecedente.nome}</p>
             <p>{personagem.classe.nome}</p>            
-        </body>
+        </div>
     </section>
   )
 }

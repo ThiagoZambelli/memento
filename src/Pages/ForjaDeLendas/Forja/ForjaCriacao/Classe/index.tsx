@@ -16,36 +16,30 @@ import { personagemCriacao } from 'state/atom';
 
 
 function Classe() {
-  const [classe, setClasse] = useState<IClasse[]>([]);  
+  const [classe, setClasse] = useState<IClasse[]>([]);
   const itemMostrado = useBannerMostrado();
   const atualizaClasse = useAtualizaClasse();
   const ir = useNavigate();
   const personagemAtual = useRecoilValue(personagemCriacao);
-  
-
-  const cadastrar = async () => {    
-    await postPersonagem(personagemAtual);
-  }
-
-  const escolher = () => {   
-    if(personagemAtual._id !== ''){
-      cadastrar();
-      ir('/forja-de-lendas');
-    }
-    
-  }
-
-  useEffect(() => {
-    atualizaClasse(itemMostrado._id);
-  }, [itemMostrado])
-  
-
   const telaPequena = window.innerWidth <= 780;
+
+
+  const cadastrar = () => {
+    postPersonagem(personagemAtual);
+  }
+
+  const escolher = () => {
+    cadastrar();
+    ir('/forja-de-lendas');
+  }
 
   useEffect(() => {
     pegaClasse();
   }, [])
-  
+  useEffect(() => {
+    atualizaClasse(itemMostrado._id);
+  }, [itemMostrado])
+
 
   const pegaClasse = async () => {
     setClasse(await getClasses());
