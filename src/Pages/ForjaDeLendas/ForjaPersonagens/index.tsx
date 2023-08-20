@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import IPersonagensProntos from '../Forja/ForjaCriacao/interface/IPersonagensProntos';
 import { meusPersonagens } from 'Services/personagem';
 import { useRecoilValue } from 'recoil';
 import { logado } from 'state/atom';
@@ -8,6 +7,7 @@ import styles from "./ForjaPersonagens.module.scss";
 import Loader from 'Components/Loader';
 import CardPersonagem from './CardPersonagem';
 import { useLocation } from 'react-router-dom';
+import IPersonagensProntos from '../interface/IPersonagensProntos';
 
 function ForjaPersonagens() {
   const [lista, setLista] = useState<IPersonagensProntos[]>([]);

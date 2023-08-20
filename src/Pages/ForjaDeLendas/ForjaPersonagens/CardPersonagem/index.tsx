@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from "./CardPersonagem.module.scss";
 import {GiBookmarklet, GiDna1, GiDramaMasks,GiMasterOfArms} from "react-icons/gi"
-import IPersonagensProntos from 'Pages/ForjaDeLendas/Forja/ForjaCriacao/interface/IPersonagensProntos';
+import IPersonagensProntos from 'Pages/ForjaDeLendas/interface/IPersonagensProntos';
+
 
 function CardPersonagem(personagem: IPersonagensProntos) {
   return (

@@ -1,7 +1,6 @@
 import { LzInput } from 'lithtlez-ds'
 import React, { useState } from 'react'
 import styles from "./Forja.module.scss";
-
 import { useNavigate } from 'react-router-dom';
 import { GiAnvil } from 'react-icons/gi'
 import useAtualizaNomes from 'Pages/ForjaDeLendas/state/hooks/useAtualizaNomes';

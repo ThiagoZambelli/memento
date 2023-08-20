@@ -12,6 +12,7 @@ import { logado, userLogado } from "state/atom";
 import useDeslogar from "state/hooks/useDeslogar";
 import { RiUserLine } from 'react-icons/ri';
 import { GiExitDoor } from 'react-icons/gi';
+import SideCopyrigth from "./SideCopyrigth";
 
 
 
@@ -52,7 +53,10 @@ function SideBarMenu() {
 					</div>}
 			</div>
 			<SideBarItens />
-			<SideBarCreditos />
+			<div>
+				<SideBarCreditos />
+				<SideCopyrigth />
+			</div>
 		</section>
 	);
 }

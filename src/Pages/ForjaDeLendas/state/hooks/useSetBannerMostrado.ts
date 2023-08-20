@@ -1,6 +1,6 @@
 import { useSetRecoilState } from "recoil";
 import { bannerMostrado } from "../atom";
-import IBannerItem from "Pages/ForjaDeLendas/Forja/ForjaCriacao/interface/IBannerItem";
+import IBannerItem from "Pages/ForjaDeLendas/interface/IBannerItem";
 
 
 export default function useSetBannerMostrado() {

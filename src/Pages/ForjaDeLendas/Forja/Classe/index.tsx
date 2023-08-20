@@ -7,12 +7,12 @@ import { useNavigate } from 'react-router-dom';
 import styles from './Classe.module.scss';
 import Loader from 'Components/Loader';
 import { GiAnvil } from 'react-icons/gi'
-import MenuTop from '../componentes/MenuTop';
-import MenuSide from '../componentes/MenuSide';
-import BannerItem from '../componentes/BannerItem';
 import { postPersonagem } from 'Services/personagem';
 import { useRecoilValue } from 'recoil';
 import { personagemCriacao } from 'state/atom';
+import MenuTop from 'Pages/ForjaDeLendas/components/MenuTop';
+import MenuSide from 'Pages/ForjaDeLendas/components/MenuSide';
+import BannerItem from 'Pages/ForjaDeLendas/components/BannerItem';
 
 
 function Classe() {
@@ -36,8 +36,11 @@ function Classe() {
   useEffect(() => {
     pegaClasse();
   }, [])
+
   useEffect(() => {
-    atualizaClasse(itemMostrado._id);
+    if (itemMostrado && itemMostrado._id !== undefined) {
+      atualizaClasse(itemMostrado._id);
+    }
   }, [itemMostrado])
 
 

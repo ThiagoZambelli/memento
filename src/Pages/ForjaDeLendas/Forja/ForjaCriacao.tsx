@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import forja from '../../assets/forja.svg';
+import forja from '../assets/forja.svg';
 import useResetaForja from 'Pages/ForjaDeLendas/state/hooks/useResetaForja';
 
 const bannerForja = {

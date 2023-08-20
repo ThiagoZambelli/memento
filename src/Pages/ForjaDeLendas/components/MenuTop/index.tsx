@@ -15,13 +15,14 @@ function MenuTop({ Opcoes }: MenuDeSelecaoProps) {
 
 
   useEffect(() => {
-    setLugarNaFila(0);    
+    setLugarNaFila(0);
+    setBanner(Opcoes[lugarNaFila!]);
   }, []);
 
-  
+
 
   useEffect(() => {
-    setBanner(Opcoes[lugarNaFila!])    
+    setBanner(Opcoes[lugarNaFila!])
   }, [lugarNaFila]);
 
 

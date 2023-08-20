@@ -5,11 +5,11 @@ import IAntecedente from 'interface/IAntecedente';
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import styles from './Antecedentes.module.scss';
-import MenuTop from '../componentes/MenuTop';
-import MenuSide from '../componentes/MenuSide';
-import BannerItem from '../componentes/BannerItem';
 import Loader from 'Components/Loader';
 import {GiAnvil} from 'react-icons/gi'
+import MenuTop from 'Pages/ForjaDeLendas/components/MenuTop';
+import MenuSide from 'Pages/ForjaDeLendas/components/MenuSide';
+import BannerItem from 'Pages/ForjaDeLendas/components/BannerItem';
 
 function Antecedente() {
   const [antecedente, setAntecedente] = useState<IAntecedente[]>([]);
