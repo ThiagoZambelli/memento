@@ -2,6 +2,11 @@
 
 
 .sideBar {
+  background-image: url('/assets/sideMenuBg.png');
+  background-size: 300px auto;
+  background-repeat: no-repeat;
+  
+
   z-index: 10;
   height: 100vh;
   background-color: $gunmetal;
@@ -76,11 +81,11 @@
 }
 
 .sideBarAtiva {
-  animation: ativaSideBar 1s forwards;
+  animation: ativaSideBar .8s forwards;
 }
 
 .sideBarDesativa {
-  animation: desativaSideBar 1s forwards;
+  animation: desativaSideBar .8s forwards;
 }
 
 @keyframes ativaSideBar {
@@ -89,7 +94,6 @@
     width: 0px;
     /* Começa com largura 0 */
   }
-
   100% {
     opacity: 1;
     width: 300px;
@@ -103,7 +107,6 @@
     width: 300px;
     /* Começa com largura 300px */
   }
-
   100% {
     opacity: 0;
     width: 0px;
