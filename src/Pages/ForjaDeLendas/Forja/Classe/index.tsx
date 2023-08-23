@@ -56,7 +56,7 @@ function Classe() {
       {classe.length > 0
         ? <section className={styles.classe__opcoes}>
           {telaPequena ? '' : <MenuSide Opcoes={classe} />}
-          <BannerItem {...itemMostrado} />
+          <BannerItem tipo='classe' {...itemMostrado} />
         </section>
         : <Loader />}
       <button onClick={escolher} className={styles.classe__btn}><GiAnvil /> Forjar...</button>

@@ -53,7 +53,7 @@ function SideBarMenu() {
 					</div>}
 			</div>
 			<SideBarItens />
-			<div>
+			<div className={styles.sideBar__footer}>
 				<SideBarCreditos />
 				<SideCopyrigth />
 			</div>

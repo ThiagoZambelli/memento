@@ -12,4 +12,5 @@ export default interface IBannerItem {
     armaProf?: string,
     testeResistencia?: string[],
     listaPericias?: string,
+    tipo?: "classe" | "antecedete"
 }

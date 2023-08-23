@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import ItemMenu from './ItemMenu'
 import styles from './MenuSelecao.module.scss';
 
@@ -12,6 +12,10 @@ interface MenuDeSelecaoProps {
 
 function MenuSide({Opcoes}: MenuDeSelecaoProps) {
     const setBanner = useSetBannerMostrado();
+
+    useEffect(()=>{
+        setBanner(Opcoes[0])
+    },[])
 
     return (
         <section className={styles.menu}>
