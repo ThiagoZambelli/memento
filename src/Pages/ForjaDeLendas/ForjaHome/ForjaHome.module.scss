@@ -18,9 +18,11 @@
 
         img{
             max-width: 350px;
-            border-radius: 1rem;
+            border-radius: 1rem .5rem;
             box-shadow: 0 0 12px $black;
-            opacity: .8;            
+            opacity: .8;
+            transform: rotate(-2deg);
+            border: 2px solid $walnut-brown;         
         }
 
         div{

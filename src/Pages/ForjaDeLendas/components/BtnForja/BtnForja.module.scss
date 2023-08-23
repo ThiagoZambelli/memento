@@ -1,0 +1,61 @@
+@import 'styles/_variaveis.module.scss';
+
+.btn {
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    border: 2px solid $gunmetal;
+
+    z-index: 1;
+    position: relative;
+    font-size: 2.5rem;
+    padding: .1em .6em;
+    border-radius: 10px;
+    color: $gunmetal;
+    outline: none;
+    border: none;
+    background-color: $khaki;
+    overflow: hidden;
+    transition: color 0.8s ease-in-out;
+    transition: 1s;
+    margin: 2rem 0;
+
+    &:disabled {
+        color: $khaki-opaciti-2;
+        border: none;
+
+        &::before {
+            display: none;
+        }
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: $walnut-brown;
+        transform-origin: center;
+        transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+        transition: transform 0.45s ease-in-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: $almond;
+        box-shadow: 0 0 9px $black;
+    }
+
+    &:hover::before {
+        transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+
+    }
+}
