@@ -14,8 +14,16 @@
         justify-content: space-evenly;
         padding: 1rem 0;
         margin: 2rem 0;
-        border-radius: 1em;
+        border-radius: 5px;
         box-shadow: 0 0 6px $black;
         background-image: url('/assets/stardust.png');
+    }
+}
+
+@media screen and (max-width: 490px ) {
+    .paginaFicha{
+        &__ficha{
+            max-width: 100%;
+        }
     }
 }
