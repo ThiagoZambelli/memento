@@ -10,6 +10,7 @@ import useAtualizaRaca from 'Pages/ForjaDeLendas/state/hooks/useAtualizaRace';
 import MenuTop from 'Pages/ForjaDeLendas/components/MenuTop';
 import MenuSide from 'Pages/ForjaDeLendas/components/MenuSide';
 import BannerItem from 'Pages/ForjaDeLendas/components/BannerItem';
+import BtnForja from 'Pages/ForjaDeLendas/components/BtnForja';
 
 
 function Racas() {
@@ -45,7 +46,7 @@ function Racas() {
           <BannerItem {...itemMostrado} />
         </section>
         : <Loader />}
-        <button onClick={escolher} className={styles.raca__btn}><GiAnvil />  Forjar...</button>
+        <BtnForja onClick={escolher}><GiAnvil /> Forjar...</BtnForja>   
     </section>
   )
 }

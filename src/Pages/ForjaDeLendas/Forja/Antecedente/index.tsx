@@ -6,10 +6,11 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import styles from './Antecedentes.module.scss';
 import Loader from 'Components/Loader';
-import {GiAnvil} from 'react-icons/gi'
+import { GiAnvil } from 'react-icons/gi'
 import MenuTop from 'Pages/ForjaDeLendas/components/MenuTop';
 import MenuSide from 'Pages/ForjaDeLendas/components/MenuSide';
 import BannerItem from 'Pages/ForjaDeLendas/components/BannerItem';
+import BtnForja from 'Pages/ForjaDeLendas/components/BtnForja';
 
 function Antecedente() {
   const [antecedente, setAntecedente] = useState<IAntecedente[]>([]);
@@ -17,7 +18,7 @@ function Antecedente() {
   const atualizaRaca = useAtualizaAntecedente();
   const ir = useNavigate();
 
-  
+
 
   const escolher = () => {
     atualizaRaca(itemMostrado._id);
@@ -45,7 +46,7 @@ function Antecedente() {
           <BannerItem {...itemMostrado} />
         </section>
         : <Loader />}
-        <button onClick={escolher} className={styles.antecedente__btn}><GiAnvil /> Forjar...</button>
+      <BtnForja onClick={escolher}><GiAnvil /> Forjar...</BtnForja>
     </section>
   )
 }

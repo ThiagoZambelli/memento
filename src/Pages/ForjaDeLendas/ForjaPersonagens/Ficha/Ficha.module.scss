@@ -1,0 +1,21 @@
+@import 'styles/_variaveis.module.scss';
+
+.paginaFicha {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__ficha{
+        background-color: rgba(234, 224, 213, .3);
+        max-width: 98%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1rem 0;
+        margin: 2rem 0;
+        border-radius: 1em;
+        box-shadow: 0 0 6px $black;
+        background-image: url('/assets/stardust.png');
+    }
+}

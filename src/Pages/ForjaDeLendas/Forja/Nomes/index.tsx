@@ -7,6 +7,7 @@ import useAtualizaNomes from 'Pages/ForjaDeLendas/state/hooks/useAtualizaNomes';
 import { useRecoilValue } from 'recoil';
 import { logado, userLogado } from 'state/atom';
 import NaoLogado from 'Components/NaoLogado';
+import BtnForja from 'Pages/ForjaDeLendas/components/BtnForja';
 
 function Forja() {
   const nomeLogado = useRecoilValue(userLogado);
@@ -38,8 +39,8 @@ function Forja() {
         <fieldset>
           <LzInput corPrimaria='#22333bff' corSecundaria='#c6ac8fff' label='Nome do Jogador' value={nomeJogador} onChange={setNomeJogador} />
           <LzInput corPrimaria='#22333bff' corSecundaria='#c6ac8fff' label='Nome do Personagem' onChange={setNomePersonagem} value={nomePersonagem} />
-        </fieldset>
-        <button className={styles.forja__btn} disabled={!habilitaBotao} ><GiAnvil /> Forjar...</button>
+        </fieldset>        
+        <BtnForja disabled={!habilitaBotao}><GiAnvil /> Forjar...</BtnForja>
       </form>
     </section> : <NaoLogado />
   )

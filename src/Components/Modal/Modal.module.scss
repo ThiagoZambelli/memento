@@ -20,6 +20,8 @@
         border-radius: 1rem;
         box-shadow: 3px 3px 9px $black, -1px -1px 6px $khaki;
         min-width: 400px;
+        background-image: url('/assets/dark-wood.png');
+        border: 1px solid $almond;
 
         header {
             display: flex;
@@ -33,7 +35,8 @@
             height: 30px;
             cursor: pointer;
             box-shadow: 0 0 3px black;
-            color: $gunmetal;
+            border: 2px solid $gunmetal;
+            color: $almond;
 
             &:hover {
                 animation: jelly 0.5s;
@@ -50,6 +53,7 @@
             text-shadow: 1px 0 $black;
             background-color: $khaki-opaciti-2;
             box-shadow: 1px 1px 4px $black, -.5px -.5px 2px $black;
+            font-weight: bold;
         }
 
         &__body {

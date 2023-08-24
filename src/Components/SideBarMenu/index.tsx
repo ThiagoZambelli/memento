@@ -34,6 +34,7 @@ function SideBarMenu() {
 			setValorSideBar(styles.sideBarDesativa);
 		}
 	}, [estadoSideBar]);
+	
 	return (
 		<section className={`${styles.sideBar} ${valorSideBar}`}>
 			<div className={styles.sideBar__header}>
