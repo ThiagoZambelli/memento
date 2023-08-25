@@ -16,12 +16,12 @@
         display: flex;
         flex-direction: column;
         background-color: $walnut-brown;
-        padding: 1rem;
-        border-radius: 1rem;
-        box-shadow: 3px 3px 9px $black, -1px -1px 6px $khaki;
+        padding: 1rem;        
+        box-shadow: 3px 3px 9px $black, -1px -1px 6px $black;
         min-width: 400px;
         background-image: url('/assets/dark-wood.png');
-        border: 1px solid $almond;
+        border: 1px solid $black;
+        border-radius: 1rem 0 1rem 0;
 
         header {
             display: flex;
@@ -35,7 +35,7 @@
             height: 30px;
             cursor: pointer;
             box-shadow: 0 0 3px black;
-            border: 2px solid $gunmetal;
+            border: 2px solid $black;
             color: $almond;
 
             &:hover {

@@ -6,6 +6,11 @@
     align-items: center;
     justify-content: center;
     font-family: $fonteTextoForja;
+    border-radius: 1rem;
+    margin-top: -1rem;
+    z-index: 10;
+    background-color: $almond;
+    box-shadow: 0 0 9px $black;
 
     h2 {
         font-size: 3rem;

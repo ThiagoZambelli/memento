@@ -4,6 +4,7 @@ import React from 'react'
 import { useRecoilValue } from 'recoil'
 import styles from './Ficha.module.scss';
 import FichaHeader from './FichaHeader';
+import FichaAtributos from './FichaAtributos';
 
 function Ficha() {
     const fichaEscolhida = useRecoilValue(ficha);
@@ -13,7 +14,7 @@ function Ficha() {
                 <section className={styles.paginaFicha__ficha}>
                     <FichaHeader {...fichaEscolhida} />
                     <div className={styles.paginaFicha__ficha__body}>
-                        <div></div>
+                        <div><FichaAtributos /></div>
                         <div></div>
                         <div></div>
                     </div>

@@ -6,7 +6,7 @@
     column-gap: .5em;
     border: 2px solid $gunmetal;
     color: $gunmetal;
-    background-color: transparent;
+    background-color: $walnut-brown;
     border-radius: 10px;
     margin: 2rem 0;
     box-shadow: 3px 3px $black;
@@ -43,7 +43,7 @@
         width: 1em;
         height: 1em;
         border-radius: 50%;
-        background-color: $walnut-brown;
+        background-color: $gunmetal;
         transform-origin: center;
         transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
         transition: transform 0.45s ease-in-out;

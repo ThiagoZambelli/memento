@@ -32,7 +32,7 @@
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      background-color: $khaki;
+      background-color: $black;
       border-bottom: 1px solid $almond;
       box-shadow: 0 0 2px $black;
 
@@ -43,7 +43,7 @@
         width: 40%;
         font-size: 1.3rem;
         padding: .5em 1em;
-        color: $gunmetal;
+        color: $gunmetal-sombra1;
         font-weight: 600;
 
         &:hover {
@@ -55,7 +55,7 @@
 
       svg {
         filter: drop-shadow(1px 1px 0 $gunmetal);
-        color: $gunmetal;
+        color: $gunmetal-sombra1;
         z-index: 9;
         cursor: pointer;
         width: 26px;
