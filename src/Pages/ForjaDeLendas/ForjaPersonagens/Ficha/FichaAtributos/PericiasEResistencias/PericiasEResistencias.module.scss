@@ -1,0 +1,27 @@
+@import 'styles/_variaveis.module.scss';
+
+.periciasEresistencias {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+
+    &__inspiracao, &__proeficiencia{
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: $fonteTextoForja;
+
+        span{
+            padding: .4em;
+            border: 1px solid $black;
+            border-radius: 5px;
+        }
+        p{
+            text-decoration: underline;
+            padding: 0 .2em;
+        }
+    }    
+}

@@ -4,10 +4,12 @@ import Atributo from './Atributo';
 import { BsGearFill } from "react-icons/bs"
 import AtualizaAtributo from './AtualizaAtributo';
 import { atualizaAtributos } from 'Services/personagem';
+import useAtualizaAtributos from './hook/useAtualizaAtributas';
+import PericiasEResistencias from './PericiasEResistencias';
 
 interface IAtributosProps {
     atributos?: number[]
-    _id: string
+    _id: string    
 }
 
 
@@ -19,6 +21,7 @@ function FichaAtributos({ _id, atributos }: IAtributosProps) {
     const [Sab, setSab] = useState<number>()
     const [Car, setCar] = useState<number>()
     const [atualiza, setAtualiza] = useState(false);
+    const atualizaFicha = useAtualizaAtributos();
 
 
     useEffect(() => {
@@ -45,7 +48,7 @@ function FichaAtributos({ _id, atributos }: IAtributosProps) {
             const atributosParaAtualizar = [For!, Dex!, Con!, Int!, Sab!, Car!];
             const id = _id;
             await atualizaAtributos(atributosParaAtualizar, id)
-            
+            atualizaFicha(atributosParaAtualizar);
             setAtualiza(!atualiza);
         }
         else{
@@ -69,7 +72,9 @@ function FichaAtributos({ _id, atributos }: IAtributosProps) {
                     {!atualiza ? <Atributo nome='Sab' valor={Sab!} /> : <AtualizaAtributo onChange={setSab} nome='Sab' value={Sab!} />}
                     {!atualiza ? <Atributo nome='Car' valor={Car!} /> : <AtualizaAtributo onChange={setCar} nome='Car' value={Car!} />}
                 </div>
-                <div></div>
+                <div>
+                    <PericiasEResistencias />
+                </div>
             </div>
         </section>
     )

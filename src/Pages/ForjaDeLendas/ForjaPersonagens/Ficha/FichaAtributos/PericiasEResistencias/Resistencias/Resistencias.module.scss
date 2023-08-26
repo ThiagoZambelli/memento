@@ -1,0 +1,59 @@
+@import 'styles/_variaveis.module.scss';
+
+.resistenciasContainers {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: $fonteTextoForja;
+    align-items: center;
+    border: 1px solid $black;
+    padding: 1rem;
+    border-radius: 1em;
+
+    &__body {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        
+
+        &__reistencia {
+            display: flex;
+            gap: 10px;
+
+            span {
+                order: 2;
+                font-weight: bold;
+            }
+
+            p {
+                order: 1;
+                font-size: 1.1rem;
+                padding: 0 .2em;
+                text-decoration: underline;
+            }
+
+            svg {
+                order: 3;
+            }
+        }
+    }
+
+    &__titulo {
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.resistenciasContainersNaoAjustada {
+    border: 2px solid;
+    max-width: 250px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: $fonteTexto;
+    padding: 1em;
+    line-height: 1.5em;
+    border-radius: 1em;
+    opacity: .8;
+    box-shadow: 0 0 3px $black;
+}
