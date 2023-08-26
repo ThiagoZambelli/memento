@@ -7,14 +7,14 @@ import FichaHeader from './FichaHeader';
 import FichaAtributos from './FichaAtributos';
 
 function Ficha() {
-    const fichaEscolhida = useRecoilValue(ficha);
+    const fichaEscolhida = useRecoilValue(ficha);    
     return (
         fichaEscolhida._id !== ''
             ? <section className={styles.paginaFicha}>
                 <section className={styles.paginaFicha__ficha}>
                     <FichaHeader {...fichaEscolhida} />
                     <div className={styles.paginaFicha__ficha__body}>
-                        <div><FichaAtributos /></div>
+                        <div><FichaAtributos _id={fichaEscolhida._id} atributos={fichaEscolhida.atributos} /></div>
                         <div></div>
                         <div></div>
                     </div>

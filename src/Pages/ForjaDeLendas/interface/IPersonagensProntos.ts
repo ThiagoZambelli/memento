@@ -8,5 +8,6 @@ export default interface IPersonagensProntos {
     nomeJogador: string,
     raca?: IRaca,
     classe?: IClasse,
-    antecedente?: IAntecedente
+    antecedente?: IAntecedente,
+    atributos?: number[]
 }

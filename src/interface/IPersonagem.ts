@@ -7,6 +7,7 @@ export default interface IPersonagem {
     raca: string,
     classe: string,
     antecedente: string,
+    atributos?: number[],
     subRaca?:{
         nome:string,
         descricao: string,

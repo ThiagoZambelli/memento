@@ -5,7 +5,7 @@ import usePegaModificador from '../hook/usePegaModficador';
 
 interface IAtributoProp {
     nome: string,
-    valor: number
+    valor: number   
 }
 
 function Atributo({ nome, valor }: IAtributoProp) {
