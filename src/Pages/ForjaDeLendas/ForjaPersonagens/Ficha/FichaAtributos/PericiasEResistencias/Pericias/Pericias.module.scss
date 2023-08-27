@@ -1,6 +1,6 @@
 @import 'styles/_variaveis.module.scss';
 
-.resistenciasContainers {
+.periciasContainer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -13,28 +13,23 @@
     &__body {
         gap: 10px;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;        
 
-        &__reistencia {
+        &__pericia {
             display: flex;
             gap: 10px;
 
-            span {
+            p {
                 font-size: .9rem;
                 order: 2;
                 font-weight: bold;
             }
 
-            p {
+            span {
                 order: 1;
                 font-size: .9rem;
                 padding: 0 .2em;
                 text-decoration: underline;
-            }
-
-            svg {
-                order: 3;
             }
         }
     }
@@ -44,17 +39,4 @@
         font-weight: bold;
         text-transform: uppercase;
     }
-}
-
-.resistenciasContainersNaoAjustada {
-    border: 2px solid;
-    max-width: 250px;
-    text-align: center;
-    font-size: 1rem;
-    font-family: $fonteTexto;
-    padding: 1em;
-    line-height: 1.5em;
-    border-radius: 1em;
-    opacity: .8;
-    box-shadow: 0 0 3px $black;
 }

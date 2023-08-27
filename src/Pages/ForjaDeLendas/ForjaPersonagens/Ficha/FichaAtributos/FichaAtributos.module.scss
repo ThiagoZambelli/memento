@@ -6,10 +6,12 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    margin: 2rem 0;
 
     &__body {
         display: flex;
         align-items: center;
+        justify-content: space-evenly;
         gap: 10px;
 
         &__atributos {

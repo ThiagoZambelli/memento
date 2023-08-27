@@ -9,7 +9,7 @@ import PericiasEResistencias from './PericiasEResistencias';
 
 interface IAtributosProps {
     atributos?: number[]
-    _id: string    
+    _id: string
 }
 
 
@@ -42,7 +42,7 @@ function FichaAtributos({ _id, atributos }: IAtributosProps) {
         }
 
     }, [])
-    
+
     const mudaAtualizacao = async () => {
         if (atualiza) {
             const atributosParaAtualizar = [For!, Dex!, Con!, Int!, Sab!, Car!];
@@ -51,7 +51,7 @@ function FichaAtributos({ _id, atributos }: IAtributosProps) {
             atualizaFicha(atributosParaAtualizar);
             setAtualiza(!atualiza);
         }
-        else{
+        else {
             setAtualiza(!atualiza);
         }
 
