@@ -1,0 +1,53 @@
+@import "styles/_variaveis.module.scss";
+
+.newContainer {
+    box-sizing: border-box;
+    max-width: 99%;
+    margin: 2rem 0;
+
+    span {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        font-size: 2rem;
+        font-family: $fonteTexto;
+        color: $black;
+        padding: 10px;
+        text-shadow: 0 0 6px #A0F8EA, 0 0 12px #A0F8EA, 0 0 18px #A0F8EA;
+        svg{
+            filter: drop-shadow(0 0 18px #A0F8EA);
+        }
+    }
+}
+
+.new {
+    max-width: 100%;
+    border: 1px solid $black;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: $fonteTexto;
+    padding: 2rem .5rem;
+    line-height: 1.5em;
+    box-shadow: 1px 1px 6px $black;
+
+    &__titulo {
+        line-height: 1.5em;
+        font-size: 2rem;
+        margin-left: 1em;
+        color: $gunmetal;
+
+    }
+
+    p {
+        font-size: 1.3rem;
+        padding: 0 1em;
+
+        svg {
+            margin-right: 2rem;
+        }
+
+    }
+}
