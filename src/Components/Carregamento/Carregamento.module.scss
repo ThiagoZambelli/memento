@@ -1,0 +1,111 @@
+@import 'styles/_variaveis.module.scss';
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__loader {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        background-color: #fff2;
+        animation: rotacionar 24s linear infinite;
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30px;
+                height: 30px;
+                background: transparent;                
+                border: 2px solid $gunmetal-sombra1;
+                border-radius: 50%;                
+            }
+
+            &:nth-of-type(3n+3)::before {
+                background-color: $almond;
+                border: none;
+                box-shadow: 0 0 10px $gunmetal-sombra1,
+                    0 0 20px $gunmetal-sombra1,
+                    0 0 30px $gunmetal-sombra1
+            }
+        }
+
+        &__1 {
+            transform: rotate(calc(30deg * 1));
+        }
+
+        &__2 {
+            transform: rotate(calc(30deg * 2));
+        }
+
+        &__3 {
+            transform: rotate(calc(30deg * 3));
+        }
+
+        &__4 {
+            transform: rotate(calc(30deg * 4));
+        }
+
+        &__5 {
+            transform: rotate(calc(30deg * 5));
+        }
+
+        &__6 {
+            transform: rotate(calc(30deg * 6));
+        }
+
+        &__7 {
+            transform: rotate(calc(30deg * 7));
+        }
+
+        &__8 {
+            transform: rotate(calc(30deg * 8));
+        }
+
+        &__9 {
+            transform: rotate(calc(30deg * 9));
+        }
+
+        &__10 {
+            transform: rotate(calc(30deg * 10));
+        }
+
+        &__11 {
+            transform: rotate(calc(30deg * 11));
+        }
+
+        &__12 {
+            transform: rotate(calc(30deg * 12));
+        }
+    }
+
+    h3 {
+        position: absolute;
+        font-size: 1.2em;
+        font-weight: 500;
+        color: $gunmetal;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px $gunmetal-sombra1,
+            0 0 20px $gunmetal-sombra1,
+            0 0 30px $gunmetal-sombra1
+    }
+}
+@keyframes rotacionar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

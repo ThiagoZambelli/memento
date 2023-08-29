@@ -11,10 +11,11 @@
         column-gap: 10px;
         font-size: 2rem;
         font-family: $fonteTexto;
-        color: $black;
+        color: $gunmetal;
         padding: 10px;
         text-shadow: 0 0 6px #A0F8EA, 0 0 12px #A0F8EA, 0 0 18px #A0F8EA;
-        svg{
+
+        svg {
             filter: drop-shadow(0 0 18px #A0F8EA);
         }
     }
@@ -32,6 +33,8 @@
     padding: 2rem .5rem;
     line-height: 1.5em;
     box-shadow: 1px 1px 6px $black;
+    background-color: $pagina;
+    background-image: url('../assets/rice-paper.png');
 
     &__titulo {
         line-height: 1.5em;
@@ -44,10 +47,30 @@
     p {
         font-size: 1.3rem;
         padding: 0 1em;
+        text-align: justify;
+        line-height: 1.5em;
 
         svg {
             margin-right: 2rem;
         }
 
+    }
+}
+
+@media screen and (max-width:700px) {
+    .new {
+        &__titulo {           
+            font-size: 1.5rem; 
+
+        }
+
+        p {
+            font-size: 1rem;           
+
+            svg {
+                margin-right: 1rem;
+            }
+
+        }
     }
 }

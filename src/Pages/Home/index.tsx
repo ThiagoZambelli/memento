@@ -5,7 +5,7 @@ import News from "./News";
 function Home() {
 	return (
 		<section className={styles.home}>           
-			<News />
+			<News />			
 		</section>
 	);
 }
