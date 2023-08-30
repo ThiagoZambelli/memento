@@ -1,0 +1,35 @@
+@import 'styles/_variaveis.module.scss';
+
+.pericia {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    div{
+        width: 15px;
+        height: 15px;
+        border: 1px solid $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 0;
+        svg{
+            color: $gunmetal-sombra1;
+            transform: scale(1.6);
+            filter: drop-shadow(1px 1px $walnut-brown);
+        }
+    }
+    p {
+        font-size: .9rem;
+        order: 2;
+        font-weight: bold;
+    }
+
+    span {
+        order: 1;
+        font-size: .9rem;
+        padding: 0 .2em;
+        text-decoration: underline;
+    }
+}

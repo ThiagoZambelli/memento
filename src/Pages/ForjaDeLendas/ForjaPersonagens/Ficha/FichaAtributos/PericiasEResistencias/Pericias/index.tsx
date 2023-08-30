@@ -3,6 +3,7 @@ import usePegaModificador from '../../hook/usePegaModficador';
 import { useRecoilValue } from 'recoil';
 import { ficha } from 'Pages/ForjaDeLendas/state/atom';
 import styles from './Pericias.module.scss';
+import Pericia from './Pericia';
 
 function Pericias() {
     const fichaEscolhida = useRecoilValue(ficha);
@@ -27,28 +28,28 @@ function Pericias() {
             ? <section className={styles.periciasContainer}>
                 <div className={styles.periciasContainer__body}>
                     {/* Modificador de Força */}
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[0])}</span><p>Atletismo</p></div>
+                    <Pericia atributo={atributos[0]} nome='Atletismo'/>                    
                     {/* Modificador de Destreza */}
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[1])}</span><p>Acrobacia</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[1])}</span><p>Furtividade</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[1])}</span><p>Prestidigitação</p></div>                    
+                    <Pericia atributo={atributos[1]} nome='Acrobacia'/> 
+                    <Pericia atributo={atributos[1]} nome='Furtividade'/> 
+                    <Pericia atributo={atributos[1]} nome='Prestidigitação'/>                                 
                     {/* Modificador de Inteligencia */}
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[3])}</span><p>Arcanismo</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[3])}</span><p>História</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[3])}</span><p>Invesstigação</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[3])}</span><p>Natureza</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[3])}</span><p>Religião</p></div>
+                    <Pericia atributo={atributos[3]} nome='Arcanismo'/>  
+                    <Pericia atributo={atributos[3]} nome='História'/>
+                    <Pericia atributo={atributos[3]} nome='Invesstigação'/>  
+                    <Pericia atributo={atributos[3]} nome='Natureza'/>  
+                    <Pericia atributo={atributos[3]} nome='Religião'/>               
                     {/* Modificador de Sabedoria */}
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[4])}</span><p>Intuição</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[4])}</span><p>Lidar com Animais</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[4])}</span><p>Medicina</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[4])}</span><p>Percepção</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[4])}</span><p>Sobrevivência</p></div>
+                    <Pericia atributo={atributos[4]} nome='Intuição'/>
+                    <Pericia atributo={atributos[4]} nome='Lidar com Animais'/>
+                    <Pericia atributo={atributos[4]} nome='Medicina'/>
+                    <Pericia atributo={atributos[4]} nome='Percepção'/>
+                    <Pericia atributo={atributos[4]} nome='Sobrevivência'/>                  
                     {/* Modificador de Carisma */}
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[5])}</span><p>Atuação</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[5])}</span><p>Enganação</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[5])}</span><p>Intimidação</p></div>
-                    <div className={styles.periciasContainer__body__pericia}><span>{modificador(atributos[5])}</span><p>Persuasâo</p></div>
+                    <Pericia atributo={atributos[5]} nome='Atuação'/>
+                    <Pericia atributo={atributos[5]} nome='Enganação'/>
+                    <Pericia atributo={atributos[5]} nome='Intimidação'/>
+                    <Pericia atributo={atributos[5]} nome='Persuasâo'/>    
                 </div>
                 <p className={styles.periciasContainer__titulo}>Pericias</p>
             </section>
