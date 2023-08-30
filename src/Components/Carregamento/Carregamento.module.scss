@@ -5,6 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: $almond;
+    background-image: url('./assets/nice-snow.png');
 
     &__loader {
         position: relative;

@@ -13,7 +13,8 @@
         align-items: center;
         width: 100%;
         color: #3BAA94;
-        text-shadow: 1px 1px 8px $black, -2px -2px #FAFAE3;
+        text-shadow:  2px 2px #FAFAE3;
+        filter: drop-shadow(2px 2px #E9E9CC) grayscale(50%);
 
         h2 {
             display: flex;
