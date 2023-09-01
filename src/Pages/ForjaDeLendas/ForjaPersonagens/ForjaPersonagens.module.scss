@@ -1,7 +1,8 @@
 @import 'styles/_variaveis.module.scss';
 
 .personagens{
-    background-color: $almond;
+    background: $cardsGradiente;
+    border-top: 2px solid $black;
     &__carregando{
         width: 100%;
         min-height: 60vh;

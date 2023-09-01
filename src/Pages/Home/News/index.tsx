@@ -15,10 +15,9 @@ function News() {
 
     const pegaNews = async () => {
         setNoticias(await getNews());
-    }
+    }    
 
-
-    return (
+    return (        
         <section className={styles.news}>
             <div className={styles.news__titulo}>
                 <h2><GiScrollUnfurled />What's Rolling<GiScrollUnfurled /></h2>

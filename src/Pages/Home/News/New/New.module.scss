@@ -30,11 +30,24 @@
     justify-content: flex-start;
     align-items: flex-start;
     font-family: $fonteTexto;
-    padding: 2rem .5rem;
+    padding: .5rem;
     line-height: 1.5em;
     box-shadow: 1px 1px 6px $black;
     background-color: $pagina;
     background-image: url('../assets/rice-paper.png');
+
+    &__date{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: .2em;
+        font-size: 14px;
+        width: 100%;
+        gap: 5px;        
+        color: $walnut-brown;
+        font-weight: bold;
+        text-shadow: 1px 1px $gunmetal;
+    }
 
     &__titulo {
         line-height: 1.5em;

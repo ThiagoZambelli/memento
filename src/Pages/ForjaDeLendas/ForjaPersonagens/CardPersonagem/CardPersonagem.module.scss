@@ -1,76 +1,94 @@
 @import "styles/_variaveis.module.scss";
 
-.card{
-    width: 350px;
-    box-sizing: border-box;
+.card {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.25);
-    box-shadow: 0 0 9px black;   
-    border-radius: 1em 1em 0 0;
+    width: 340px;
+    border-top: 4px solid $walnut-brown;
+    border-left: 4px solid $walnut-brown;
+    border-bottom: 4px solid $khaki;
+    border-right: 4px solid $khaki;
+    box-shadow: -4px -4px $khaki, 4px 4px $walnut-brown;
+    border-radius: 4px;
+    height: 550px;
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
+    background-color: $almond;
+    background-image: url("/assets/cardBG.png");
     cursor: pointer;
-    transition: .5s;
-    
-    &:hover{
-        transform: scale(1.05);
+    transition: .4s;
+
+    &:hover {
+        transform: scale(1.01);
     }
 
-    header{
-        background-color: $almond-vidro;
-        border-radius: 1em 1em 0 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        h3{
-            font-family: $fontMenu;
-            font-size: 2.5rem;
-            color: $gunmetal;
-            text-decoration: underline;
-            justify-content: space-evenly;
-            display: flex;
-            align-items: center;
-            column-gap: 1em;
-            padding: .3em 0;
-            p{
-                box-sizing: border-box;
-                flex-wrap: wrap;
-                text-align: center;
-                max-width: 60%;
-            }
-        }
-        h4{
-            padding: .5em 0;
-            font-size: 1.6rem;
-            color: $almond;            
-            span{
-                text-transform: uppercase;
-                color: $walnut-brown;
-                text-decoration: none;
-                padding: 0 1em;
-            }
-        }
-    }
-    div{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        padding: 1em;
-        width: 100%;
-        font-family: $fonteTextoForja;
-        font-size: 1.4rem;
-        row-gap: 1em;
-        text-transform: uppercase;
+    &__nome {
+        font-family: $fonteTituloForja;
         color: $gunmetal;
-        p{
+        font-size: 2rem;
+        padding: .2em;
+        text-shadow: 0 0 6px $gunmetal-sombra1, 0 0 12px $gunmetal-sombra1;
+    }
+
+    &__imagem {
+        width: 300px;
+        height: 300px;
+        border: 3px solid $gunmetal;
+        box-shadow: 2px 2px $gunmetal-sombra1, -2px -2px $gunmetal-sombra1;
+        border-radius: 1em;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: flex-end;
+
+        svg {
+            margin: 1rem 1rem 0 0;
+            width: 25px;
+            height: 25px;
+            fill: $black;
+            stroke: $gunmetal-sombra1;
+            &:hover{
+                filter:drop-shadow(0 0 6px $gunmetal-sombra1);
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        width: 100%;
+        padding: 1rem .5rem 0 .5rem;
+        font-family: $fonteTextoForja;
+
+        h3 {
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+            color: $walnut-brown;
+            text-shadow: 1px 1px $khaki;
+        }
+
+        div {
             display: flex;
             align-items: center;
-            column-gap: 1em;
+            justify-content: space-around;
+            gap: 1em;
+            color: $gunmetal-sombra1;
+            text-shadow: 1px 1px $khaki;
+            font-size: 1.5rem;
+        }
+
+        span {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            padding: .5em;
+            color: $gunmetal-sombra1;
+            text-shadow: 1px 1px $khaki;
+            font-weight: bold;
         }
     }
 }
