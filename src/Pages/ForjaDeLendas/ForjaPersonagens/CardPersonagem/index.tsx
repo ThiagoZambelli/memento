@@ -4,6 +4,7 @@ import IPersonagensProntos from 'Pages/ForjaDeLendas/interface/IPersonagensPront
 import {useSetRecoilState } from 'recoil';
 import { ficha } from 'Pages/ForjaDeLendas/state/atom';
 import { useNavigate } from 'react-router-dom';
+import {GiArchiveResearch} from 'react-icons/gi'
 import useAbreModalUrl from 'state/hooks/useAbreModalUrl';
 
 
@@ -18,14 +19,15 @@ function CardPersonagem(personagem: IPersonagensProntos) {
     ir('/forja-de-lendas/ficha');
   }
   return (
-    <section className={styles.card} onClick={aoClicar}>
+    <section className={styles.card}>
       <header className={styles.card__nome}><h2>{personagem.nomePersonagem}</h2></header>
       <div style={{backgroundImage:`url(${imagem})`}} className={styles.card__imagem}></div>
-      <div className={styles.card__body}>
+      <div className={styles.card__body} onClick={aoClicar}>
         <h3>{personagem.classe?.nome}</h3>
-        <div>
+        <div className={styles.card__body__info}>
           <p>{personagem.raca?.nome}</p>
           <p>{personagem.antecedente?.nome}</p>
+          <GiArchiveResearch />
         </div>
         <span>Jogador: {personagem.nomeJogador}</span>
       </div>

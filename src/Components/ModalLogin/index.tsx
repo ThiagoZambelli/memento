@@ -6,6 +6,7 @@ import useLogar from "state/hooks/useLogar";
 import useAbreModalLogin from "state/hooks/useAbreModalLogin";
 import Loader from "Components/Loader";
 import useSetUserLogado from "state/hooks/useSetUserLogado";
+import { useNavigate } from "react-router-dom";
 
 function ModalLogin() {
 	const [senha, setSenha] = useState("");
@@ -14,6 +15,7 @@ function ModalLogin() {
 	const logarSite = useLogar();
 	const fechar = useAbreModalLogin();
 	const setNome = useSetUserLogado();
+	const ir = useNavigate();
 
 
 
@@ -27,6 +29,7 @@ function ModalLogin() {
 			setEmail("");
 			setNome(response);
 			setCarregando(false);
+			ir("/")
 			fechar();
 		} else {
 			setSenha("");
