@@ -37,10 +37,11 @@
         width: 100%;
         padding: 1rem .4rem;
         z-index: 999;
+        border: 2px solid $dark-color-card;
 
         display: none;
         opacity: 0;
-        background-color: rgba($color: $ligth-color-card2, $alpha: .8);
+        background-color: rgba($color: $ligth-color-card2, $alpha: .9);
         transition: opacity 1s ease-in-out;
 
 
@@ -59,6 +60,12 @@
                     cursor: pointer;
                 }
             }
+        }
+        h3{
+            text-align: center;
+            font-size: 1.5rem;
+            line-height: 1.5em;
+            color: $dark-color-card;
         }
 
         p {

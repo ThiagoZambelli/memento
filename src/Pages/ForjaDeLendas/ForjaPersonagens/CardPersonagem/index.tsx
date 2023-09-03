@@ -47,6 +47,7 @@ function CardPersonagem(personagem: IPersonagensProntos) {
       <section className={styles.card}>
         <div key={`${personagem._id}modal`} className={`${styles.card__modal} ${abreModal ? styles.show : '' }`}>
           <button onClick={abreModalImagem} className={styles.card__modal__closeBTN}><GrClose /></button>
+          <h3>Insira uma URL com final .png ou .jpg</h3>
           <LzInput value={novaUrl} onChange={setNovaUrl} label='Insira a URL' corPrimaria='#36462F' corSecundaria='#BACEBF'/>
           {erro && <p>Url invalida!</p>}
           <LzBotao onClick={mudaImagem} forma='gota' corHover='#64765B' corPrimaria='#36462F'>Cadastrar</LzBotao>
