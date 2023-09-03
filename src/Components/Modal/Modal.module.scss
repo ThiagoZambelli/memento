@@ -28,15 +28,15 @@
             width: 100%;
             align-items: flex-end;
             justify-content: flex-end;
+            
         }
 
         &__botaoFechar {
             width: 30px;
             height: 30px;
             cursor: pointer;
-            box-shadow: 0 0 3px black;
-            border: 2px solid $black;
-            color: $almond;
+            filter: drop-shadow(0 0 3px $almond);
+            
 
             &:hover {
                 animation: jelly 0.5s;

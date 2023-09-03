@@ -47,7 +47,7 @@ function FichaAtributos({ _id, atributos }: IAtributosProps) {
         if (atualiza) {
             const atributosParaAtualizar = [For!, Dex!, Con!, Int!, Sab!, Car!];
             const id = _id;
-            await atualizaAtributos(atributosParaAtualizar, id)
+            await atualizaAtributos(atributosParaAtualizar, id);
             atualizaFicha(atributosParaAtualizar);
             setAtualiza(!atualiza);
         }

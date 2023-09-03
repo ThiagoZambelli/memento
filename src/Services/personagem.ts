@@ -32,6 +32,20 @@ export async function atualizaAtributos(atributos: number[], id: string) {
         console.log(err)
     }
 }
+export async function atualizaImg(img: string, id: string) {
+    try {
+        const token = sessionStorage.getItem('token');
+        await personagemAPI.patch('atualizaImg', { img, id }, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
+
 export async function meusPersonagens() {
     const token = sessionStorage.getItem('token');
     try {
