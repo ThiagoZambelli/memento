@@ -12,9 +12,7 @@ function Modal({closeModal, titulo, children, aberto }: IModalProps) {
 	return (
 		<section key={titulo} className={`${styles.modalOverlay} ${aberto ? styles.modalAberto : styles.modalFechado}`}>
 			<section className={styles.modalOverlay__modal}>
-				<header>
-					<GrClose className={styles.modalOverlay__modal__botaoFechar} onClick={closeModal} />
-				</header>
+				<button className={styles.modalOverlay__modal__btn}  onClick={closeModal} ><GrClose /></button>
 				<h2>{titulo}</h2>
 				<div className={styles.modalOverlay__modal__body}>{children}</div>
 			</section>

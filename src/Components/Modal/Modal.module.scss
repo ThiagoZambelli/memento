@@ -22,24 +22,27 @@
         background-image: url('/assets/dark-wood.png');
         border: 1px solid $black;
         border-radius: 1rem 0 1rem 0;
+       
 
-        header {
+        &__btn{
+            width: 25px;
+            height: 25px;
+            padding: 0;
+            align-self: flex-end;
             display: flex;
-            width: 100%;
-            align-items: flex-end;
-            justify-content: flex-end;
+            align-items: center;
+            justify-content: center;
+            background-color: $khaki;
+            border: none;
+            border-radius: 5px;
             
-        }
-
-        &__botaoFechar {
-            width: 30px;
-            height: 30px;
-            cursor: pointer;
-            filter: drop-shadow(0 0 3px $almond);
-            
+            svg{
+                stroke: $almond;
+            }
 
             &:hover {
                 animation: jelly 0.5s;
+                cursor: pointer;
             }
         }
 

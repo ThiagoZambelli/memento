@@ -10,5 +10,6 @@ export default interface IPersonagensProntos {
     classe?: IClasse,
     antecedente?: IAntecedente,
     atributos?: number[],
-    img?: string
+    img?: string,
+    pericias?: string[]
 }
