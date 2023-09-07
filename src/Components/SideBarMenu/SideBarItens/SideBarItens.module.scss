@@ -8,7 +8,8 @@
     width: 100%;
 
     a {
-        color: $walnut-brown;
+        color: $ligth-color-pagina1;
+        text-shadow: 1px 1px black;
         font-family: $fonteTexto;
         font-size: 1.5rem;
         text-decoration: none;
@@ -19,7 +20,6 @@
         transition: .5s;
         background-color: $gunmetal;
         border-top: 1px solid $almond;
-        text-shadow: -1px -1px 0 $black;
         box-shadow: 1px 0 2px black, -1px 0 2px black;
         background-image: url('/assets/stardust.png');
         background-size: cover;
@@ -31,7 +31,8 @@
         overflow: hidden;       
 
         &:hover {     
-            background-color: $almond;       
+            background-color: $almond;
+            color: $dark-color-pagina2;     
             transform: scale(1.04);
         }
     }
