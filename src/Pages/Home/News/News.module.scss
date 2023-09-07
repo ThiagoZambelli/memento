@@ -3,6 +3,8 @@
 .news {
     max-width: 100%;
     background-image: url('./assets/nice-snow.png');
+    min-width: 100%;
+    min-height: 100vh; 
     padding: 0 .5rem;
 
     &__titulo {

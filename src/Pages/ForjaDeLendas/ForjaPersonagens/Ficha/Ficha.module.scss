@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
 
-    &__ficha{
+    &__ficha {
         background-color: $pagina;
         max-width: 98%;
         display: flex;
@@ -18,13 +18,39 @@
         border-radius: 5px;
         box-shadow: 0 0 6px $black;
         background-image: url('/assets/stardust.png');
+
+        &__body {
+            display: flex;
+            margin: 2rem 0;
+            gap: 1rem;
+
+            div {
+                animation: fadeInScaleUp 1s ease-out;
+            }
+        }
     }
 }
 
-@media screen and (max-width: 490px ) {
-    .paginaFicha{
-        &__ficha{
+.someDaTela {
+    display: none;
+}
+
+@media screen and (max-width: 490px) {
+    .paginaFicha {
+        &__ficha {
             max-width: 100%;
         }
+    }
+}
+
+@keyframes fadeInScaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }

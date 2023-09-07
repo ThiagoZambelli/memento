@@ -11,5 +11,9 @@ export default interface IPersonagensProntos {
     antecedente?: IAntecedente,
     atributos?: number[],
     img?: string,
-    pericias?: string[]
+    pericias?: string[],
+    vinculo?: string,
+    ideais?: string,
+    fraqueza?: string,
+    tracoDePersonalidade?: string
 }

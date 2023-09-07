@@ -1,0 +1,32 @@
+@import 'styles/_variaveis.module.scss';
+
+.cardTexto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    border: 1px solid $black;
+    border-radius: 10px;
+
+    &__btn{
+        align-self: flex-end;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__titulo{
+        text-align: center;
+        font-family: $fonteTextoForja;
+        font-weight: bold;
+    }
+    &__textArea, &__texto{
+        resize: none;
+        overflow-y: auto;
+        width: 300px;
+        height: 80px;
+        font-weight: 500;
+        padding: .5em;
+    }
+}

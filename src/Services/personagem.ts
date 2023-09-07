@@ -45,6 +45,20 @@ export async function atualizaPericias(pericias: string[] | [], id: string) {
         console.log(err)
     }
 }
+export async function atualizaTextos(texto: string, valor: string, id: string) {
+    try {
+        const token = sessionStorage.getItem('token');
+        await personagemAPI.patch('atualizaTextos', { texto, valor, id }, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
+
 export async function atualizaImg(img: string, id: string) {
     try {
         const token = sessionStorage.getItem('token');
