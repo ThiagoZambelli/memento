@@ -1,0 +1,68 @@
+@import 'styles/_variaveis.module.scss';
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    font-size: 1.8rem;
+    border-radius: 10px;
+    padding: .2em .5em;
+    transition: .5s;
+    background-color: $ligth-color-pagina;
+    color: $dark-color-pagina;
+    border: 1px solid $dark-color-pagina;
+    box-shadow: 2px 2px $dark-color-pagina2, 3px 3px $black;
+    margin: 2em 0;
+
+    z-index: 1;
+    position: relative;
+    outline: none;    
+    overflow: hidden;
+    transition: color 0.8s ease-in-out;
+    transition: box-shadow 0.8s ease-in-out;
+
+    &::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        background-color: $dark-color-pagina;
+        transform-origin: center;
+        transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+        transition: transform 0.45s ease-in-out;
+    }
+
+    &:hover{
+        cursor: pointer;
+        color: $ligth-color-pagina;
+        border: 1px solid $ligth-color-pagina;
+        box-shadow: 3px 3px $ligth-color-pagina, 4px 4px $black;
+    }
+    &:active{
+        box-shadow: 1px 1px $black;
+    }
+
+    &:hover::before {
+        transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+
+    }
+
+    &:disabled {
+        background-color: transparent;
+        color: $black;
+        border: none;
+        box-shadow: none;
+
+        &::before {
+            display: none;
+        }
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+}

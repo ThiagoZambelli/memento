@@ -17,11 +17,11 @@
         flex-direction: column;
         background-color: $walnut-brown;
         padding: 1rem;        
-        box-shadow: 3px 3px 9px $black, -1px -1px 6px $black;
+        box-shadow: 4px 4px 6px $dark-color-pagina2, 5px 5px $black;
         min-width: 400px;
         background-image: url('/assets/dark-wood.png');
-        border: 1px solid $black;
-        border-radius: 1rem 0 1rem 0;
+        border: 1px solid $dark-color-pagina;
+        border-radius: 0 1rem 1rem 0;
        
 
         &__btn{
@@ -32,17 +32,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: $khaki;
-            border: none;
+            background-color: $ligth-color-pagina;
+            border: 1px solid $dark-color-pagina;
+            box-shadow: 2px 2px $dark-color-pagina2, 3px 3px $black;
             border-radius: 5px;
+            transition: box-shadow .5s ease-in-out;
             
             svg{
-                stroke: $almond;
+                color: $dark-color-pagina;
             }
 
             &:hover {
                 animation: jelly 0.5s;
                 cursor: pointer;
+            }
+            &:active{
+                box-shadow: 1px 1px $black;
             }
         }
 
@@ -52,10 +57,10 @@
             padding: 1rem 0;
             margin: 2rem 0;
             border-radius: 1em;
-            color: $gunmetal;
-            text-shadow: 1px 0 $black;
+            color: $ligth-color-pagina;
+            text-shadow: 2px 2px $dark-color-pagina;
             background-color: $khaki-opaciti-2;
-            box-shadow: 1px 1px 4px $black, -.5px -.5px 2px $black;
+            box-shadow: 2px 2px $dark-color-pagina2, 3px 3px $black;;
             font-weight: bold;
         }
 

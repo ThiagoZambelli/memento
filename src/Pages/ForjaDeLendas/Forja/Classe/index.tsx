@@ -13,7 +13,7 @@ import { personagemCriacao } from 'state/atom';
 import MenuTop from 'Pages/ForjaDeLendas/components/MenuTop';
 import MenuSide from 'Pages/ForjaDeLendas/components/MenuSide';
 import BannerItem from 'Pages/ForjaDeLendas/components/BannerItem';
-import BtnForja from 'Pages/ForjaDeLendas/components/BtnForja';
+import BtnComum from 'Components/BtnComum';
 
 
 function Classe() {
@@ -60,7 +60,7 @@ function Classe() {
           <BannerItem tipo='classe' {...itemMostrado} />
         </section>
         : <Loader />}
-      <BtnForja onClick={escolher}><GiAnvil /> Forjar...</BtnForja>   
+      <BtnComum onClick={escolher}><GiAnvil /> Forjar...</BtnComum>   
     </section>
   )
 }

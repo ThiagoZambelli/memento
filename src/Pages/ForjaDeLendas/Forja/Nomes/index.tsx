@@ -7,7 +7,7 @@ import useAtualizaNomes from 'Pages/ForjaDeLendas/state/hooks/useAtualizaNomes';
 import { useRecoilValue } from 'recoil';
 import { logado, userLogado } from 'state/atom';
 import NaoLogado from 'Components/NaoLogado';
-import BtnForja from 'Pages/ForjaDeLendas/components/BtnForja';
+import BtnComum from 'Components/BtnComum';
 
 function Forja() {
   const nomeLogado = useRecoilValue(userLogado);
@@ -37,10 +37,10 @@ function Forja() {
       <p>O primeiro passo para uma grande história é dar um nome para o rumo que ela ira tomar!</p>
       <form onSubmit={atualizacao}>
         <fieldset>
-          <LzInput corPrimaria='#22333bff' corSecundaria='#c6ac8fff' label='Nome do Jogador' value={nomeJogador} onChange={setNomeJogador} />
-          <LzInput corPrimaria='#22333bff' corSecundaria='#c6ac8fff' label='Nome do Personagem' onChange={setNomePersonagem} value={nomePersonagem} />
+          <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label='Nome do Jogador' value={nomeJogador} onChange={setNomeJogador} />
+          <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label='Nome do Personagem' onChange={setNomePersonagem} value={nomePersonagem} />
         </fieldset>        
-        <BtnForja disabled={!habilitaBotao}><GiAnvil /> Forjar...</BtnForja>
+        <BtnComum disabled={!habilitaBotao}><GiAnvil /> Forjar...</BtnComum>
       </form>
     </section> : <NaoLogado />
   )

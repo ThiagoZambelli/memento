@@ -10,7 +10,7 @@ import { GiAnvil } from 'react-icons/gi'
 import MenuTop from 'Pages/ForjaDeLendas/components/MenuTop';
 import MenuSide from 'Pages/ForjaDeLendas/components/MenuSide';
 import BannerItem from 'Pages/ForjaDeLendas/components/BannerItem';
-import BtnForja from 'Pages/ForjaDeLendas/components/BtnForja';
+import BtnComum from 'Components/BtnComum';
 
 function Antecedente() {
   const [antecedente, setAntecedente] = useState<IAntecedente[]>([]);
@@ -46,7 +46,7 @@ function Antecedente() {
           <BannerItem {...itemMostrado} />
         </section>
         : <Loader />}
-      <BtnForja onClick={escolher}><GiAnvil /> Forjar...</BtnForja>
+      <BtnComum onClick={escolher}><GiAnvil /> Forjar...</BtnComum>
     </section>
   )
 }

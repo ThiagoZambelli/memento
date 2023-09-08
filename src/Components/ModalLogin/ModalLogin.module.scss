@@ -8,15 +8,6 @@
     row-gap: 2rem;
     max-width: 90%;    
     input{
-        filter: drop-shadow(2px 2px 6px $black);
-    }
-
-    &__containerbtn{
-        width: 100px;
-        height: 100px;
-        box-sizing: border-box;
-        button{
-            filter: drop-shadow(2px 2px 6px $black);
-        }
-    }
+        box-shadow: 2px 2px $dark-color-pagina2, 3px 3px $black;;
+    }   
 }

@@ -7,6 +7,7 @@ import useAbreModalLogin from "state/hooks/useAbreModalLogin";
 import Loader from "Components/Loader";
 import useSetUserLogado from "state/hooks/useSetUserLogado";
 import { useNavigate } from "react-router-dom";
+import BtnComum from "Components/BtnComum";
 
 function ModalLogin() {
 	const [senha, setSenha] = useState("");
@@ -40,10 +41,10 @@ function ModalLogin() {
 
 	return (
 		<form className={styles.modalLogin} onSubmit={logar}>
-			<LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Email" value={email} onChange={setEmail} type="email" />
-			<LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Senha" value={senha} onChange={setSenha} type="password" />
+			<LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Email" value={email} onChange={setEmail} type="email" />
+			<LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Senha" value={senha} onChange={setSenha} type="password" />
 			<div className={styles.modalLogin__containerbtn}>
-				{!carregando ? <LzBotao corSecundaria="#eae0d5ff" corPrimaria="#5e503fff" corHover="#22333bff">Logar</LzBotao> : <Loader />}
+				{!carregando ? <BtnComum >Logar</BtnComum> : <Loader />}
 			</div>
 		</form>
 	);

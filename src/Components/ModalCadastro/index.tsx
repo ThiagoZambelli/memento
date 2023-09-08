@@ -5,6 +5,7 @@ import { postUser } from 'Services/usuario';
 import useValidaUsuario from 'state/hooks/useValidaUsuario';
 import useAbreModalCadastro from 'state/hooks/useAbreModalCadastro';
 import Loader from 'Components/Loader';
+import BtnComum from 'Components/BtnComum';
 
 function ModalCadastro() {
     const [nome, setNome] = useState<string>("");
@@ -54,12 +55,12 @@ function ModalCadastro() {
 
     return (
         <form className={styles.modalCadastro} onSubmit={cadastrar}>
-            <LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Nome" value={nome} onChange={setNome} />
-            <LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Email" value={email} onChange={setEmail} type='email' />
-            <LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Senha" value={senha} onChange={setSenha} type='password' />
-            <LzInput corBg='#c6ac8fff' corSecundaria="#c6ac8fff" corPrimaria="#22333bff" label="Confirmar Senha" value={confSenha} onChange={setConfSenha} type='password' />
+            <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Nome" value={nome} onChange={setNome} />
+            <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Email" value={email} onChange={setEmail} type='email' />
+            <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Senha" value={senha} onChange={setSenha} type='password' />
+            <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Confirmar Senha" value={confSenha} onChange={setConfSenha} type='password' />
             <div className={styles.modalCadastro__containerbtn}>
-                {!carregando ? <LzBotao corSecundaria="#eae0d5ff" corPrimaria="#5e503fff" corHover="#22333bff">Cadastrar</LzBotao> : <Loader />}
+                {!carregando ? <BtnComum >Cadastrar</BtnComum> : <Loader />}
             </div>
         </form>
     )
