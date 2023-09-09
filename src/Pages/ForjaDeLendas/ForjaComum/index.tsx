@@ -10,7 +10,7 @@ const bannerForja = {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     height: '200px',
-    boxShadow: '0 0 9px black', // Ajuste a altura conforme necessário
+    boxShadow: '0 0 9px black', // Ajuste a altura conforme necessário    
 };
 
 const links = [

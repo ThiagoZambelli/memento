@@ -7,8 +7,8 @@
   /* A imagem será redimensionada para cobrir todo o elemento */
   background-position: center;
 
-  border-right: 2px solid $almond;
-  border-top: 2px solid $almond;
+  border-right: 2px solid $ligth-color-pagina;
+  border-top: 2px solid $ligth-color-pagina;
   z-index: 10;
   height: 100vh;
   background-color: $gunmetal;
@@ -32,7 +32,7 @@
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      background-color: $black;
+      background-color: $ligth-color-pagina;
       border-bottom: 1px solid $almond;
       box-shadow: 0 0 2px $black;
 
@@ -43,19 +43,20 @@
         width: 40%;
         font-size: 1.3rem;
         padding: .5em 1em;
-        color: $gunmetal-sombra1;
+        color: $dark-color-pagina;
+        text-shadow: .5px .5px $black;
         font-weight: 600;
 
         &:hover {
-          background-color: $almond;
-          color: $walnut-brown ;
+          background-color: $dark-color-pagina;
+          color: $ligth-color-pagina ;
         }
 
       }
 
       svg {
         filter: drop-shadow(1px 1px 0 $gunmetal);
-        color: $gunmetal-sombra1;
+        color: $dark-color-pagina;
         z-index: 9;
         cursor: pointer;
         width: 26px;

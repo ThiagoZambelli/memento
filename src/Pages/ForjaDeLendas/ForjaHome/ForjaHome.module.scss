@@ -7,7 +7,7 @@
     box-shadow: 0 0 12px $black;
     border-radius: 4px 4px 0 0;
 
-    &__container{
+    &__container {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -16,39 +16,41 @@
         flex-wrap: wrap;
         row-gap: 3rem;
 
-        img{
+        img {
             max-width: 350px;
             border-radius: 1rem .5rem;
             box-shadow: 0 0 12px $black;
             opacity: .8;
             transform: rotate(-2deg);
-            border: 2px solid $walnut-brown;         
+            border: 2px solid $walnut-brown;
         }
 
-        div{
+        div {
             max-width: 500px;
-            text-align: center;            
-            background-image: url('../../../assets/stardust.png');            
+            text-align: center;
+            background-image: url('../../../assets/stardust.png');
 
-            h2{
+            h2 {
                 font-family: $fonteTituloForja;
                 font-size: 2.5rem;
                 padding: 1em;
                 font-weight: bold;
                 color: $dark-color-pagina1;
-                text-shadow: 2px 2px $black;
+                text-shadow: 1px 1px $black;
             }
-            p{
-                font-family: $fonteTextoForja;                
-                font-size: 1.5rem;
+            
+
+            p {
+                font-family: $fonteTextoForja;
+                font-size: 1.8rem;
                 line-height: 1.5em;
                 color: $dark-color-pagina3;
-                text-shadow: 1.2px 1.2px 2px $black;
+                text-shadow: 1px 1px $black;
             }
         }
     }
 }
 
-.invertido{
+.invertido {
     order: 2;
 }
