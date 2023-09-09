@@ -8,6 +8,7 @@ import FichaAtributos from './FichaAtributos';
 import FichaHabilidades from './FichaHabilidades';
 import { useMediaQuery } from 'react-responsive';
 import MenuMobile from './MenuMobile';
+import FichaVida from './FichaVida';
 
 function Ficha() {
     const fichaEscolhida = useRecoilValue(ficha);
@@ -18,6 +19,7 @@ function Ficha() {
             ? <section className={styles.paginaFicha}>
                 <section className={styles.paginaFicha__ficha}>
                     <FichaHeader {...fichaEscolhida} />
+                    <FichaVida  {...fichaEscolhida} />
                     {isMobile && <MenuMobile valor={mostraCaracteristicas} mudaEstado={setMostraCaracteristicas} />}
                     <div className={styles.paginaFicha__ficha__body}>
                         <div className={`${isMobile && mostraCaracteristicas && styles.someDaTela}`} key={'valores'}><FichaAtributos _id={fichaEscolhida._id} atributos={fichaEscolhida.atributos} /></div>

@@ -5,13 +5,16 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    background-color: $ligth-color-pagina;
+    border-radius: 1rem 1rem 0 0;
+    margin: -1rem 0 0 0;
 
     &__titulo{
         font-family: $fonteTituloForja;
         font-size: 4rem;
         padding: .5em;
-        color: $walnut-brown;
-        text-shadow: 1px 1px $almond, -1px -1px $black;
+        color: $dark-color-pagina1;
+        text-shadow: 1px 1px $black;
     }
     &__descricao{
         font-family: $fonteTextoForja;

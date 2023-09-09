@@ -2,25 +2,26 @@
 
 .itemMenu {
     background-color: rgba(0, 0, 0, 0.25);
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);   
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
     padding: .2em;
-    color: $gunmetal;
+    color: $dark-color-pagina1;
+    text-shadow: 1px 1px $black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
 
     z-index: 1;
-    position: relative;     
+    position: relative;
     outline: none;
-    border: none;    
+    border: none;
     overflow: hidden;
 
-    &:hover{
+    &:hover {
         transform: scale(1.02);
     }
-    
+
     &::after {
         content: '';
         z-index: -1;
@@ -37,7 +38,3 @@
         transform: translate3d(800%, 0, 0) rotate(35deg);
     }
 }
-
-
-
-

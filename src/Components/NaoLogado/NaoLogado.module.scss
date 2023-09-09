@@ -1,6 +1,6 @@
 @import "styles/_variaveis.module.scss";
 
-.naoLogado{
+.naoLogado {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,28 +10,29 @@
     font-family: $fonteTituloForja;
     font-size: 2.5rem;
     background-image: url("/assets/stardust.png");
-    background-color: $almond;
+    background-color: $ligth-color-pagina;
     border-radius: 1rem 1rem 0 0;
     margin-top: -1rem;
     box-shadow: 0 0 6px $black;
     padding: 2rem 0;
 
-    h3{
+    h3 {
         max-width: 80%;
         text-align: center;
         font-weight: bold;
-        color: $gunmetal;
+        color: $dark-color-pagina1;
+        text-shadow: 2px 2px $black;
         line-height: 1.5em;
-        text-shadow: -1px -1px $black;
     }
-    h4{
+
+    h4 {
         max-width: 70%;
         text-align: center;
         font-weight: bold;
-        color: $gunmetal;
+        color: $dark-color-pagina3;
+        text-shadow: 1.2px 1.2px 2px $black;
         font-size: 1.8rem;
         text-decoration: underline;
         line-height: 1.5em;
-        text-shadow:-1px -1px $almond;
     }
 }

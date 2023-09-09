@@ -3,7 +3,7 @@
 .forjaHome {
     display: flex;
     flex-wrap: wrap;
-    background-color: $almond;
+    background-color: $ligth-color-pagina;
     box-shadow: 0 0 12px $black;
     border-radius: 4px 4px 0 0;
 
@@ -35,14 +35,14 @@
                 font-size: 2.5rem;
                 padding: 1em;
                 font-weight: bold;
-                color: $gunmetal;
-                text-shadow: 2px 2px $walnut-brown;
+                color: $dark-color-pagina1;
+                text-shadow: 2px 2px $black;
             }
             p{
                 font-family: $fonteTextoForja;                
                 font-size: 1.5rem;
                 line-height: 1.5em;
-                color: $walnut-brown;
+                color: $dark-color-pagina3;
                 text-shadow: 1.2px 1.2px 2px $black;
             }
         }

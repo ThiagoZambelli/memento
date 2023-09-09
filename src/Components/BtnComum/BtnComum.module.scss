@@ -8,10 +8,10 @@
     border-radius: 10px;
     padding: .2em .5em;
     transition: .5s;
-    background-color: $ligth-color-pagina;
+    background-color: $ligth-color-pagina1;
     color: $dark-color-pagina;
     border: 1px solid $dark-color-pagina;
-    box-shadow: 2px 2px $dark-color-pagina2, 3px 3px $black;
+    box-shadow: 2px 2px $dark-color-pagina1, 3px 3px $black;
     margin: 2em 0;
 
     z-index: 1;
@@ -38,9 +38,9 @@
 
     &:hover{
         cursor: pointer;
-        color: $ligth-color-pagina;
-        border: 1px solid $ligth-color-pagina;
-        box-shadow: 3px 3px $ligth-color-pagina, 4px 4px $black;
+        color: $ligth-color-pagina1;
+        border: 1px solid $ligth-color-pagina1;
+        box-shadow: 3px 3px $ligth-color-pagina1, 4px 4px $black;
     }
     &:active{
         box-shadow: 1px 1px $black;
