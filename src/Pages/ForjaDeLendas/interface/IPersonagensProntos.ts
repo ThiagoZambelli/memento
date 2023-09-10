@@ -15,5 +15,7 @@ export default interface IPersonagensProntos {
     vinculo?: string,
     ideais?: string,
     fraqueza?: string,
-    tracoDePersonalidade?: string
+    tracoDePersonalidade?: string,
+    vida?: number,
+    lvl?: number
 }

@@ -51,6 +51,9 @@
           background-color: $dark-color-pagina;
           color: $ligth-color-pagina ;
         }
+        &:hover svg{
+          color: $ligth-color-pagina ;
+        }
 
       }
 

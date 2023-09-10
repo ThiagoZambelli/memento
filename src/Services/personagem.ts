@@ -45,10 +45,10 @@ export async function atualizaPericias(pericias: string[] | [], id: string) {
         console.log(err)
     }
 }
-export async function atualizaTextos(texto: string, valor: string, id: string) {
+export async function atualizaPersonagem(campo: string , valor: string | number, id: string) {
     try {
         const token = sessionStorage.getItem('token');
-        await personagemAPI.patch('atualizaTextos', { texto, valor, id }, {
+        await personagemAPI.patch('atualizaPersonagem', { campo, valor, id }, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

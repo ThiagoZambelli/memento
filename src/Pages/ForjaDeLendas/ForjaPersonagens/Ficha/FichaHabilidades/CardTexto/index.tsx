@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { BsPencilSquare } from 'react-icons/bs';
 import styles from './CardTexto.module.scss';
 import usePegaQualTexto from './hook/usePegaQualTexto';
-import { atualizaTextos } from 'Services/personagem';
+import { atualizaPersonagem } from 'Services/personagem';
 import { useRecoilValue } from 'recoil';
 import { ficha } from 'Pages/ForjaDeLendas/state/atom';
 
@@ -26,7 +26,7 @@ function CardTexto({ busca, titulo, onChange, texto }: ICardTextoProps) {
     const atualiza = async () => {
         if (escrever) {
             try {
-                await atualizaTextos(busca, texto, fichaEscolhida._id)
+                await atualizaPersonagem(busca, texto, fichaEscolhida._id)
             }
             catch (err) {
                 console.log(err)

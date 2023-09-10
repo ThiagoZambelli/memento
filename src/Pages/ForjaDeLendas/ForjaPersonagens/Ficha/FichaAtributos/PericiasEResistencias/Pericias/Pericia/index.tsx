@@ -4,6 +4,7 @@ import styles from './Pericia.module.scss';
 import { AiOutlineCheck } from 'react-icons/ai'
 import useComparaPericia from './hook/useComparaPericia';
 import useSetaPericia from './hook/useSetaPericia';
+import useGeraProeficiencia from 'Pages/ForjaDeLendas/ForjaPersonagens/Ficha/FichaVida/hook/useGeraProeficiencia';
 
 interface IPericiaProps {
     atributo: number,
@@ -14,6 +15,7 @@ function Pericia({ nome, atributo }: IPericiaProps) {
     const modificador = usePegaModificador();
     const verificar = useComparaPericia();
     const setar = useSetaPericia();
+    const [proeficiencia, setProeficiencia] = useState(useGeraProeficiencia())
 
     useEffect(()=>{
         setCheck(verificar(nome))
@@ -25,7 +27,7 @@ function Pericia({ nome, atributo }: IPericiaProps) {
     return (
         <div className={styles.pericia}>
             <div onClick={clicar}>{check && <AiOutlineCheck />}</div>
-            <span>{check ? modificador(atributo) + 2 : modificador(atributo)}</span>
+            <span>{check ? modificador(atributo) + proeficiencia! : modificador(atributo)}</span>
             <p>{nome}</p>
         </div>
     )
