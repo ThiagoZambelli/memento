@@ -23,7 +23,7 @@ function New({ createdAt, titulo, paragrafos, alerta }: NewProps) {
             <span><GiTiedScroll />New</span>
             <section className={styles.new}>
                 <div className={styles.new__date}>{`${dia}/${mes}/${ano}`}</div>
-                <h3 className={`${styles.new__titulo} ${alerta && styles.alerta}`}>{titulo}</h3>
+                <h3 className={`${styles.new__titulo} ${alerta && styles.new__titulo__alerta}`}>{titulo}</h3>
                 {paragrafos.map((e, i) => (<p key={i}><BiRightArrow />{e}</p>))}
             </section>
         </div>

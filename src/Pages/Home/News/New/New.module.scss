@@ -52,6 +52,9 @@
         font-size: 2rem;
         margin-left: 1em;
         color: $gunmetal;
+        &__alerta{
+            color: $alert-color;
+        }
 
     }
 
@@ -67,6 +70,7 @@
 
     }
 }
+
 
 @media screen and (max-width:700px) {
     .new {
