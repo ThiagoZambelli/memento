@@ -95,3 +95,34 @@
     color: $dark-color-pagina;
     filter: drop-shadow(2px 2px $ligth-color-pagina3);
 }
+
+@media screen and (max-width: 600px) {
+    .vida {
+        width: 150px;
+
+        &__maximo {
+            span {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+
+            }
+        }
+
+        &__modificacao {
+            &__container {
+
+                span,
+                input {
+                    font-size: .8rem;                  
+                }
+
+                p {                
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

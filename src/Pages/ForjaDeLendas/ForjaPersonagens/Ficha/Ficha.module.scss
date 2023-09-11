@@ -17,7 +17,7 @@
         justify-content: space-evenly;
         flex-direction: column;
         padding: 1rem 0;
-        margin: 2rem 0;
+        margin: 2rem 10px;
         border-radius: 5px;
         box-shadow: 0 0 6px $black;
         background-image: url('/assets/stardust.png');
@@ -26,6 +26,7 @@
             display: flex;
             margin: 2rem 0;
             gap: 1rem;
+            padding: 1rem;
 
             div {
                 animation: fadeInScaleUp 1s ease-out;

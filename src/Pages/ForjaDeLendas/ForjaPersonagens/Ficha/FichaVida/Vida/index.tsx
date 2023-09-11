@@ -43,7 +43,7 @@ function Vida({ id, lvl, dado, con, vida }: IVidaProps) {
             {!alterando
                 ? <div className={styles.vida__maximo}>
                     <span>
-                        {vida + modificador(con) + dado}
+                        {vida + (modificador(con) * (lvl - 1)) + (dado + modificador(con))}
                     </span>
                     <p>Vida Maxima <GiHeartPlus /></p>
                 </div>

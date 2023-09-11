@@ -14,24 +14,32 @@ import MenuTop from 'Pages/ForjaDeLendas/components/MenuTop';
 import MenuSide from 'Pages/ForjaDeLendas/components/MenuSide';
 import BannerItem from 'Pages/ForjaDeLendas/components/BannerItem';
 import BtnComum from 'Components/BtnComum';
+import { useMediaQuery } from 'react-responsive';
 
 
 function Classe() {
   const [classe, setClasse] = useState<IClasse[]>([]);
+  const [carregando, setCarregando] = useState(false);
   const itemMostrado = useBannerMostrado();
   const atualizaClasse = useAtualizaClasse();
   const ir = useNavigate();
-  const personagemAtual = useRecoilValue(personagemCriacao);
-  const telaPequena = window.innerWidth <= 780;
-  
+  const personagemAtual = useRecoilValue(personagemCriacao);  
+  const telaPequena = useMediaQuery({ query: '(max-width: 780px)' });
 
-  const cadastrar = () => {
-    postPersonagem(personagemAtual);
-  }
 
-  const escolher = () => {
-    cadastrar();
-    ir('/forja-de-lendas');
+
+
+  const escolher = async () => {
+    setCarregando(true)
+    try {
+      await postPersonagem(personagemAtual);
+      setCarregando(false);
+      ir('/forja-de-lendas/personagens');
+    }
+    catch (err) {
+      console.log(err)
+      setCarregando(false)
+    }
   }
 
   useEffect(() => {
@@ -60,7 +68,9 @@ function Classe() {
           <BannerItem tipo='classe' {...itemMostrado} />
         </section>
         : <Loader />}
-      <BtnComum onClick={escolher}><GiAnvil /> Forjar...</BtnComum>   
+      {!carregando
+        ? <BtnComum onClick={escolher}><GiAnvil /> Forjar...</BtnComum>
+        : <Loader />}
     </section>
   )
 }

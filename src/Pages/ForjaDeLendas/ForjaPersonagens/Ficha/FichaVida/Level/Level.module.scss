@@ -1,0 +1,61 @@
+@import "styles/_variaveis.module.scss";
+
+.level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+
+    &__lvl{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    span,
+    select {
+        font-size: 2.5rem;
+        background-color: transparent;
+        border: none;
+    }
+
+    p {
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 1.5rem;
+    }
+
+    &__btnSave {
+        align-self: flex-end;
+        padding: 0;
+        width: 15px;
+        height: 15px;
+        background-color: transparent;
+        border: none;
+        transition: .3s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .level {
+        span {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+
+}

@@ -3,16 +3,14 @@ import styles from './FichaVida.module.scss';
 import IPersonagensProntos from 'Pages/ForjaDeLendas/interface/IPersonagensProntos';
 import useGeraProeficiencia from './hook/useGeraProeficiencia';
 import Vida from './Vida';
+import Level from './Level';
 
 function FichaVida({ ...fichaEscolhida }: IPersonagensProntos) {
 
     return (
         <section className={styles.fichaVida}>
             <div className={styles.fichaVida__container}>
-                <div className={styles.fichaVida__container__lvl}>
-                    <span>{fichaEscolhida.lvl}</span>
-                    <p>Level</p>
-                </div>
+                <Level id={fichaEscolhida._id} lvl={fichaEscolhida.lvl!}/>
             </div>
             <div className={styles.fichaVida__container}>
                 <div className={styles.fichaVida__container__inspiracao}>

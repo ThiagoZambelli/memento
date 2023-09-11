@@ -11,13 +11,15 @@ import MenuTop from 'Pages/ForjaDeLendas/components/MenuTop';
 import MenuSide from 'Pages/ForjaDeLendas/components/MenuSide';
 import BannerItem from 'Pages/ForjaDeLendas/components/BannerItem';
 import BtnComum from 'Components/BtnComum';
+import { useMediaQuery } from 'react-responsive';
 
 
 function Racas() {
   const [racas, setRacas] = useState<IRaca[]>([]);
   const itemMostrado = useBannerMostrado();
   const atualizaRaca = useAtualizaRaca();
-  const ir = useNavigate();    
+  const ir = useNavigate();     
+  const telaPequena = useMediaQuery({ query: '(max-width: 780px)' });
  
 
   const escolher = () => {
@@ -25,7 +27,6 @@ function Racas() {
     ir('/forja/cricao/antecedente');
   }
 
-  const telaPequena = window.innerWidth <= 780;
 
   useEffect(() => {
     pegaRacas();

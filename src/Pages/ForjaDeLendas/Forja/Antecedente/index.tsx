@@ -11,12 +11,14 @@ import MenuTop from 'Pages/ForjaDeLendas/components/MenuTop';
 import MenuSide from 'Pages/ForjaDeLendas/components/MenuSide';
 import BannerItem from 'Pages/ForjaDeLendas/components/BannerItem';
 import BtnComum from 'Components/BtnComum';
+import { useMediaQuery } from 'react-responsive';
 
 function Antecedente() {
   const [antecedente, setAntecedente] = useState<IAntecedente[]>([]);
   const itemMostrado = useBannerMostrado();
   const atualizaRaca = useAtualizaAntecedente();
-  const ir = useNavigate();
+  const ir = useNavigate();  
+  const telaPequena = useMediaQuery({ query: '(max-width: 780px)' });
 
 
 
@@ -25,7 +27,6 @@ function Antecedente() {
     ir('/forja/cricao/classe');
   }
 
-  const telaPequena = window.innerWidth <= 780;
 
   useEffect(() => {
     pegaAntecedentes();
