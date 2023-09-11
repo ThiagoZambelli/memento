@@ -1,6 +1,6 @@
 export default interface INew {
     titulo: string,
     paragrafos: string[],
-    alerta?: boolean,
+    alert?: boolean,
     data: string
 }
