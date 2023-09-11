@@ -27,7 +27,6 @@ function Antecedente() {
     ir('/forja/cricao/classe');
   }
 
-
   useEffect(() => {
     pegaAntecedentes();
   }, [])
