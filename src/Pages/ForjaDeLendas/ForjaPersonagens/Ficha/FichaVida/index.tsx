@@ -9,9 +9,12 @@ function FichaVida({ ...fichaEscolhida }: IPersonagensProntos) {
 
     return (
         <section className={styles.fichaVida}>
-            <div className={styles.fichaVida__container}>
-                <Level id={fichaEscolhida._id} lvl={fichaEscolhida.lvl!}/>
+             <div className={styles.fichaVida__container}>
+                <Level id={fichaEscolhida._id} lvl={fichaEscolhida.lvl!} />
             </div>
+            <div className={styles.fichaVida__container}>
+                <Vida id={fichaEscolhida._id} lvl={fichaEscolhida.lvl!} vida={fichaEscolhida.vida || 0} con={fichaEscolhida.atributos![2]} dado={fichaEscolhida.classe?.dadoVida!} />
+            </div>           
             <div className={styles.fichaVida__container}>
                 <div className={styles.fichaVida__container__inspiracao}>
                     <span>0</span>
@@ -21,9 +24,6 @@ function FichaVida({ ...fichaEscolhida }: IPersonagensProntos) {
                     <span>{useGeraProeficiencia()}</span>
                     <p>Bônus de Proficiência</p>
                 </div>
-            </div>
-            <div className={styles.fichaVida__container}>
-                <Vida id={fichaEscolhida._id} lvl={fichaEscolhida.lvl!} vida={fichaEscolhida.vida || 0} con={fichaEscolhida.atributos![2]} dado={fichaEscolhida.classe?.dadoVida!} />
             </div>
         </section>
     )

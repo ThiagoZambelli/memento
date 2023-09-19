@@ -1,0 +1,11 @@
+@import 'styles/_variaveis.module.scss';
+
+.contosDoBardo {
+    &__claro {
+        background-color: $ligth-color-bardo2;
+    }
+
+    &__escuro {
+        background-color: $dark-color-bardo2;
+    }
+}

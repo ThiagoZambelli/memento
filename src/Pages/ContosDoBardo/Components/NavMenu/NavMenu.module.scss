@@ -1,0 +1,12 @@
+.teste{
+    ul{
+        display: flex;
+        gap: 1rem;
+        li{
+            a{
+                font-size: 2rem;
+                text-decoration: none;
+            }
+        }
+    }
+}

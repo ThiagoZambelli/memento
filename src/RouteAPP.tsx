@@ -12,7 +12,6 @@ import Home from "Pages/Home";
 // import ForjaHome from "Pages/ForjaDeLendas/ForjaHome";
 // import ForjaPersonagens from "Pages/ForjaDeLendas/ForjaPersonagens";
 // import Ficha from "Pages/ForjaDeLendas/ForjaPersonagens/Ficha";
-import GoblinCaolho from "Pages/GoblinCaolho";
 import PaginaErro from "Pages/PaginaErro";
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -26,6 +25,8 @@ const ForjaComum = lazy(() => import('Pages/ForjaDeLendas/ForjaComum'));
 const ForjaHome = lazy(() => import('Pages/ForjaDeLendas/ForjaHome'));
 const ForjaPersonagens = lazy(() => import('Pages/ForjaDeLendas/ForjaPersonagens'));
 const Ficha = lazy(() => import('Pages/ForjaDeLendas/ForjaPersonagens/Ficha'));
+const GoblinCaolho = lazy(() => import('Pages/GoblinCaolho'));
+const ContosDoBardo = lazy(() => import('Pages/ContosDoBardo'));
 
 function RouteAPP() {
 	return (
@@ -34,6 +35,7 @@ function RouteAPP() {
 				<Route path="/" element={<PaginaBase />}>
 					<Route index element={<Home />} />
 					<Route path="goblin-caolho" element={<GoblinCaolho />} />
+					<Route path="contos-do-bardo" element={<ContosDoBardo  />} />
 					<Route path="forja-de-lendas" element={<ForjaComum />}>
 						<Route index element={<ForjaHome />} />
 						<Route path="forja" element={<Forja />} />

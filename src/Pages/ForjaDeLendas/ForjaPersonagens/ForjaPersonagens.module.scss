@@ -2,9 +2,9 @@
 
 .personagens{
     background: $ligth-color-pagina;
-    background-image: url("/assets/personagensBG.png");
-    border-top: 3px solid $dark-color-card;
-    box-shadow: 0 0 6px $dark-color-card3, 0 0 12px $dark-color-card3;
+    background-image: url("/assets/old-map.png");
+    border-top: 3px solid $ligth-color-pagina1;
+    box-shadow: 0 0 6px $ligth-color-pagina2, 0 0 12px $ligth-color-pagina2;
     border-radius: 1rem 1rem 0 0;
     margin: -1rem 0 0 0;
     &__carregando{

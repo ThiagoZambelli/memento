@@ -1,0 +1,26 @@
+@import 'styles/_variaveis.module.scss';
+
+.banner {
+    display: flex;
+    flex-direction: column;    
+    padding: 1rem;    
+   
+
+    &__principal{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        img{
+            max-width: 100%;
+        }
+    }
+
+}
+.claro {
+    background-color: $ligth-color-bardo;
+}
+
+.escuro {
+    background-color: $dark-color-bardo;
+}
