@@ -14,7 +14,7 @@ function SideBarItens() {
 			<Link onClick={fechaMenu} to={"/"}>Home</Link>
 			<Link onClick={fechaMenu} to={"/goblin-caolho"}>Goblin Caolho</Link>
 			<Link onClick={fechaMenu} to={"/forja-de-lendas"}>Forja de Lendas</Link>
-			<Link onClick={fechaMenu} to={"/contos-do-bardo"}>Contos do Bardo</Link>
+			<Link onClick={fechaMenu} to={"/contos-do-bardo/"}>Contos do Bardo</Link>
 		</section>
 	);
 }

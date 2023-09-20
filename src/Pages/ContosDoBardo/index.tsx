@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './ContosDoBardo.module.scss';
 import Banner from './Components/Banner'
 import usePegaEstadoModo from './state/hooks/usePegaEstadoModo';
+import { Outlet } from 'react-router-dom';
 
 function ContosDoBardo() {
   const modoDoEstado = usePegaEstadoModo();
@@ -14,6 +15,7 @@ function ContosDoBardo() {
   return (
     <section className={`${!modoDaPagina ? styles.contosDoBardo__claro : styles.contosDoBardo__escuro}`} >
       <Banner modoClaro={modoDaPagina} />
+      <Outlet />
     </section>
   )
 }

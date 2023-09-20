@@ -27,6 +27,8 @@ const ForjaPersonagens = lazy(() => import('Pages/ForjaDeLendas/ForjaPersonagens
 const Ficha = lazy(() => import('Pages/ForjaDeLendas/ForjaPersonagens/Ficha'));
 const GoblinCaolho = lazy(() => import('Pages/GoblinCaolho'));
 const ContosDoBardo = lazy(() => import('Pages/ContosDoBardo'));
+const ContosHome = lazy(() => import('Pages/ContosDoBardo/ContosHome'));
+const ContosFavoritos = lazy(() => import('Pages/ContosDoBardo/ContosFavoritos'));
 
 function RouteAPP() {
 	return (
@@ -35,7 +37,10 @@ function RouteAPP() {
 				<Route path="/" element={<PaginaBase />}>
 					<Route index element={<Home />} />
 					<Route path="goblin-caolho" element={<GoblinCaolho />} />
-					<Route path="contos-do-bardo" element={<ContosDoBardo  />} />
+					<Route path="contos-do-bardo" element={<ContosDoBardo  />}>
+						<Route index element={<ContosHome />} />
+						<Route path="favoritos" element={<ContosFavoritos />} />
+					</Route>
 					<Route path="forja-de-lendas" element={<ForjaComum />}>
 						<Route index element={<ForjaHome />} />
 						<Route path="forja" element={<Forja />} />

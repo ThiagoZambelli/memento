@@ -15,12 +15,13 @@ interface IBotaoModoProps {
   modoClaro: boolean;
 }
 const BotaoModo = styled.button<IBotaoModoProps>`
-    height: 30px;
-    width: 60px;
+    height: 25px;
+    width: 50px;
     border-radius: 15px;
     align-self: flex-end;
-    border: 2px solid #black;
+    border: 2px solid ${props => (props.modoClaro ? '#7D594C':'#DACEA7')};
     background-color:${props => (!props.modoClaro ? '#7D594C':'#DACEA7')};
+    box-shadow: 1px 1px #000;
     display: flex;
     align-items: center;    
     box-sizing: border-box;
@@ -28,11 +29,14 @@ const BotaoModo = styled.button<IBotaoModoProps>`
     justify-content: ${props => (!props.modoClaro ? 'flex-start':'flex-end')}; 
     cursor: pointer;  
     padding: 5px;
+    outline: none;
+    transition: justify-content 1s ease;
+    margin: 1rem 0;
     svg{
       box-sizing: border-box;
       color:${props => (props.modoClaro ? '#7D594C':'#DACEA7')};
-      height: 20px;
-      width: 20px;      
+      height: 15px;
+      width: 15px;      
     }
 `
 
