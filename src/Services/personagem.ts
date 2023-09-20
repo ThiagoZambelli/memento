@@ -19,6 +19,19 @@ export async function postPersonagem(personagem: IPersonagem) {
         console.log(err)
     }
 }
+export async function deletPersonagem(id: string) {
+    try {
+        const token = sessionStorage.getItem('token');
+        await personagemAPI.patch(`deletaPersonagem/${id}`, {id}, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
 export async function atualizaAtributos(atributos: number[], id: string) {
     try {
         const token = sessionStorage.getItem('token');
@@ -45,7 +58,7 @@ export async function atualizaPericias(pericias: string[] | [], id: string) {
         console.log(err)
     }
 }
-export async function atualizaPersonagem(campo: string , valor: string | number, id: string) {
+export async function atualizaPersonagem(campo: string, valor: string | number, id: string) {
     try {
         const token = sessionStorage.getItem('token');
         await personagemAPI.patch('atualizaPersonagem', { campo, valor, id }, {

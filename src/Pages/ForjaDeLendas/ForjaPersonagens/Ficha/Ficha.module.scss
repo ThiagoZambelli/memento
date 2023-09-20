@@ -3,11 +3,67 @@
 .paginaFicha {
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: $ligth-color-pagina;
     border-radius: 1rem 1rem 0 0;
-    margin-top: -1rem;    
+    margin-top: -1rem;
+    position: relative;
+
+    &__modal {
+        position: fixed;
+        top: 0;
+        width: 0;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        background-color: rgba($color: #000000, $alpha: .2);
+
+        &__aberto {
+            display: flex;
+        }
+
+        &__fechado {
+            display: none;
+        }
+
+        &__body {
+            background-color: rgba($color: $ligth-color-pagina, $alpha: .9);
+            border: 2px solid $dark-color-pagina;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba($color: #000000, $alpha: .8);
+            display: flex;
+            gap: 2rem;
+            flex-direction: column;
+            padding: 1rem;
+            p{
+                font-family: $fonteTextoForja;
+                font-size: 1.8rem;
+                color: $dark-color-pagina;
+            }
+
+            div {
+                display: flex;
+                gap: 10px;
+
+                button{
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__btnDeleta {
+        align-self: flex-end;
+
+        button {
+            font-size: 1rem;
+            margin: 2rem;
+        }
+    }
 
     &__ficha {
         background-color: $pagina;
