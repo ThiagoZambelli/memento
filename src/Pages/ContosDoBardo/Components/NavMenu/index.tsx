@@ -34,12 +34,6 @@ const Teste = styled.button<ILinkProp>`
     
       
 `
-    // font-size: 2rem;
-    // text-decoration: none;
-    // padding: 0 .3em;
-    // color:${props => (!props.modoClaro ? '#6A473C' : '#EFE4BF')};
-    // ${ props => (props.local === props.localPage ? `border-bottom: 2px solid ${!props.modoClaro ? '#6A473C' : '#EFE4BF'}` : '')};
-    // ${ props => (props.local === props.localPage ? 'transform: scale(2);' : '')}
 
 const NavEstilizada = styled.nav<ISectionProps>`
     ul{
@@ -58,7 +52,7 @@ function NavMenu({ modoClaro }: INavMenu) {
 
     <NavEstilizada modoClaro={modoClaro}>
       <ul>
-        <li ><LinkEstilizada to={'./'}><Teste local={''} localPage={localPage} modoClaro={modoClaro}>Home</Teste></LinkEstilizada></li>
+        <li><LinkEstilizada to={'./'}><Teste local={''} localPage={localPage} modoClaro={modoClaro}>Home</Teste></LinkEstilizada></li>
         <li><LinkEstilizada to={'./favoritos'}><Teste local='favoritos' localPage={localPage} modoClaro={modoClaro}>Favoritos</Teste></LinkEstilizada></li>
       </ul>
     </NavEstilizada>

@@ -3,6 +3,7 @@ import { getContos } from 'Services/contos';
 import IConto from 'interface/IConto';
 import React, { useEffect, useState } from 'react'
 import CardDeConto from './CardDeConto';
+import styles from './ContosHome.module.scss';
 
 function ContosHome() {
   const [contos, setContos] = useState<IConto[]>();
@@ -15,9 +16,9 @@ function ContosHome() {
   }, [])
 
   return (
-    <section>
+    <section className={styles.contosHome}>
       {contos && contos?.length > 0
-        ? contos?.map(e => (<CardDeConto />))
+        ? contos?.map(e => (<CardDeConto {...e}/>))
         : <Carregamento />}
     </section>
   )
