@@ -22,7 +22,7 @@ const Teste = styled.button<ILinkProp>`
     display: flex;
     align-items: center;
     gap: .5em;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     border-radius: 10px;
     padding: .2em .5em;
     transition: .3s;
@@ -30,6 +30,7 @@ const Teste = styled.button<ILinkProp>`
     color: ${props => (props.modoClaro ? '#6A473C' : '#EFE4BF')};
     border: 1px solid ${props => (props.modoClaro ? '#6A473C' : '#EFE4BF')};
     cursor: pointer;
+    box-shadow: 0 0 12px rgb(0, 0, 0, .4);
     ${ props => (props.local !== props.localPage ? `box-shadow: 3px 3px ${props.modoClaro ? '#6A473C' : '#EFE4BF'}, 4px 4px #000` : 'box-shadow: 1px 1px #000')};
     
       

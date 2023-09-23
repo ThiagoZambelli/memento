@@ -3,14 +3,15 @@
 .banner {
     display: flex;
     flex-direction: column;    
-    padding: 2rem;    
+    padding: 2rem;
+    box-shadow: 0 0 12px rgb(0, 0, 0, .4);  
    
 
     &__principal{
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 2rem;
         img{
             max-width: 100%;

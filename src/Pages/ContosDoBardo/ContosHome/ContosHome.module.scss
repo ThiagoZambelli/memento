@@ -1,8 +1,10 @@
-.contosHome{
-    padding: 2rem 0;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.contosHome {
+    &__cards {
+        padding: 2rem;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
 }

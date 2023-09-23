@@ -13,13 +13,27 @@
         font-family: $fonteTexto;
         color: $gunmetal;
         padding: 10px;
-        text-shadow: 0 0 6px #A0F8EA, 0 0 12px #A0F8EA, 0 0 18px #A0F8EA;
+        animation: pulsar 2s infinite;
 
         svg {
             filter: drop-shadow(0 0 18px #A0F8EA);
         }
     }
 }
+@keyframes pulsar {
+    0% {              
+        text-shadow: 0 0 6px #A0F8EA;
+        opacity: 1;
+    }
+    25%, 50% {              
+        text-shadow: 0 0 6px #A0F8EA, 0 0 12px #A0F8EA, 0 0 18px #A0F8EA;
+        opacity: .6;
+    }
+    100%{              
+        text-shadow: 0 0 6px #A0F8EA;
+        opacity: 1;
+    }
+  }
 
 .new {
     max-width: 100%;

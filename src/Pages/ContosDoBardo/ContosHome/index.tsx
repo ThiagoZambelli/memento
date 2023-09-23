@@ -17,9 +17,10 @@ function ContosHome() {
 
   return (
     <section className={styles.contosHome}>
-      {contos && contos?.length > 0
-        ? contos?.map(e => (<CardDeConto {...e}/>))
-        : <Carregamento />}
+      {!contos && <Carregamento />}
+      <div className={styles.contosHome__cards}>
+        {contos && contos?.length > 0 && contos?.map(e => (<CardDeConto key={e._id} {...e} />))}
+      </div>
     </section>
   )
 }

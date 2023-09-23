@@ -31,7 +31,7 @@ const BotaoModo = styled.button<IBotaoModoProps>`
     padding: 5px;
     outline: none;
     transition: justify-content 1s ease;
-    margin: 1rem 0;
+    margin: 2rem 0;
     svg{
       box-sizing: border-box;
       color:${props => (props.modoClaro ? '#7D594C':'#DACEA7')};
