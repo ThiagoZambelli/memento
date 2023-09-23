@@ -1,20 +1,6 @@
 .teste {
 
-    transform: scale(1.5);
-    border-bottom: 1px solid ;
-}
-
-@keyframes pulsar {
-    0% {
-        text-shadow: 0 0 6px #ffffff;
-        filter: drop-shadow(0 0 6px #ffffff);
-    }
-    25%, 50% {
-        text-shadow: 0 0 6px #ffffff, 0 0 12px #ffffff, 0 0 18px #ffffff;
-        filter: drop-shadow(none);
-    }
-    100%{
-        text-shadow: 0 0 6px #ffffff;
-        filter: drop-shadow(0 0 6px #ffffff);
-    }
+   align-self: center;
+   font-style: italic;
+   text-align: center;
 }

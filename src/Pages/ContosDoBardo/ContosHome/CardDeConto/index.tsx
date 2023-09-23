@@ -79,7 +79,7 @@ const CardConto = styled.section<CardContoProps>`
             font-size: 1.6rem;
             margin: 1em;
             cursor: pointer;
-            animation: pulsar 2s infinite;
+            animation: pulsarBtn 2s infinite;
             color: #BCAE84;
             font-weight: bold;
 
@@ -102,7 +102,7 @@ const CardConto = styled.section<CardContoProps>`
       }
     }
 
-        @keyframes pulsar {
+        @keyframes pulsarBtn {
           0% {              
               filter: drop-shadow(0 0 4px rgb(0, 0, 0, .9));
           }
@@ -127,7 +127,7 @@ function CardDeConto({ img, titulo, descricao, _id }: IConto) {
         <h3>{titulo}</h3>
       </section>
       <div>
-        <h3>{titulo}</h3>
+        <h3>{titulo}</h3>        
         <p>{descricao}</p>
         <button onClick={ler}>Ler ... <AiFillRead /></button>
       </div>

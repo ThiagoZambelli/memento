@@ -1,8 +1,9 @@
+import PaginaErro from 'Pages/PaginaErro'
 import React from 'react'
 
 function ContosFavoritos() {
   return (
-    <div>ContosFavoritos</div>
+    <PaginaErro />
   )
 }
 

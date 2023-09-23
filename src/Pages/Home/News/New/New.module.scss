@@ -13,14 +13,14 @@
         font-family: $fonteTexto;
         color: $gunmetal;
         padding: 10px;
-        animation: pulsar 2s infinite;
+        animation: pulsarSpan 2s infinite;
 
         svg {
             filter: drop-shadow(0 0 18px #A0F8EA);
         }
     }
 }
-@keyframes pulsar {
+@keyframes pulsarSpan {
     0% {              
         text-shadow: 0 0 6px #A0F8EA;
         opacity: 1;

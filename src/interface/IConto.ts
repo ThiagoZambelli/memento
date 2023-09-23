@@ -5,13 +5,14 @@ export default interface IConto {
     capitulos: ICapitulo[],
     img: string,
     curtidas?: string[],
-    comentarios?: IComentario[]
+    comentarios?: IComentario[],
+    tags?: string[]
 }
 
 interface ICapitulo {
     id: string,
     tituloCap: string,
-    conteudo: string
+    conteudo: string[]
 }
 interface IComentario {
     id: string,
