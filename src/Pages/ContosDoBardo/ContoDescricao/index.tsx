@@ -60,9 +60,7 @@ function ContoDescricao() {
 
     useEffect(() => {
         pegaConto();
-    }, [])
-
-    console.log(modoDaPagina)
+    }, [])    
 
     return (
         <section className={styles.aling}>

@@ -42,7 +42,7 @@ const ContoEstilizado = styled.section<ContoEstilizadoProps>`
            }           
 `
 const TextoEstilizado = styled.p<TextoEstilizadoProps>`          
-        padding: 2em;
+        padding: 2em 3em;
         line-height: 1.5em;
         font-size: 1.5rem;
         align-self: flex-start;
@@ -52,7 +52,11 @@ const TextoEstilizado = styled.p<TextoEstilizadoProps>`
         ? `     font-style: italic;
                 text-align: center;
                 font-size: 1.4rem;`
-        : ``)}         
+        : ``)}
+        
+        @media screen and (max-width: 700px) {
+            padding: 1em .5em;
+         }
 `
 
 interface ICapituloProps {
@@ -64,11 +68,9 @@ interface ICapituloProps {
 }
 function Capitulo({ modo, onClick, conteudo, id, tituloCap }: ICapituloProps) {
     const testaDialogo = (texto: string) => {
-        if (texto[0] === "–" || texto[0] === "-") {
-            console.log(texto[0], true)
+        if (texto[0] === "–" || texto[0] === "-") {            
             return true
-        } else {
-            console.log(texto[0], false)
+        } else {            
             return false
         }
     }
