@@ -7,7 +7,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: $almond;   
+    background-color: transparent;   
 
     &__loader {
         position: relative;
@@ -41,9 +41,7 @@
                 background-color: transparent;
                 background-image: url("./assets/D20critico.svg");  
                 border: none;
-                box-shadow: 0 0 10px $gunmetal-sombra1,
-                    0 0 20px $gunmetal-sombra1,
-                    0 0 30px $gunmetal-sombra1
+                box-shadow: 0 0 12px #A0F8EA, 0 0 24px #A0F8EA;
             }
         }
 

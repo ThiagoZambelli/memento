@@ -34,7 +34,10 @@
         padding: 1rem;
     }
     &__capitulos{
+        display: flex;
+        flex-direction: column;
         width: 100%;
         margin: 2rem 0;
+        gap: 5px;
     }
 }

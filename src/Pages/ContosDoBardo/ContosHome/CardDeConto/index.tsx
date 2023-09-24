@@ -105,7 +105,7 @@ const CardConto = styled.section<CardContoProps>`
     }
 
       &:hover div {
-        height: 350px; /* A altura que você deseja quando o mouse passar sobre o CardConto */
+        height: 410px; /* A altura que você deseja quando o mouse passar sobre o CardConto */
       }
     }
 
