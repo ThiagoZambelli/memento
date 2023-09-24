@@ -8,6 +8,7 @@ import Loader from "Components/Loader";
 import useSetUserLogado from "state/hooks/useSetUserLogado";
 import { useNavigate } from "react-router-dom";
 import BtnComum from "Components/BtnComum";
+import useAbreModalCadastro from "state/hooks/useAbreModalCadastro";
 
 function ModalLogin() {
 	const [senha, setSenha] = useState("");
@@ -17,7 +18,13 @@ function ModalLogin() {
 	const fechar = useAbreModalLogin();
 	const setNome = useSetUserLogado();
 	const ir = useNavigate();
+	const abrirModalCadastro = useAbreModalCadastro();
+	const abreModalLogin = useAbreModalLogin();
 
+	const abreCadastro = () => {
+		abrirModalCadastro();
+		abreModalLogin();
+	}
 
 
 	const logar = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -45,6 +52,9 @@ function ModalLogin() {
 			<LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Senha" value={senha} onChange={setSenha} type="password" />
 			<div className={styles.modalLogin__containerbtn}>
 				{!carregando ? <BtnComum >Logar</BtnComum> : <Loader />}
+			</div>
+			<div>
+				<h3 onClick={abreCadastro}>Ainda não tem uma conta?</h3>
 			</div>
 		</form>
 	);

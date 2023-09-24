@@ -15,14 +15,14 @@ function ForjaHome() {
                 <img src={imagem1} alt="Esboço de perssonagem" className={`${telaPequena && styles.invertido}`}/>
                 <div>
                     <h2>Bem-Vindo a Forja de Lendas.</h2>
-                    <p>Aqui damos todas as ferramentas necessárias para auxiliar na sua grande história.</p>
+                    <p>Aqui, queremos dar todas as ferramentas necessárias para ajudar em sua grande história.</p>
                 </div>
             </div>
             <div className={styles.forjaHome__container}>
                 <img src={imagem2} alt="Esboço de perssonagem" className={`${styles.invertido}`} />
                 <div>
-                    <h2>Quem Somos !</h2>
-                    <p>Este projeto consiste em ser uma plataforma para jogadores de RPG. Temos a intenção de dar asas à sua imaginação, para que o limite de suas aventuras seja apenas sua criatividade!</p>
+                    <h2>O que é a Forja ?</h2>
+                    <p>A forja foi feita para tornar mais simples e dinâmica a criação e controle das fichas de personagens.</p>
                 </div>
             </div>
         </section>

@@ -34,5 +34,10 @@
         font-size: 1.8rem;
         text-decoration: underline;
         line-height: 1.5em;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.02);
+        }
     }
 }

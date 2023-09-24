@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { PiBookBookmarkDuotone } from 'react-icons/pi'
+import { TiChevronRight } from 'react-icons/ti'
 
 interface TextoEstilizadoProps {
     dialogo: boolean,
@@ -68,7 +69,7 @@ interface ICapituloProps {
 }
 function Capitulo({ modo, onClick, conteudo, id, tituloCap }: ICapituloProps) {
     const testaDialogo = (texto: string) => {
-        if (texto[0] === "–" || texto[0] === "-") {            
+        if (texto[0] === "–" || texto[0] === "-" || texto[0] === "'") {            
             return true
         } else {            
             return false
@@ -76,10 +77,10 @@ function Capitulo({ modo, onClick, conteudo, id, tituloCap }: ICapituloProps) {
     }
     return (
         <ContoEstilizado modo={modo} >
-            <button onClick={onClick}><PiBookBookmarkDuotone /></button>
+            <button onClick={onClick}><PiBookBookmarkDuotone /><TiChevronRight /></button>
             <h3>{tituloCap}</h3>
             {conteudo.map(e => (<TextoEstilizado modo={modo} dialogo={testaDialogo(e)}>{e}</TextoEstilizado>))}
-            <button onClick={onClick}><PiBookBookmarkDuotone /></button>
+            <button onClick={onClick}><PiBookBookmarkDuotone /><TiChevronRight /></button>
         </ContoEstilizado>
     )
 }

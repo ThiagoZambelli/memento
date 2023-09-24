@@ -30,7 +30,10 @@ const CardConto = styled.section<CardContoProps>`
       justify-content: center;
 
         h3{
-          margin-top: 1rem;
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+          margin: 1rem .5rem 0 .5rem;
           font-size: 2rem;
           color: #000000;          
           padding: .4rem .8rem;
@@ -58,15 +61,19 @@ const CardConto = styled.section<CardContoProps>`
         border: .5px solid rgb(0, 0, 0, .6);
 
           h3{
-              font-size: 2rem;
+              font-size: 1.8rem;
+              display: flex;
+              flex-wrap: wrap;
+              text-align: center;
               color: #C2D0B5;
               padding-top: 1rem;
               text-shadow: 2px 2px #000000;
           }
           p{
-              font-size: 1.2rem;
+              font-size: 1.1rem;
               color: #C2D0B5;
               text-shadow: 1px 1px #000000;
+              text-align: justify;
           }
           button {
             display: flex;
@@ -76,7 +83,7 @@ const CardConto = styled.section<CardContoProps>`
             padding: 0;
             font-family: sans-serif;
             border: none;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             margin: 1em;
             cursor: pointer;
             animation: pulsarBtn 2s infinite;

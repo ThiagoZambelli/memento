@@ -13,7 +13,7 @@ import useDeslogar from "state/hooks/useDeslogar";
 import { RiUserLine } from 'react-icons/ri';
 import { GiExitDoor } from 'react-icons/gi';
 import SideCopyrigth from "./SideCopyrigth";
-import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -25,11 +25,11 @@ function SideBarMenu() {
 	const abrirModalLogin = useAbreModalLogin();
 	const abrirModalCadastro = useAbreModalCadastro();
 	const estadoLogado = useRecoilValue(logado);
-	const nomeUserLogado = useRecoilValue(userLogado);	
+	const nomeUserLogado = useRecoilValue(userLogado);
 	const aoDeslogar = useDeslogar();
 
 	const deslogar = () => {
-		aoDeslogar()		
+		aoDeslogar()
 	}
 
 	useEffect(() => {

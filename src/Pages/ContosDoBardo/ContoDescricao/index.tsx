@@ -34,12 +34,13 @@ const ImgEstilizada = styled.img<ModoProps>`
           }
 `
 const TituloEstilizada = styled.h3<ModoProps>`
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    text-align: center;
     color: ${props => (props.modo ? `#C2D0B5` : `#244549`)};
 `
 const DescricaoEstilizada = styled.p<ModoProps>`
     font-size: 1.3rem;
-    text-align: center;
+    text-align: justify;
     color: ${props => (props.modo ? `#C2D0B5` : `#244549`)};
 `
 

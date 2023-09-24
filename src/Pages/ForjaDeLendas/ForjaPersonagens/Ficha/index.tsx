@@ -44,10 +44,7 @@ function Ficha() {
                             <BtnComum onClick={() => setDeletando(false)}>Nâo</BtnComum>
                         </div>
                     </div>
-                </div>
-                <div className={styles.paginaFicha__btnDeleta}>
-                    <BtnComum onClick={() => setDeletando(true)}><RiDeleteBinFill /> Deletar Personagem</BtnComum>
-                </div>
+                </div>                
                 <section className={styles.paginaFicha__ficha}>
                     <FichaHeader {...fichaEscolhida} />
                     <FichaVida  {...fichaEscolhida} />
@@ -58,6 +55,9 @@ function Ficha() {
                         <div></div>
                     </div>
                 </section>
+                <div className={styles.paginaFicha__btnDeleta}>
+                    <BtnComum onClick={() => setDeletando(true)}><RiDeleteBinFill /> Deletar Personagem</BtnComum>
+                </div>
             </section>
             : <PaginaErro />
     )
