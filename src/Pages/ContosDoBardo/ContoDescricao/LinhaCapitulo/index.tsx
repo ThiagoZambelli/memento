@@ -20,7 +20,7 @@ function LinhaCapitulo({ modo, tituloCap, conteudo, id }: ICapituloProps) {
 
   return (
     <>
-      <div onClick={abrirModal} className={styles.container}><GiRead /><BiArrowToRight />{tituloCap}</div>
+      <div onClick={abrirModal} className={styles.container}><GiRead /><BiArrowToRight /><p>{tituloCap}</p></div>
       {aberto && <Capitulo modo={modo} onClick={abrirModal} tituloCap={tituloCap} conteudo={conteudo} id={id} />}
     </>
   )

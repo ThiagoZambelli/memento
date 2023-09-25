@@ -32,6 +32,10 @@
         display: flex;
         gap: 1rem;
         padding: 1rem;
+        p{
+            line-height: 1.5em;
+            text-align: center;
+        }
     }
     &__capitulos{
         display: flex;
