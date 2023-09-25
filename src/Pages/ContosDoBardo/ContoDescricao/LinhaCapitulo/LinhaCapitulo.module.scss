@@ -12,6 +12,10 @@
     color: #19383C;
     background-color: #C2D0B5;
     flex-wrap: wrap;
+    p{
+        line-height: 1.5em;
+        text-align: center;
+    }
 
     &:hover{
         transform: scale(1.05);
