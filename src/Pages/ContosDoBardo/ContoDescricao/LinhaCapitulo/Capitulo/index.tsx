@@ -69,7 +69,8 @@ interface ICapituloProps {
 }
 function Capitulo({ modo, onClick, conteudo, id, tituloCap }: ICapituloProps) {
     const testaDialogo = (texto: string) => {
-        if (texto[0] === "–" || texto[0] === "-" || texto[0] === "'" || texto[0] === '"') {            
+        const ultimoCaractere = texto.length - 1;
+        if (texto[0] === "–" || texto[0] === "-" || texto[0] === "'" || texto[0] === '"' || texto[ultimoCaractere] === '"') {            
             return true
         } else {            
             return false
