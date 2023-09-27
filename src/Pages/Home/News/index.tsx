@@ -23,7 +23,7 @@ function News() {
                 <h2><GiScrollUnfurled />What's Rolling<GiScrollUnfurled /></h2>
             </div>
             <div className={styles.news__body}>
-                {noticias && noticias?.length > 0 ? noticias?.map((e, i) => (<New key={i} {...e} />)) : <Loader />}
+                {noticias && noticias?.length > 0 ? noticias?.map((e, i) => (<New key={i} {...e} />)) : <div className={styles.news__body__loaderContainer}><Loader /></div>}
             </div>
         </section>
     )
