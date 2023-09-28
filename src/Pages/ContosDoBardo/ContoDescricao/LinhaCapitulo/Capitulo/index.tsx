@@ -56,7 +56,7 @@ const TextoEstilizado = styled.p<TextoEstilizadoProps>`
         : ``)}
         
         @media screen and (max-width: 700px) {
-            padding: 1em .5em;
+            padding: 1em .1em;
          }
 `
 
