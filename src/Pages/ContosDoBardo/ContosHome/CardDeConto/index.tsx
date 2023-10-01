@@ -1,8 +1,14 @@
-import IConto from 'interface/IConto';
-import React from 'react';
-import styled from 'styled-components';
-import { AiFillRead } from 'react-icons/ai';
-import { useNavigate } from 'react-router-dom';
+import IConto from "interface/IConto";
+import React, { useState } from "react";
+import styled from "styled-components";
+import {
+  AiFillRead,
+  AiFillStar,
+  AiOutlineStar,
+  AiOutlineHeart,
+} from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import { LiaHeartSolid } from "react-icons/lia";
 
 interface CardContoProps {
   img: string;
@@ -19,7 +25,8 @@ const CardConto = styled.section<CardContoProps>`
     section {
       width: 100%;
       height: 100%;
-      background-image: url(${props => props.img}); /* Use a prop 'img' aqui */
+      background-image: url(${(props) =>
+        props.img}); /* Use a prop 'img' aqui */
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -60,13 +67,49 @@ const CardConto = styled.section<CardContoProps>`
         backdrop-filter: blur(16px);
         border: .5px solid rgb(0, 0, 0, .6);
 
+        header{
+              align-self: flex-end;
+              display: flex;
+              gap: 1rem;
+              padding: .5rem 0;
+              svg{
+                width: 24px;
+                height: 24px;
+                cursor: pointer;
+                filter: drop-shadow(0 0 6px rgba(0, 0, 0, .25));
+                
+                &:active{
+                  animation: jelly 1s;
+                }
+              }
+
+              @keyframes jelly {
+
+                0%,
+                100% {
+                  transform: scale(1, 1);
+                }
+              
+                25% {
+                  transform: scale(0.9, 1.1);
+                }
+              
+                50% {
+                  transform: scale(1.1, 0.9);
+                }
+              
+                75% {
+                  transform: scale(0.95, 1.05);
+                }
+              }
+          }
+
           h3{
               font-size: 1.8rem;
               display: flex;
               flex-wrap: wrap;
               text-align: center;
-              color: #C2D0B5;
-              padding-top: 1rem;
+              color: #C2D0B5;              
               text-shadow: 2px 2px #000000;
           }
           p{
@@ -122,21 +165,43 @@ const CardConto = styled.section<CardContoProps>`
         }
 `;
 
-
 function CardDeConto({ img, titulo, descricao, _id }: IConto) {
-  const ir = useNavigate()
+  const ir = useNavigate();
+  const [curtido, setCurtido] = useState(false);
+  const [favoritado, setFavoritado] = useState(false);
+
   const ler = () => {
-    ir(`./descricao/${_id}`)
-  }
+    ir(`./descricao/${_id}`);
+  };
   return (
     <CardConto img={img}>
       <section>
         <h3>{titulo}</h3>
       </section>
       <div>
-        <h3>{titulo}</h3>        
+        <header>
+          {curtido ? (
+            <LiaHeartSolid
+              color="#EA7265"
+              onClick={() => setCurtido(!curtido)}
+            />
+          ) : (
+            <AiOutlineHeart onClick={() => setCurtido(!curtido)} />
+          )}
+          {favoritado ? (
+            <AiFillStar
+              color="#FFCF3D"
+              onClick={() => setFavoritado(!favoritado)}
+            />
+          ) : (
+            <AiOutlineStar onClick={() => setFavoritado(!favoritado)} />
+          )}
+        </header>
+        <h3>{titulo}</h3>
         <p>{descricao}</p>
-        <button onClick={ler}>Ler ... <AiFillRead /></button>
+        <button onClick={ler}>
+          Ler ... <AiFillRead />
+        </button>
       </div>
     </CardConto>
   );
