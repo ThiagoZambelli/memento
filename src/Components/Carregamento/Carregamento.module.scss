@@ -102,7 +102,8 @@
         text-transform: uppercase;
         text-shadow: 0 0 10px #A0F8EA,
             0 0 20px #A0F8EA,
-            0 0 30px #A0F8EA
+            0 0 30px #A0F8EA;
+        animation: carregarPuls 1s linear infinite;
     }
 }
 @keyframes rotacionar{
@@ -111,5 +112,22 @@
     }
     100%{
         transform: rotate(360deg);
+    }
+}
+@keyframes carregarPuls {
+    0% {
+        text-shadow: 0 0 6px #A0F8EA;
+        opacity: 1;
+    }
+
+    25%,
+    50% {
+        text-shadow: 0 0 6px #A0F8EA, 0 0 12px #A0F8EA, 0 0 18px #A0F8EA;
+        opacity: .6;
+    }
+
+    100% {
+        text-shadow: 0 0 6px #A0F8EA;
+        opacity: 1;
     }
 }

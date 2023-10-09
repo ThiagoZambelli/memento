@@ -58,7 +58,7 @@ export async function atualizaPericias(pericias: string[] | [], id: string) {
         console.log(err)
     }
 }
-export async function atualizaPersonagem(campo: string, valor: string | number, id: string) {
+export async function atualizaPersonagem(campo: string, valor: string | number | object, id: string) {
     try {
         const token = sessionStorage.getItem('token');
         await personagemAPI.patch('atualizaPersonagem', { campo, valor, id }, {

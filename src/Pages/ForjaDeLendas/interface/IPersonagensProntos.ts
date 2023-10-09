@@ -1,5 +1,6 @@
 import IAntecedente from "interface/IAntecedente";
 import IClasse from "interface/IClasse";
+import IHabilidade from "interface/IHabilidade";
 import IRaca from "interface/IRaca";
 
 export default interface IPersonagensProntos {
@@ -17,5 +18,6 @@ export default interface IPersonagensProntos {
     fraqueza?: string,
     tracoDePersonalidade?: string,
     vida?: number,
-    lvl?: number
+    lvl?: number,
+    habilidades?: IHabilidade[]
 }

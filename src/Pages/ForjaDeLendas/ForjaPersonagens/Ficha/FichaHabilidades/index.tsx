@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from './FichaHabilidades.module.scss';
 import CardTexto from './CardTexto';
+import Habilidades from './Habilidades';
 
 function FichaHabilidades() {
     const [traçosDePersonalidades, setTraçosDePersonalidades] = useState('');
@@ -14,6 +15,7 @@ function FichaHabilidades() {
             <CardTexto busca='ideais' titulo='Ideais' texto={ideais} onChange={setIdeais} />
             <CardTexto busca='vinculo' titulo='Vinculos' texto={vinculos} onChange={setVinculos} />
             <CardTexto busca='fraqueza' titulo='Fraquezas' texto={fraquezas} onChange={setFraquezas} />
+            <Habilidades />
         </section>
     )
 }

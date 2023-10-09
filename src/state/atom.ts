@@ -1,3 +1,4 @@
+import IHabilidade from "interface/IHabilidade";
 import IPersonagem from "interface/IPersonagem";
 import { atom } from "recoil";
 
@@ -31,5 +32,9 @@ export const personagemCriacao = atom<IPersonagem>({
 		classe: '',
 		antecedente: ''
 	}
+});
+export const habilidadesFicha = atom<IHabilidade[]>({
+	key: "habilidadesFicha",
+	default: []
 });
 
