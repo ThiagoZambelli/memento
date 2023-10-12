@@ -42,6 +42,9 @@ const BodyStyled = styled.div`
       font-weight: bold;
     }
   }
+  p{
+    padding: 0.5rem;
+  }
 `;
 const HeaderStyled = styled.div`
   display: flex;

@@ -10,6 +10,7 @@ import BtnComum from "Components/BtnComum";
 import IHabilidade from "interface/IHabilidade";
 import useAtualizaHabilidades from "Pages/ForjaDeLendas/state/hooks/useAtualizaHabilidades";
 import { atualizaPersonagem } from "Services/personagem";
+import Loader from "Components/Loader";
 
 
 const HabilidadesStyled = styled.div`
@@ -28,10 +29,11 @@ const HeaderStyled = styled.div`
 
   div {
     display: flex;
-    gap: 10px;
+    gap: 1rem;
   }
 
   svg {
+    font-size: 1.4rem;
     cursor: pointer;
   }
 `;
@@ -53,7 +55,7 @@ const ModalmodificaHabilidadeStyled = styled.form`
   padding: 1rem;
   border: 2px solid #6a473c;
   border-radius: 10px;
-  width: 400px;
+  width: 350px;
   gap: 1rem;
   background-color: rgba(125, 89, 76, 0.2);
   backdrop-filter: blur(2px);
@@ -107,6 +109,7 @@ function Habilidades() {
   const [novoNome, setNovoNome] = useState("");
   const [novaDescricao, setNovaDescricao] = useState("");
   const [novaOrigem, setNovaOrigem] = useState("");
+  const [carregando, setCarregando] = useState(false)
 
   const mudarEstadoDeletar = () => {
     setEstadoDeletar(!estadoDeletar);
@@ -141,13 +144,15 @@ function Habilidades() {
   };
   const cadastrarHabilidade = async (e: React.FormEvent) => {
     e.preventDefault();
+    setCarregando(true)
     const novaHabilidade = novaListaHabilidades("add");
     atualizaHabilidades(novaHabilidade!);
     setNovaDescricao('');
     setNovoNome('');
     setNovaOrigem('');
-    setModalAberto(false);
     await atualizaPersonagem("habilidades", novaHabilidade!, fichaEscolhida._id);
+    setCarregando(false)
+    setModalAberto(false);
   };
 
   useEffect(() => {
@@ -198,7 +203,7 @@ function Habilidades() {
               value={novaDescricao}
               onChange={(e) => setNovaDescricao(e.target.value)}
             ></textarea>
-            <BtnComum>Cadastrar</BtnComum>
+            {!carregando ? <BtnComum>Cadastrar</BtnComum> : <Loader />}
           </div>
         </ModalmodificaHabilidadeStyled>
       )}
