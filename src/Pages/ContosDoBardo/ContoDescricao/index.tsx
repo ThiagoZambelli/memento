@@ -76,7 +76,7 @@ function ContoDescricao() {
                         </div>
                     </header>
                     <div className={styles.container__tags}>
-                        {conto.tags && conto.tags.map(e => (<Tag modo={modoDaPagina} tag={e} />))}
+                        {conto.tags && conto.tags.map((e, i) => (<Tag key={i} modo={modoDaPagina} tag={e} />))}
                     </div>
                     <div className={styles.container__capitulos}>
                         {conto.capitulos && conto.capitulos.map(e => (<LinhaCapitulo modo={modoDaPagina} key={e.id} {...e} />))}
