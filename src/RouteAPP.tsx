@@ -1,11 +1,10 @@
 import Carregamento from "Components/Carregamento";
 import PaginaBase from "Pages/PaginaBase";
 import Home from "Pages/Home";
-
-
 import PaginaErro from "Pages/PaginaErro";
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
+
 
 const Antecedente = lazy(() => import('Pages/ForjaDeLendas/Forja/Antecedente'));
 const Classe = lazy(() => import('Pages/ForjaDeLendas/Forja/Classe'));
@@ -46,7 +45,7 @@ function RouteAPP() {
 						<Route path="classe" element={<Classe />} />
 					</Route>
 				</Route>
-				<Route path="*" element={<PaginaErro />} />
+				<Route path="*" element={<PaginaErro />} />				
 			</Routes>
 		</Suspense>
 	);

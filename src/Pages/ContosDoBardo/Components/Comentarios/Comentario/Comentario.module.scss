@@ -1,0 +1,30 @@
+@import 'styles/_variaveis.module.scss';
+
+.comentario{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: $comentarios-200;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 0 6px rgba($color: #000000, $alpha: .25);
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.02);
+    }
+
+    &__user{
+        display: flex;
+        align-items: center;
+        gap: .5em;
+        font-size: 1.2rem;
+        color: $comentarios-900;
+        margin-left: 1rem;
+    }
+    &__texto{
+        color: $comentarios-500;
+        line-height: 1.3em;       
+    }
+
+}

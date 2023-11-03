@@ -9,6 +9,8 @@ import {
 } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { LiaHeartSolid } from "react-icons/lia";
+import { useRecoilValue } from "recoil";
+import { logado } from "state/atom";
 
 interface CardContoProps {
   img: string;
@@ -62,16 +64,16 @@ const CardConto = styled.section<CardContoProps>`
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        gap: 2rem;
-        padding: 0 1rem;
+        gap: 2rem;        
         backdrop-filter: blur(16px);
         border: .5px solid rgb(0, 0, 0, .6);
+        padding: 0 1rem;        
 
         header{
               align-self: flex-end;
               display: flex;
               gap: 1rem;
-              padding: .5rem 0;
+              margin-top: .5rem;            
               svg{
                 width: 24px;
                 height: 24px;
@@ -169,6 +171,7 @@ function CardDeConto({ img, titulo, descricao, _id }: IConto) {
   const ir = useNavigate();
   const [curtido, setCurtido] = useState(false);
   const [favoritado, setFavoritado] = useState(false);
+  const estadoLogado = useRecoilValue(logado);
 
   const ler = () => {
     ir(`./descricao/${_id}`);
@@ -179,24 +182,26 @@ function CardDeConto({ img, titulo, descricao, _id }: IConto) {
         <h3>{titulo}</h3>
       </section>
       <div>
-        <header>
-          {curtido ? (
-            <LiaHeartSolid
-              color="#EA7265"
-              onClick={() => setCurtido(!curtido)}
-            />
-          ) : (
-            <AiOutlineHeart onClick={() => setCurtido(!curtido)} />
-          )}
-          {favoritado ? (
-            <AiFillStar
-              color="#FFCF3D"
-              onClick={() => setFavoritado(!favoritado)}
-            />
-          ) : (
-            <AiOutlineStar onClick={() => setFavoritado(!favoritado)} />
-          )}
-        </header>
+        {estadoLogado && (
+          <header>
+            {curtido ? (
+              <LiaHeartSolid
+                color="#EA7265"
+                onClick={() => setCurtido(!curtido)}
+              />
+            ) : (
+              <AiOutlineHeart onClick={() => setCurtido(!curtido)} />
+            )}
+            {favoritado ? (
+              <AiFillStar
+                color="#FFCF3D"
+                onClick={() => setFavoritado(!favoritado)}
+              />
+            ) : (
+              <AiOutlineStar onClick={() => setFavoritado(!favoritado)} />
+            )}
+          </header>
+        )}
         <h3>{titulo}</h3>
         <p>{descricao}</p>
         <button onClick={ler}>

@@ -8,7 +8,7 @@
     border-radius: 10px;
     border: .5px solid rgba($color: #000000, $alpha: .4);
     margin: 0 1rem;
-    transition: .5s;
+    transition: .3s;
     color: #19383C;
     background-color: #C2D0B5;    
     p{
@@ -20,7 +20,7 @@
     }
 
     &:hover{
-        transform: scale(1.05);
+        transform: scale(1.02);
         box-shadow: 0 0 4px rgba($color: #000000, $alpha: .5);
         cursor: pointer;
     }
