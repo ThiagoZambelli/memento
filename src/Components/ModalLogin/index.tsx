@@ -9,6 +9,7 @@ import useSetUserLogado from "state/hooks/useSetUserLogado";
 import { useNavigate } from "react-router-dom";
 import BtnComum from "Components/BtnComum";
 import useAbreModalCadastro from "state/hooks/useAbreModalCadastro";
+import useSetIdUserLogado from "state/hooks/useSetIdUserLogado";
 
 function ModalLogin() {
 	const [senha, setSenha] = useState("");
@@ -17,6 +18,7 @@ function ModalLogin() {
 	const logarSite = useLogar();
 	const fechar = useAbreModalLogin();
 	const setNome = useSetUserLogado();
+	const setId = useSetIdUserLogado();
 	const ir = useNavigate();
 	const abrirModalCadastro = useAbreModalCadastro();
 	const abreModalLogin = useAbreModalLogin();
@@ -35,7 +37,8 @@ function ModalLogin() {
 			logarSite();
 			setSenha("");
 			setEmail("");
-			setNome(response);
+			setNome(response.nome);
+			setId(response.id)
 			setCarregando(false);
 			ir("/")
 			fechar();

@@ -1,5 +1,6 @@
 export default interface IComentario {
-    id: string,
+    _id: string,
     texto: string,
-    user: string,
+    nomeUser: string,
+    idUser: string,
 }

@@ -1,3 +1,5 @@
+import IComentario from "./IComentario"
+
 export default interface IConto {
     _id: string,
     titulo: string,
@@ -13,9 +15,4 @@ interface ICapitulo {
     id: string,
     tituloCap: string,
     conteudo: string[]
-}
-interface IComentario {
-    id: string,
-    texto: string,
-    user: string,
 }

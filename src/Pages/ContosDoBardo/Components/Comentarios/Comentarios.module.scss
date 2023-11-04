@@ -7,23 +7,26 @@
     background-color: $comentarios-100; 
     padding: 1rem;
     font-family: $fonteTexto;
+    box-shadow: 0 0 6px rgba($color: $comentarios-900, $alpha: .25);
+    gap: 1rem;
 
     &__titulo{
         font-size: 1.5rem;
         color: $comentarios-900;
         display: flex;
         align-items: center;
-        gap: .5em;
-        margin: 1em 0 2em 0;
+        gap: .5em;        
         border-bottom: 2px solid $comentarios-900;
         align-self: flex-start;
         padding: 0 .2em;
+        margin-top: 1rem;
     }
 
     &__body{
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        margin: 1rem 0;
     }
 
 }

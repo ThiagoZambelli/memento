@@ -10,6 +10,7 @@ import styled from "styled-components";
 import usePegaEstadoModo from "../state/hooks/usePegaEstadoModo";
 import Comentarios from "../Components/Comentarios";
 
+
 interface ModoProps {
   modo: boolean;
 }
@@ -50,6 +51,7 @@ const DescricaoEstilizada = styled.p<ModoProps>`
 
 function ContoDescricao() {
   const [conto, setConto] = useState<IConto>();
+  const [recarregar, setRecarregar] = useState(0)
   const idConto = useLocation().pathname.replace(
     "/contos-do-bardo/descricao/",
     ""
@@ -66,8 +68,12 @@ function ContoDescricao() {
   }, [modoDoEstado]);
 
   useEffect(() => {
-    pegaConto();
+    pegaConto();    
   }, []);
+
+  useEffect(() => {
+    pegaConto();    
+  }, [recarregar]);
 
   return (
     <section className={styles.aling}>
@@ -104,7 +110,7 @@ function ContoDescricao() {
                 ))}
             </div>
           </section>
-          <Comentarios />
+          <Comentarios reacarregar={recarregar} setRecarregar={setRecarregar} idConto={idConto} lista={conto.comentarios}/>
         </>
       )}
     </section>

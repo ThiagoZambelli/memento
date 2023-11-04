@@ -13,7 +13,7 @@ export async function login({senha, email}:ILogin) {
     const response = await loginAPI.post('',credenciais);
     if(response.status === 200){
       sessionStorage.setItem('token',await response.data.token)
-      return response.data.nome;
+      return response.data;
     }else{
       alert(response.data.message)
     }

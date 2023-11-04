@@ -18,9 +18,8 @@
         display: flex;
         align-items: center;
         width: 100%;
-        color: #3BAA94;
-        text-shadow:  2px 2px #FAFAE3;
-        cursor: url('/assets/cursores/magico.png');    
+        text-shadow:  2px 2px #FAFAE3;       
+        
 
         h2 {
             display: flex;
@@ -30,6 +29,7 @@
             justify-content: center;
             padding: 2em 0;
             animation: pulsarTitulo 2s infinite;
+            color: #3BAA94;
 
             svg {
                 border-bottom: 2px solid #E9E9CC;                

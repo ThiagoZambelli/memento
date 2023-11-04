@@ -8,7 +8,7 @@ import SideBarCreditos from "./SideBarCreditos";
 import useAbreModalLogin from "state/hooks/useAbreModalLogin";
 import useAbreModalCadastro from "state/hooks/useAbreModalCadastro";
 import { useRecoilValue } from "recoil";
-import { logado, userLogado } from "state/atom";
+import { logado, nomeUserserLogado } from "state/atom";
 import useDeslogar from "state/hooks/useDeslogar";
 import { RiUserLine } from 'react-icons/ri';
 import { GiExitDoor } from 'react-icons/gi';
@@ -25,7 +25,7 @@ function SideBarMenu() {
 	const abrirModalLogin = useAbreModalLogin();
 	const abrirModalCadastro = useAbreModalCadastro();
 	const estadoLogado = useRecoilValue(logado);
-	const nomeUserLogado = useRecoilValue(userLogado);
+	const nomeUserLogado = useRecoilValue(nomeUserserLogado);
 	const aoDeslogar = useDeslogar();
 
 	const deslogar = () => {

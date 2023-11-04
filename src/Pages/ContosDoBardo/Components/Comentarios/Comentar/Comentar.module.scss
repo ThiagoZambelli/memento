@@ -1,0 +1,97 @@
+@import 'styles/_variaveis.module.scss';
+
+.comentar {
+    display: flex;
+    width: 100%;
+    font-family: $fonteTexto;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba($color: $comentarios-900, $alpha: .25);
+
+    textarea {
+        flex: 1;
+        border-radius: 5px 0 0 5px;
+        background-color: $comentarios-200;
+        color: $comentarios-600;
+        overflow: auto;
+        resize: none;
+
+        &::placeholder {
+            text-align: center;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        border-radius: 0 5px 5px 0;
+        background-color: $comentarios-600;
+        color: $comentarios-100;
+        transition: .2s;
+        width: 100px;
+        height: 40px;
+
+        &:hover {
+            transform: scale(1.005);
+        }
+
+    }
+
+    textarea,
+    button {
+        border: none;
+        padding: .5em;
+        border: 1px solid $comentarios-600;
+        font-size: 1.1rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__loader {
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        color: $comentarios-100;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+
+        &::after,
+        &::before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 50%;
+            left: 50%;
+            transform: scale(0.5) translate(0, 0);
+            background-color: #FFF;
+            border-radius: 50%;
+            animation: animloader 1s infinite ease-in-out;
+        }
+
+        &::before {
+            background-color: $comentarios-950;
+            transform: scale(0.5) translate(-24px, -24px);
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animloader {
+            50% {
+                transform: scale(1) translate(-50%, -50%);
+            }
+        }
+
+    }
+}

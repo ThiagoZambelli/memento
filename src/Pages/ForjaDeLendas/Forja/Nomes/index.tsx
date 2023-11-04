@@ -5,12 +5,12 @@ import { useNavigate } from 'react-router-dom';
 import { GiAnvil } from 'react-icons/gi'
 import useAtualizaNomes from 'Pages/ForjaDeLendas/state/hooks/useAtualizaNomes';
 import { useRecoilValue } from 'recoil';
-import { logado, userLogado } from 'state/atom';
+import { logado, nomeUserserLogado } from 'state/atom';
 import NaoLogado from 'Components/NaoLogado';
 import BtnComum from 'Components/BtnComum';
 
 function Forja() {
-  const nomeLogado = useRecoilValue(userLogado);
+  const nomeLogado = useRecoilValue(nomeUserserLogado);
   const [nomeJogador, setNomeJogador] = useState('');
   const [nomePersonagem, setNomePersonagem] = useState('');
   const att = useAtualizaNomes();
