@@ -12,7 +12,7 @@ function SideBarItens() {
 	return (
 		<section className={styles.itens}>
 			<Link onClick={fechaMenu} to={"/"}>Home</Link>
-			<Link onClick={fechaMenu} to={"/goblin-caolho"}>Goblin Caolho</Link>
+			<Link onClick={fechaMenu} to={"/news"}>Noticias</Link>
 			<Link onClick={fechaMenu} to={"/forja-de-lendas"}>Forja de Lendas</Link>
 			<Link onClick={fechaMenu} to={"/contos-do-bardo/"}>Contos do Bardo</Link>
 		</section>

@@ -1,0 +1,82 @@
+@import 'styles/_variaveis.module.scss';
+
+.footer {
+    padding: 0 2rem;
+    background-color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $corPrimeiraTela10;
+
+    hr {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: $corPrimeiraTela5;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+
+    &__logo {
+        height: 5rem;
+        margin: 1rem 0 2rem;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+
+    &__top {
+        width: 100%;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding: 1rem 0;
+
+        &__coluna {
+            display: flex;
+            flex-direction: column;
+            min-width: 300px;
+            gap: 1em;
+
+            div {
+                display: flex;
+                gap: 1em;
+                align-items: center;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                color: $corPrimeiraTela8;
+                text-decoration: underline;
+            }
+
+            p {
+                max-width: 50%;
+            }
+        }
+    }
+
+    &__copy {
+        padding: 1em 0;
+        font-size: 1.1rem;
+        color: $corPrimeiraTela8;
+
+        p {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}

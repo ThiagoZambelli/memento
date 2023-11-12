@@ -90,8 +90,17 @@ $comentarios-600: #656565;
 $comentarios-900: #3d3d3d;
 $comentarios-950: #292929;
 
-
-
+// Landing Page
+$corPrimeiraTela1:#480e30;
+$corPrimeiraTela2:#572545;
+$corPrimeiraTela3:#653b5b;
+$corPrimeiraTela4:#735170;
+$corPrimeiraTela5:#816685;
+$corPrimeiraTela6:#907d99;
+$corPrimeiraTela7:#a093ad;
+$corPrimeiraTela8:#b1aac0;
+$corPrimeiraTela9:#c4c1d3;
+$corPrimeiraTela10:#d8d8e6;
 
 // Fontes
 
@@ -99,8 +108,10 @@ $comentarios-950: #292929;
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&display=swap');
 
 $fontMenu: 'Fredericka the Great', cursive;
 $fonteTexto: 'Montserrat', sans-serif;
 $fonteTextoForja: 'Delius Swash Caps', cursive;
 $fonteTituloForja: 'Arapey', serif;
+$fontelandinPage: 'Maitree', serif;

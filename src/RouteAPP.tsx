@@ -6,6 +6,7 @@ import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
 
+
 const Antecedente = lazy(() => import('Pages/ForjaDeLendas/Forja/Antecedente'));
 const Classe = lazy(() => import('Pages/ForjaDeLendas/Forja/Classe'));
 const ForjaCriacao = lazy(() => import('Pages/ForjaDeLendas/Forja/ForjaCriacao'));
@@ -15,7 +16,7 @@ const ForjaComum = lazy(() => import('Pages/ForjaDeLendas/ForjaComum'));
 const ForjaHome = lazy(() => import('Pages/ForjaDeLendas/ForjaHome'));
 const ForjaPersonagens = lazy(() => import('Pages/ForjaDeLendas/ForjaPersonagens'));
 const Ficha = lazy(() => import('Pages/ForjaDeLendas/ForjaPersonagens/Ficha'));
-const GoblinCaolho = lazy(() => import('Pages/GoblinCaolho'));
+const LandingPage = lazy(() => import('Pages/LandingPage'));
 const ContosDoBardo = lazy(() => import('Pages/ContosDoBardo'));
 const ContosHome = lazy(() => import('Pages/ContosDoBardo/ContosHome'));
 const ContosFavoritos = lazy(() => import('Pages/ContosDoBardo/ContosFavoritos'));
@@ -26,8 +27,8 @@ function RouteAPP() {
 		<Suspense fallback={<Carregamento />}>
 			<Routes>
 				<Route path="/" element={<PaginaBase />}>
-					<Route index element={<Home />} />
-					<Route path="goblin-caolho" element={<GoblinCaolho />} />
+					<Route index element={<LandingPage />} />
+					<Route path="news" element={<Home />} />
 					<Route path="contos-do-bardo" element={<ContosDoBardo  />}>
 						<Route index element={<ContosHome />} />
 						<Route path="favoritos" element={<ContosFavoritos />} />
@@ -45,7 +46,8 @@ function RouteAPP() {
 						<Route path="classe" element={<Classe />} />
 					</Route>
 				</Route>
-				<Route path="*" element={<PaginaErro />} />				
+				<Route path="*" element={<PaginaErro />} />		
+				<Route path="/teste" element={<LandingPage />} />		
 			</Routes>
 		</Suspense>
 	);

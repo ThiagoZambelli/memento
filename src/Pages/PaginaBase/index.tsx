@@ -10,6 +10,7 @@ import useAbreModalLogin from "state/hooks/useAbreModalLogin";
 import useAbreModalCadastro from "state/hooks/useAbreModalCadastro";
 import ModalLogin from "Components/ModalLogin";
 import ModalCadastro from "Components/ModalCadastro";
+import Footer from "Components/Footer";
 
 
 function PaginaBase() {
@@ -38,6 +39,7 @@ function PaginaBase() {
 			<BotaoMenu />
 			<SideBarMenu />
 			<Outlet />
+			<Footer />
 		</section>
 	);
 }

@@ -1,0 +1,177 @@
+@import 'styles/_variaveis.module.scss';
+
+.primeiraTela {
+    height: 100vh;
+    max-height: 100vh;
+    min-height: min-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    
+    font-family: $fontelandinPage;
+    flex-wrap: wrap;    
+
+    &__container {
+        flex: 1;
+        min-width: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: .4rem;
+
+        &__pseudoLogo {
+            width: 250px;
+            height: 250px;
+        }
+
+        &__logo {
+            width: 250px;
+            z-index: 20;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: -200px;
+            animation: queda 1.5s forwards ease-out;
+            filter: drop-shadow(2px 2px 1px $corPrimeiraTela10);
+
+            transition: scale .5s;
+            cursor: pointer;
+
+            &:hover{
+                scale: 1.03;
+            }
+            &:active{
+                filter: drop-shadow(0 0 24px $corPrimeiraTela5);                
+            }
+
+        }
+
+        &__card {
+            background-color: rgba($color: $corPrimeiraTela1, $alpha: .35);
+            box-shadow: 0 0 6px rgba($color: $corPrimeiraTela10, $alpha: .5);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 1rem;
+            backdrop-filter: blur(2px);
+            z-index: 2;
+            max-width: 95%;
+
+            animation: surgirDaDireita 0.5s ease-out;
+
+        }
+
+        &__titulo {
+            font-size: 3rem;
+            color: $corPrimeiraTela1;
+            text-shadow: .5px .5px 0 $corPrimeiraTela5;
+        }
+
+        &__texto {
+            max-width: 95%;
+            font-size: 1.3rem;
+            line-height: 2em;
+            text-align: center;
+            color: $corPrimeiraTela9;
+            text-shadow: .5px .5px 0 $corPrimeiraTela10;
+        }
+    }
+}
+
+.containerLogo {
+    position: relative;
+    animation: pulse 1s infinite;
+}
+
+
+
+@keyframes queda {
+    0% {
+        transform: scale(0.9) translate(-50%, -50%);
+        top: -200px;
+    }
+
+    10% {
+        transform: scale(0.9) translate(-50%, -50%);
+        top: 50%;
+    }
+
+    20%,
+    50% {
+        transform: scale(.99) translate(-50%, -50%);
+        top: 30%;
+    }
+
+    35% {
+        transform: scale(1) translate(-50%, -50%);
+        top: 50%;
+    }
+
+    60% {
+        transform: scale(1) translate(-50%, -50%);
+        top: 50%;
+    }
+
+    100% {
+        transform: rotateZ(20deg) scale(.98) translate(-50%, -50%);
+        top: 65%;        
+    }
+}
+
+@keyframes surgirDaDireita {
+    0% {
+        transform: scale(.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes pulse {
+    50%{
+        transform: scale(1.01);
+    }
+}
+
+/* Layout para dispositivos móveis (largura da tela até 767 pixels) */
+@media screen and (max-width: 767px) {
+
+
+    .primeiraTela {
+        height: auto;
+        max-height: none;
+
+        &__container {
+            width: 100%;
+            height: auto;
+
+            &__card{
+                gap: .5rem;
+            }
+            &__pseudoLogo {
+                width: 150px;
+                height: 150px;
+            }
+
+            &__logo {
+                width: 150px;
+                margin-left: 75px;
+            }
+
+            &__titulo {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                margin: 1em 0;              
+                padding: 0 .2em;            
+            }
+    
+            &__texto{
+                font-size: 1rem;
+            }
+        }
+    }
+}
