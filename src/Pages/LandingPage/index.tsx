@@ -4,7 +4,6 @@ import styled from "styled-components";
 import bg from 'assets/img/primeiraPagina.jpg'
 import SegundaTela from "./SegundaTela";
 import TerceiraTela from "./TerceiraTela";
-import Footer from "Components/Footer";
 import Vagalumes from "./Components/Vagalumes";
 
 const TelaStyled = styled.section`
@@ -14,10 +13,10 @@ const TelaStyled = styled.section`
     background-size: cover;
     background-attachment: fixed;
     overflow: hidden;
-    gap: 10rem;    
+    gap: 12rem;    
     display: flex;
     flex-direction: column;
-    user-select: none;
+    user-select: none;    
 `;
 
 function LandingPage() {
