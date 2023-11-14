@@ -5,6 +5,7 @@ import bg from 'assets/img/primeiraPagina.jpg'
 import SegundaTela from "./SegundaTela";
 import TerceiraTela from "./TerceiraTela";
 import Footer from "Components/Footer";
+import Vagalumes from "./Components/Vagalumes";
 
 const TelaStyled = styled.section`
     background-image: url(${bg});
@@ -22,6 +23,9 @@ const TelaStyled = styled.section`
 function LandingPage() {
   return (
     <TelaStyled>
+      {[...Array(20)].map((_, index) => (
+        <Vagalumes key={index} />
+      ))}
       <PrimeiraTela />
       <SegundaTela />
       <TerceiraTela />      

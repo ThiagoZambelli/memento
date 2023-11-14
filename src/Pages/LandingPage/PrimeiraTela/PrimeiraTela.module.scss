@@ -6,11 +6,11 @@
     min-height: min-content;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;    
-    
+    align-items: flex-start;
+    justify-content: center;
+
     font-family: $fontelandinPage;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
 
     &__container {
         flex: 1;
@@ -20,6 +20,8 @@
         justify-content: center;
         flex-direction: column;
         padding: .4rem;
+        gap: 15rem;
+        
 
         &__pseudoLogo {
             width: 250px;
@@ -27,24 +29,14 @@
         }
 
         &__logo {
+            margin-left: 125px;
             width: 250px;
-            z-index: 20;
+            
             position: absolute;
             transform: translate(-50%, -50%);
             top: -200px;
             animation: queda 1.5s forwards ease-out;
-            filter: drop-shadow(2px 2px 1px $corPrimeiraTela10);
-
-            transition: scale .5s;
-            cursor: pointer;
-
-            &:hover{
-                scale: 1.03;
-            }
-            &:active{
-                filter: drop-shadow(0 0 24px $corPrimeiraTela5);                
-            }
-
+            filter: drop-shadow(2px 2px 1px $corPrimeiraTela10);            
         }
 
         &__card {
@@ -80,9 +72,49 @@
     }
 }
 
-.containerLogo {
-    position: relative;
-    animation: pulse 1s infinite;
+
+.btn {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $corPrimeiraTela1;
+    min-width: 200px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .95;
+    }
+
+    &__animation {
+        border-radius: 100%;
+        animation: ripple 0.6s linear infinite;
+    }
+}
+
+
+
+
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
 }
 
 
@@ -95,28 +127,28 @@
 
     10% {
         transform: scale(0.9) translate(-50%, -50%);
-        top: 50%;
+        top: 40%;
     }
 
     20%,
     50% {
         transform: scale(.99) translate(-50%, -50%);
-        top: 30%;
+        top: 20%;
     }
 
     35% {
         transform: scale(1) translate(-50%, -50%);
-        top: 50%;
+        top: 40%;
     }
 
     60% {
         transform: scale(1) translate(-50%, -50%);
-        top: 50%;
+        top: 40%;
     }
 
     100% {
         transform: rotateZ(20deg) scale(.98) translate(-50%, -50%);
-        top: 65%;        
+        top: 55%;
     }
 }
 
@@ -131,8 +163,9 @@
         opacity: 1;
     }
 }
+
 @keyframes pulse {
-    50%{
+    50% {
         transform: scale(1.01);
     }
 }
@@ -149,9 +182,10 @@
             width: 100%;
             height: auto;
 
-            &__card{
+            &__card {
                 gap: .5rem;
             }
+
             &__pseudoLogo {
                 width: 150px;
                 height: 150px;
@@ -165,13 +199,46 @@
             &__titulo {
                 font-size: 1.5rem;
                 text-transform: uppercase;
-                margin: 1em 0;              
-                padding: 0 .2em;            
+                margin: 1em 0;
+                padding: 0 .2em;
             }
-    
-            &__texto{
+
+            &__texto {
                 font-size: 1rem;
             }
+        }
+    }
+
+    @keyframes queda {
+        0% {
+            transform: scale(0.9) translate(-50%, -50%);
+            top: -200px;
+        }
+    
+        10% {
+            transform: scale(0.9) translate(-50%, -50%);
+            top: 20%;
+        }
+    
+        20%,
+        50% {
+            transform: scale(.99) translate(-50%, -50%);
+            top: 10%;
+        }
+    
+        35% {
+            transform: scale(1) translate(-50%, -50%);
+            top: 20%;
+        }
+    
+        60% {
+            transform: scale(1) translate(-50%, -50%);
+            top: 20%;
+        }
+    
+        100% {
+            transform: rotateZ(20deg) scale(.98) translate(-50%, -50%);
+            top: 20%;
         }
     }
 }

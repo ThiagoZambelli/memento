@@ -1,14 +1,13 @@
 import React from "react";
 import styles from "./PrimeiraTela.module.scss";
 import logo from "assets/img/LogoMemento.svg";
-import Vagalumes from "../Components/Vagalumes";
+import useAbreModalLogin from "state/hooks/useAbreModalLogin";
 
 function PrimeiraTela() {
+  const abrirModalLogin = useAbreModalLogin();
+
   return (
-    <section className={styles.primeiraTela}>
-      {[...Array(20)].map((_, index) => (
-        <Vagalumes key={index} />
-      ))}
+    <section className={styles.primeiraTela}>      
       <div
         className={`${styles.primeiraTela__container} ${styles.containerLogo}`}
       >
@@ -18,6 +17,11 @@ function PrimeiraTela() {
           alt="Logo do Memento"
         />
         <div className={styles.primeiraTela__container__pseudoLogo} />
+        <div>
+          <button onClick={() => abrirModalLogin()} className={styles.btn}>
+            <i className={styles.btn__animation}></i>Logar<i className={styles.btn__animation}></i>
+          </button>
+        </div>      
       </div>
       <div className={styles.primeiraTela__container}>
         <div className={styles.primeiraTela__container__card}>
@@ -36,7 +40,7 @@ function PrimeiraTela() {
             incríveis, onde o único limite é sua imaginação. Com o Memento, você
             se torna o mestre da sua própria narrativa, moldando mundos e
             personagens como nunca antes.
-          </p>
+          </p>          
         </div>
       </div>
     </section>
