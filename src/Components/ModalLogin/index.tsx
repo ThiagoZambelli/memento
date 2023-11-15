@@ -51,8 +51,8 @@ function ModalLogin() {
 
 	return (
 		<form className={styles.modalLogin} onSubmit={logar}>
-			<LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Email" value={email} onChange={setEmail} type="email" />
-			<LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Senha" value={senha} onChange={setSenha} type="password" />
+			<LzInput corBg='#c4c1d3' corSecundaria="#d8d8e6" corPrimaria="#480e30" label="Email" value={email} onChange={setEmail} type="email" />
+			<LzInput corBg='#c4c1d3' corSecundaria="#d8d8e6" corPrimaria="#480e30" label="Senha" value={senha} onChange={setSenha} type="password" />
 			<div className={styles.modalLogin__containerbtn}>
 				{!carregando ? <BtnComum >Logar</BtnComum> : <Loader />}
 			</div>

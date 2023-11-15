@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from "./ModalCadastro.module.scss";
-import { LzBotao, LzInput } from 'lithtlez-ds';
+import { LzInput } from 'lithtlez-ds';
 import { postUser } from 'Services/usuario';
 import useValidaUsuario from 'state/hooks/useValidaUsuario';
 import useAbreModalCadastro from 'state/hooks/useAbreModalCadastro';
@@ -55,10 +55,10 @@ function ModalCadastro() {
 
     return (
         <form className={styles.modalCadastro} onSubmit={cadastrar}>
-            <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Nome" value={nome} onChange={setNome} />
-            <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Email" value={email} onChange={setEmail} type='email' />
-            <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Senha" value={senha} onChange={setSenha} type='password' />
-            <LzInput corBg='#EFE4BF' corSecundaria="#EFE4BF" corPrimaria="#6A473C" label="Confirmar Senha" value={confSenha} onChange={setConfSenha} type='password' />
+            <LzInput corBg='#c4c1d3' corSecundaria="#d8d8e6" corPrimaria="#480e30" label="Nome" value={nome} onChange={setNome} />
+            <LzInput corBg='#c4c1d3' corSecundaria="#d8d8e6" corPrimaria="#480e30" label="Email" value={email} onChange={setEmail} type='email' />
+            <LzInput corBg='#c4c1d3' corSecundaria="#d8d8e6" corPrimaria="#480e30" label="Senha" value={senha} onChange={setSenha} type='password' />
+            <LzInput corBg='#c4c1d3' corSecundaria="#d8d8e6" corPrimaria="#480e30" label="Confirmar Senha" value={confSenha} onChange={setConfSenha} type='password' />
             <div className={styles.modalCadastro__containerbtn}>
                 {!carregando ? <BtnComum >Cadastrar</BtnComum> : <Loader />}
             </div>

@@ -3,28 +3,27 @@
 
 .sideBar {
   background-image: url('/assets/sideMenuBg.png');
-  background-size: cover;
-  /* A imagem será redimensionada para cobrir todo o elemento */
+  background-size: cover;  
   background-position: center;
 
-  border-right: 2px solid $ligth-color-pagina;
-  border-top: 2px solid $ligth-color-pagina;
+  border-right: 2px solid $corPrimeiraTela9;
+  border-top: 2px solid $corPrimeiraTela9;
   z-index: 10;
   height: 100vh;
-  background-color: $gunmetal;
+  background-color: $corPrimeiraTela3;
   width: 0;
   position: fixed;
-  /* Inicia com largura 0 */
+  
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* Esconde o conteúdo quando a largura é 0 */
+  
   border-radius: 0 10px 10px 0;
 
-  -webkit-box-shadow: 6px 0px 12px 3px $black-shadow-opacit;
-  -moz-box-shadow: 6px 0px 12px 3px $black-shadow-opacit;
-  box-shadow: 6px 0px 12px 3px $black-shadow-opacit;
+  -webkit-box-shadow: 6px 0px 12px 3px $corPrimeiraTela4;
+  -moz-box-shadow: 6px 0px 12px 3px $corPrimeiraTela4;
+  box-shadow: 6px 0px 12px 3px $corPrimeiraTela4;
 
   &__header {
     &__top {
@@ -32,8 +31,8 @@
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      background-color: $ligth-color-pagina;
-      border-bottom: 1px solid $almond;
+      background-color: $corPrimeiraTela10;
+      border-bottom: 1px solid $corPrimeiraTela1;
       box-shadow: 0 0 2px $black;
 
       button {
@@ -43,23 +42,23 @@
         width: 40%;
         font-size: 1.3rem;
         padding: .5em 1em;
-        color: $dark-color-pagina;
+        color: $corPrimeiraTela1;
         text-shadow: .5px .5px $black;
         font-weight: 600;
 
         &:hover {
-          background-color: $dark-color-pagina;
-          color: $ligth-color-pagina ;
+          background-color: $corPrimeiraTela1;
+          color: $corPrimeiraTela10;
         }
         &:hover svg{
-          color: $ligth-color-pagina ;
+          color: $corPrimeiraTela10;
         }
 
       }
 
       svg {
-        filter: drop-shadow(1px 1px 0 $gunmetal);
-        color: $dark-color-pagina;
+        filter: drop-shadow(1px 1px 0 $corPrimeiraTela10);
+        color: $corPrimeiraTela1;
         z-index: 9;
         cursor: pointer;
         width: 26px;
@@ -79,14 +78,14 @@
       font-size: 2rem;
       column-gap: .5em;
       padding: .2em;
-      color: $ligth-color-pagina1;
-      text-shadow: 2px 2px $dark-color-pagina;
+      color: $corPrimeiraTela10;
+      text-shadow: 2px 2px $corPrimeiraTela1;
       text-transform: uppercase;
       background-color: rgba(255, 255, 255, 0.25);
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
       animation: jelly .6s;
       svg{
-        filter: drop-shadow(2px 2px $dark-color-pagina);
+        filter: drop-shadow(2px 2px $corPrimeiraTela2);
       }
     }
   }

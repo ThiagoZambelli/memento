@@ -10,61 +10,63 @@ import useAbreModalCadastro from "state/hooks/useAbreModalCadastro";
 import { useRecoilValue } from "recoil";
 import { logado, nomeUserserLogado } from "state/atom";
 import useDeslogar from "state/hooks/useDeslogar";
-import { RiUserLine } from 'react-icons/ri';
-import { GiExitDoor } from 'react-icons/gi';
+import { RiUserLine } from "react-icons/ri";
+import { GiExitDoor } from "react-icons/gi";
 import SideCopyrigth from "./SideCopyrigth";
 
-
-
-
-
 function SideBarMenu() {
-	const estadoSideBar = useEstadoSideBar();
-	const abreFecha = useAtivaSideBar();
-	const [valorSideBar, setValorSideBar] = useState<string>();
-	const abrirModalLogin = useAbreModalLogin();
-	const abrirModalCadastro = useAbreModalCadastro();
-	const estadoLogado = useRecoilValue(logado);
-	const nomeUserLogado = useRecoilValue(nomeUserserLogado);
-	const aoDeslogar = useDeslogar();
+  const estadoSideBar = useEstadoSideBar();
+  const abreFecha = useAtivaSideBar();
+  const [valorSideBar, setValorSideBar] = useState<string>();
+  const abrirModalLogin = useAbreModalLogin();
+  const abrirModalCadastro = useAbreModalCadastro();
+  const estadoLogado = useRecoilValue(logado);
+  const nomeUserLogado = useRecoilValue(nomeUserserLogado);
+  const aoDeslogar = useDeslogar();
 
-	const deslogar = () => {
-		aoDeslogar()
-	}
+  const deslogar = () => {
+    aoDeslogar();
+  };
 
-	useEffect(() => {
-		if (estadoSideBar) {
-			setValorSideBar(styles.sideBarAtiva);
-		} else {
-			setValorSideBar(styles.sideBarDesativa);
-		}
-	}, [estadoSideBar]);
+  useEffect(() => {
+    if (estadoSideBar) {
+      setValorSideBar(styles.sideBarAtiva);
+    } else {
+      setValorSideBar(styles.sideBarDesativa);
+    }
+  }, [estadoSideBar]);
 
-	return (
-		<section className={`${styles.sideBar} ${valorSideBar}`}>
-			<div className={styles.sideBar__header}>
-				<div className={styles.sideBar__header__top}>
-					{!estadoLogado
-						? <>
-							<button onClick={abrirModalLogin}>Login</button>
-							<button onClick={abrirModalCadastro}>Register</button>
-						</> :
-						<button onClick={deslogar}><GiExitDoor />Deslogar</button>}
-					<AiOutlineClose onClick={abreFecha} />
-				</div>
-				{estadoLogado &&
-					<div className={styles.sideBar__header__nome}>
-						<RiUserLine />
-						{nomeUserLogado}
-					</div>}
-			</div>
-			<SideBarItens />
-			<div className={styles.sideBar__footer}>
-				<SideBarCreditos />
-				<SideCopyrigth />
-			</div>
-		</section>
-	);
+  return (
+    <section className={`${styles.sideBar} ${valorSideBar}`}>
+      <div className={styles.sideBar__header}>
+        <div className={styles.sideBar__header__top}>
+          {!estadoLogado ? (
+            <>
+              <button onClick={abrirModalLogin}>Login</button>
+              <button onClick={abrirModalCadastro}>Register</button>
+            </>
+          ) : (
+            <button onClick={deslogar}>
+              <GiExitDoor />
+              Deslogar
+            </button>
+          )}
+          <AiOutlineClose onClick={abreFecha} />
+        </div>
+        {estadoLogado && (
+          <div className={styles.sideBar__header__nome}>
+            <RiUserLine />
+            {nomeUserLogado}
+          </div>
+        )}
+      </div>
+      <SideBarItens />
+      <div className={styles.sideBar__footer}>
+        <SideBarCreditos />
+        <SideCopyrigth />
+      </div>
+    </section>
+  );
 }
 
 export default SideBarMenu;

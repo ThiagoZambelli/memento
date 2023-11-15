@@ -1,10 +1,10 @@
 import React from "react";
-import PrimeiraTela from "./PrimeiraTela";
 import styled from "styled-components";
 import bg from 'assets/img/primeiraPagina.jpg'
 import SegundaTela from "./SegundaTela";
 import TerceiraTela from "./TerceiraTela";
-import Vagalumes from "./Components/Vagalumes";
+import Intro from "./Intro";
+
 
 const TelaStyled = styled.section`
     background-image: url(${bg});
@@ -21,11 +21,8 @@ const TelaStyled = styled.section`
 
 function LandingPage() {
   return (
-    <TelaStyled>
-      {[...Array(20)].map((_, index) => (
-        <Vagalumes key={index} />
-      ))}
-      <PrimeiraTela />
+    <TelaStyled>           
+      <Intro />
       <SegundaTela />
       <TerceiraTela />      
     </TelaStyled>

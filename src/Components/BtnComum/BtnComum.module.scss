@@ -8,10 +8,10 @@
     border-radius: 10px;
     padding: .2em .5em;
     transition: .5s;
-    background-color: $ligth-color-pagina1;
-    color: $dark-color-pagina;
-    border: 1px solid $dark-color-pagina;
-    box-shadow: 2px 2px $dark-color-pagina1, 3px 3px $black;
+    background-color: $corPrimeiraTela10;
+    color: $corPrimeiraTela1;
+    border: 1px solid $corPrimeiraTela9;
+    box-shadow: 2px 2px $corPrimeiraTela10, 3px 3px $black;
     margin: 2em 0;
 
     z-index: 1;
@@ -30,7 +30,7 @@
         width: 1em;
         height: 1em;
         border-radius: 50%;
-        background-color: $dark-color-pagina;
+        background-color: $corPrimeiraTela1;
         transform-origin: center;
         transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
         transition: transform 0.45s ease-in-out;
@@ -38,9 +38,9 @@
 
     &:hover{
         cursor: pointer;
-        color: $ligth-color-pagina1;
-        border: 1px solid $ligth-color-pagina1;
-        box-shadow: 3px 3px $ligth-color-pagina1, 4px 4px $black;
+        color: $corPrimeiraTela10;
+        border: 1px solid $corPrimeiraTela9;
+        box-shadow: 3px 3px $corPrimeiraTela10, 4px 4px $black;
     }
     &:active{
         box-shadow: 1px 1px $black;
