@@ -62,7 +62,7 @@
                     font-size: 4rem;
                     color: $corPrimeiraTela1;
                     animation: jelly 1s ease-out forwards;
-                    text-shadow: .2px .2px 0 $corPrimeiraTela5, 0 0 6px $corPrimeiraTela5;
+                    text-shadow: 0 0 1px $corPrimeiraTela9, .2px .2px 0 $corPrimeiraTela5, 0 0 6px $corPrimeiraTela5;
                 }
             }
 
@@ -99,6 +99,7 @@
         align-items: center;
         justify-content: center;
         flex: 1;
+        font-size: 1.2rem;
     }
 }
 
@@ -131,6 +132,39 @@
     &__animation {
         border-radius: 100%;
         animation: ripple 0.6s linear infinite;
+    }
+}
+
+
+
+@media (max-width: 980px) {
+    .intro {
+        &__body {
+            flex-direction: column;
+
+            &__container {
+                padding: .2rem;
+
+                &__logo {
+                    img {
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+
+                &__titulo {
+                    h1 {
+                        font-size: 2rem;
+                    }
+                }
+
+                &__card {
+                    P {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -198,16 +232,3 @@
         transform: scale(1) translate(0, 10px) rotateZ(25deg);
     }
 }
-
-@media (max-width: 980px) {
-    .intro {
-        &__body{
-            flex-direction: column;
-        }
-    }  
-  } 
-  
-  
-  
-  
-  
