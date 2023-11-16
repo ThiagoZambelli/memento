@@ -23,7 +23,7 @@ function Intro() {
         <div className={styles.intro__body__container}>
           <div className={styles.intro__body__container__card}>
             <p className={styles.intro__body__container__descricao}>
-              Memento é sua aliada definitiva quando se trata de criar momentos
+              Memento é o seu aliado definitivo quando se trata de criar momentos
               épicos.
             </p>
             <p className={styles.intro__body__container__descricao}>

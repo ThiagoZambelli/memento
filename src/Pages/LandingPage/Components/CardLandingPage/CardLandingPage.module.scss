@@ -10,7 +10,8 @@
     font-size: 1.5rem;
     line-height: 1.3em;
     text-align: center;  
-    padding: 2em .2em;  
+    padding: 2em .2em;
+    cursor: pointer;
 
     &:hover {
         border-radius: 5px;        
@@ -45,7 +46,7 @@
         align-items: center;
         border-radius: 15px;
         transition: all 0.4s;
-        font-size: 0px;
+        font-size: 1rem;
         transform: rotate(90deg) scale(-1);
         color: $corPrimeiraTela9;
 
@@ -59,7 +60,12 @@
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
-                gap: 1em;
+                gap: .5em;
+                
+                svg{
+                    font-size: .8rem;
+                    color: $corPrimeiraTela1;
+                }
             }
         }
     }

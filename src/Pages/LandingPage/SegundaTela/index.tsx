@@ -25,7 +25,7 @@ function SegundaTela() {
                   </li>
                   <li>
                     <BsCheck2All />
-                    Compartilhamento de Perssonagens.
+                    Compartilhamento de Personagens.
                   </li>
                   <li>
                     <BsCheck2All />
