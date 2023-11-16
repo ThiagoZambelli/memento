@@ -58,6 +58,7 @@
             li{
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 gap: 1em;
             }
         }
@@ -66,7 +67,7 @@
     &:hover &__segundo {
         opacity: 1;
         height: 100%;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         transform: rotate(0deg);
     }
 
