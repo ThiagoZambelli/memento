@@ -21,6 +21,7 @@ const ContosDoBardo = lazy(() => import('Pages/ContosDoBardo'));
 const ContosHome = lazy(() => import('Pages/ContosDoBardo/ContosHome'));
 const ContosFavoritos = lazy(() => import('Pages/ContosDoBardo/ContosFavoritos'));
 const ContoDescricao = lazy(() => import('Pages/ContosDoBardo/ContoDescricao'));
+const FichaPronta = lazy(() => import('Pages/FichaPronta/Index'));
 
 function RouteAPP() {
 	return (
@@ -47,7 +48,7 @@ function RouteAPP() {
 					</Route>
 				</Route>
 				<Route path="*" element={<PaginaErro />} />		
-				<Route path="/teste" element={<LandingPage />} />		
+				<Route path="/ficha/:id" element={<FichaPronta />} />	
 			</Routes>
 		</Suspense>
 	);

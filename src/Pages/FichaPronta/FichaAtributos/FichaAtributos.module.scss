@@ -1,0 +1,98 @@
+@import 'styles/_variaveis.module.scss';
+
+
+.fichaAtributos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;       
+    
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+
+        &__atributos {
+            &__header {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: space-between;
+                
+                p{
+                    text-transform: uppercase;
+                }
+                button{
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    padding: 0;
+                    &:hover{
+                        animation: jelly .6s;                        
+                    }
+                }
+            }
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 1rem .5rem;
+            font-family: $fonteTextoForja;
+
+            &__atributo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    padding: 2px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+
+                h3 {
+                    border: 2px solid $black;
+                    font-size: 2rem;
+                    padding: .2em;
+                    border-radius: 4px;
+                }
+
+                span {
+                    font-size: 1.2rem;
+                    border: 1px solid $black;
+                    border-radius: 50%;
+                    padding: .1em .4em;
+                    margin-top: -2px;
+                }
+            }
+        }
+    }
+
+}
+
+.btnAtivo{
+    color: $almond;
+    filter: drop-shadow(0 0 3px $gunmetal);
+}
+
+@keyframes jelly {
+
+    0%,
+    100% {
+      transform: scale(1, 1);
+    }
+  
+    25% {
+      transform: scale(0.9, 1.1);
+    }
+  
+    50% {
+      transform: scale(1.1, 0.9);
+    }
+  
+    75% {
+      transform: scale(0.95, 1.05);
+    }
+  }

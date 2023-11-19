@@ -65,6 +65,24 @@
         }
     }
 
+    &__completa{
+        padding: 10px 1rem;
+        font-size: 1.1rem;
+        color: $corPrimeiraTela1;
+        background-color: $corPrimeiraTela10;
+        border-radius: 2px;
+        margin: .5rem;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        box-shadow: 0 0 6px rgba($color: $corPrimeiraTela1, $alpha: .8);
+
+        svg{
+            color: $corPrimeiraTela1;
+        }
+    }
+
     &__ficha {
         background-color: $pagina;
         max-width: 98%;

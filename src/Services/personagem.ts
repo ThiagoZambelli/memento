@@ -100,3 +100,17 @@ export async function meusPersonagens() {
         console.log(err)
     }
 }
+export async function getPersonagem(id:string) {
+    const token = sessionStorage.getItem('token');
+    try {
+        const listaDePersonagens = await personagemAPI.get(`personagem/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        return listaDePersonagens.data
+    }
+    catch (err) {
+        console.log(err)
+    }
+}

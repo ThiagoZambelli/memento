@@ -1,0 +1,104 @@
+@import 'styles/_variaveis.module.scss';
+
+.fichaHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    max-width: 100%;
+    border-bottom: 2px solid $black;
+
+    &__nomePersonagem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: 2.5rem;
+            padding: 10px 1em;
+            border-bottom: 1px solid $black;
+            font-family: $fonteTexto;
+        }
+
+        p {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: $fonteTituloForja;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $black;
+        border-radius: 1.5em 0 1.5em 0;
+        padding: 1em 0;
+        row-gap: 1rem;
+
+        h3 {
+            font-size: 1.2rem;
+            padding: 5px 2em;
+            border-bottom: 1px solid $black;
+            font-family: $fonteTexto;
+        }
+
+        p {
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: $fonteTituloForja;
+        }
+
+        &__top,
+        &__down {
+            display: flex;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &__down {
+            h3 {
+                padding: 5px 2.5em;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .fichaHeader {
+        flex-direction: column;
+        gap: 1rem;
+
+        &__nomePersonagem {
+            h2 {
+                font-size: 1.8rem;
+                padding: 10px 1em;
+            }
+
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 855px) {
+    .fichaHeader {
+        &__body {
+            h3 {
+                font-size: .9rem;
+            }
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+}

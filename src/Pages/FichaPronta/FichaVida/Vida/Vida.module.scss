@@ -1,0 +1,128 @@
+@import "styles/_variaveis.module.scss";
+
+.vida {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 180px;
+
+    &__btn {
+        background-color: transparent;
+        align-self: flex-end;
+        padding: 0;
+        border: none;
+        width: 1rem;
+        height: 1rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__maximo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5em;
+
+        span {
+            font-size: 2.5rem;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+            gap: .5em;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 1.2rem;
+
+            svg {
+                color: $dark-color-pagina3;
+            }
+        }
+    }
+
+    &__modificacao {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5em;
+
+        &__container {
+            display: flex;
+            align-items: center;
+            gap: .5em;
+
+            span,
+            input {
+                font-size: 1rem;
+                width: 3rem;
+                height: 1.4rem;
+                background-color: transparent;
+                border: 1px solid $black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                gap: .5em;
+                font-weight: bold;
+                text-decoration: underline;
+                font-size: 1.2rem;
+
+            }
+        }
+    }
+}
+
+.ativo {
+    color: $ligth-color-pagina1;
+    filter: drop-shadow(2px 2px $dark-color-pagina);
+}
+
+.naoAtivo {
+    color: $dark-color-pagina;
+    filter: drop-shadow(2px 2px $ligth-color-pagina3);
+}
+
+@media screen and (max-width: 600px) {
+    .vida {
+        width: 150px;
+
+        &__maximo {
+            span {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+
+            }
+        }
+
+        &__modificacao {
+            &__container {
+
+                span,
+                input {
+                    font-size: .8rem;                  
+                }
+
+                p {                
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

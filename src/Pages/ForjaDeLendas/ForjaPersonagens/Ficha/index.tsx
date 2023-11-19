@@ -13,8 +13,9 @@ import BtnComum from "Components/BtnComum";
 import { deletPersonagem } from "Services/personagem";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
+import { HiDocumentText } from "react-icons/hi";
 
-function Ficha() {
+function Ficha() {  
   const fichaEscolhida = useRecoilValue(ficha);
   const isMobile = useMediaQuery({ query: "(max-width: 780px)" });
   const [mostraCaracteristicas, setMostraCaracteristicas] = useState(false);
@@ -48,6 +49,7 @@ function Ficha() {
           </div>
         </div>
       </div>
+      <button className={styles.paginaFicha__completa} onClick={() => ir(`/ficha/${fichaEscolhida._id}`)}><HiDocumentText /> Ficha Completa</button>
       <section className={styles.paginaFicha__ficha}>
         <FichaHeader {...fichaEscolhida} />
         <FichaVida {...fichaEscolhida} />
