@@ -3,7 +3,7 @@
 
 .sideBar {
   background-image: url('/assets/sideMenuBg.png');
-  background-size: cover;  
+  background-size: cover;
   background-position: center;
 
   border-right: 2px solid $corPrimeiraTela9;
@@ -13,17 +13,19 @@
   background-color: $corPrimeiraTela3;
   width: 0;
   position: fixed;
-  
+
   overflow: hidden;
-  display: flex;
+
   flex-direction: column;
   justify-content: space-between;
-  
+
   border-radius: 0 10px 10px 0;
 
   -webkit-box-shadow: 6px 0px 12px 3px $corPrimeiraTela4;
   -moz-box-shadow: 6px 0px 12px 3px $corPrimeiraTela4;
   box-shadow: 6px 0px 12px 3px $corPrimeiraTela4;
+
+  transition: width .5s ease, opacity .5s ease;
 
   &__header {
     &__top {
@@ -50,7 +52,8 @@
           background-color: $corPrimeiraTela1;
           color: $corPrimeiraTela10;
         }
-        &:hover svg{
+
+        &:hover svg {
           color: $corPrimeiraTela10;
         }
 
@@ -84,7 +87,8 @@
       background-color: rgba(255, 255, 255, 0.25);
       box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
       animation: jelly .6s;
-      svg{
+
+      svg {
         filter: drop-shadow(2px 2px $corPrimeiraTela2);
       }
     }
@@ -101,40 +105,17 @@
 }
 
 .sideBarAtiva {
-  animation: ativaSideBar .8s forwards;
+  opacity: 1;
+  width: 300px;
+  display: flex;
 }
 
 .sideBarDesativa {
-  animation: desativaSideBar .8s forwards;
+  opacity: 0;
+  width: 0px;
+  // display: none;
 }
 
-@keyframes ativaSideBar {
-  0% {
-    opacity: 0;
-    width: 0px;
-    /* Começa com largura 0 */
-  }
-
-  100% {
-    opacity: 1;
-    width: 300px;
-    /* Termina com largura 300px */
-  }
-}
-
-@keyframes desativaSideBar {
-  0% {
-    opacity: 1;
-    width: 300px;
-    /* Começa com largura 300px */
-  }
-
-  100% {
-    opacity: 0;
-    width: 0px;
-    /* Termina com largura 0 */
-  }
-}
 
 @keyframes jelly {
 
