@@ -26,9 +26,9 @@
         width: 5em;
         height: 6em;
         border: 3px solid transparent;
-        border-top-color: $dark-color-pagina;
-        border-bottom-color: $dark-color-pagina;
-        filter: drop-shadow(0 0 2px $dark-color-pagina3);
+        border-top-color: $corPrimeiraTela1;
+        border-bottom-color: $corPrimeiraTela2;
+        filter: drop-shadow(0 0 6px $corPrimeiraTela9);
         border-radius: 50%;
         animation: spin-stretch 2s ease infinite;
         
