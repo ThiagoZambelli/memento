@@ -1,5 +1,5 @@
 import IConto from "interface/IConto";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import {
   AiFillRead,
@@ -10,7 +10,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import { LiaHeartSolid } from "react-icons/lia";
 import { useRecoilValue } from "recoil";
-import { logado } from "state/atom";
+import { idUserserLogado, logado } from "state/atom";
+import { likeConto } from "Services/contos";
 
 interface CardContoProps {
   img: string;
@@ -167,11 +168,23 @@ const CardConto = styled.section<CardContoProps>`
         }
 `;
 
-function CardDeConto({ img, titulo, descricao, _id }: IConto) {
+function CardDeConto({ img, titulo, descricao, _id, curtidas }: IConto) {
   const ir = useNavigate();
   const [curtido, setCurtido] = useState(false);
   const [favoritado, setFavoritado] = useState(false);
   const estadoLogado = useRecoilValue(logado);
+  const valorIdUserLogado = useRecoilValue(idUserserLogado);
+
+  useEffect(() => {
+    if (curtidas?.includes(valorIdUserLogado)){
+      setCurtido(true);
+    }
+  }, []);
+
+  const curtir = async () => {
+    await likeConto(_id);
+    setCurtido(!curtido);
+  };
 
   const ler = () => {
     ir(`./descricao/${_id}`);
@@ -185,12 +198,9 @@ function CardDeConto({ img, titulo, descricao, _id }: IConto) {
         {estadoLogado && (
           <header>
             {curtido ? (
-              <LiaHeartSolid
-                color="#EA7265"
-                onClick={() => setCurtido(!curtido)}
-              />
+              <LiaHeartSolid color="#EA7265" onClick={() => curtir()} />
             ) : (
-              <AiOutlineHeart onClick={() => setCurtido(!curtido)} />
+              <AiOutlineHeart onClick={() => curtir()} />
             )}
             {favoritado ? (
               <AiFillStar

@@ -6,7 +6,7 @@ import CardDeConto from './CardDeConto';
 import styles from './ContosHome.module.scss';
 
 function ContosHome() {
-  const [contos, setContos] = useState<IConto[]>();
+  const [contos, setContos] = useState<IConto[]>();  
 
   const pegaLista = async () => {
     setContos(await getContos())

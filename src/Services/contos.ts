@@ -10,3 +10,16 @@ export async function getConto(id: string) {
     const response = await contosAPI.get(`conto/${id}`)    
     return response.data
 }
+export async function likeConto(idConto: string) {
+    try {
+        const token = sessionStorage.getItem('token');
+        await contosAPI.patch(`likeConto/${idConto}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+    }
+    catch (err) {
+        console.log(err)
+    }
+}
