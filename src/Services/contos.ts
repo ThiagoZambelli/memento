@@ -13,7 +13,7 @@ export async function getConto(id: string) {
 export async function likeConto(idConto: string) {
     try {
         const token = sessionStorage.getItem('token');
-        await contosAPI.patch(`likeConto/${idConto}`, {
+        await contosAPI.patch(`likeConto/${idConto}`, {}, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
