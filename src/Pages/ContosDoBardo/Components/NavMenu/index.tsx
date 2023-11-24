@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useRecoilValue } from 'recoil';
+import { logado } from 'state/atom';
 import styled from 'styled-components';
 
 interface INavMenu {
@@ -47,14 +49,15 @@ const NavEstilizada = styled.nav<ISectionProps>`
 
 
 function NavMenu({ modoClaro }: INavMenu) {
-  const localPage = useLocation().pathname.replace("/contos-do-bardo/", "");  
+  const localPage = useLocation().pathname.replace("/contos-do-bardo/", "");
+  const logadoValue = useRecoilValue(logado);
   
   return (
 
     <NavEstilizada modoClaro={modoClaro}>
       <ul>
         <li><LinkEstilizada to={'./'}><Teste local={''} localPage={localPage} modoClaro={modoClaro}>Home</Teste></LinkEstilizada></li>
-        <li><LinkEstilizada to={'./favoritos'}><Teste local='favoritos' localPage={localPage} modoClaro={modoClaro}>Favoritos</Teste></LinkEstilizada></li>
+        {logadoValue && <li><LinkEstilizada to={'./favoritos'}><Teste local='favoritos' localPage={localPage} modoClaro={modoClaro}>Favoritos</Teste></LinkEstilizada></li>}
       </ul>
     </NavEstilizada>
   )

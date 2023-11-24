@@ -83,6 +83,25 @@
 
                 animation: surgirDaDireita 1s ease-out forwards;
 
+                position: relative;
+                overflow: hidden;
+                transition: .5s;
+                &::after {
+                    content: '';
+                    z-index: -1;
+                    background-color: rgba($color: $corPrimeiraTela10, $alpha: .25);
+                    position: absolute;
+                    top: -120%;
+                    bottom: -120%;
+                    width: 2em;
+                    transform: translate3d(-800%, 0, 0) rotate(35deg);
+                }
+
+                &:hover::after {
+                    transition: transform 0.30s ease-in-out;
+                    transform: translate3d(4100%, 0, 0) rotate(37deg);
+                }
+
                 p {
                     font-size: 1.52rem;
                     line-height: 1.5em;
@@ -127,7 +146,7 @@
     animation: jelly 1s ease-out forwards;
 
     &:hover {
-        opacity: .9;        
+        opacity: .9;
     }
 
     &__animation {

@@ -68,13 +68,13 @@ const CardConto = styled.section<CardContoProps>`
         gap: 2rem;        
         backdrop-filter: blur(16px);
         border: .5px solid rgb(0, 0, 0, .6);
-        padding: 0 1rem;        
+               
 
         header{
               align-self: flex-end;
               display: flex;
               gap: 1rem;
-              margin-top: .5rem;            
+                         
               svg{
                 width: 24px;
                 height: 24px;
@@ -151,6 +151,7 @@ const CardConto = styled.section<CardContoProps>`
     }
 
       &:hover div {
+        padding: .5rem 1rem; 
         height: 410px; /* A altura que você deseja quando o mouse passar sobre o CardConto */
       }
     }
@@ -176,7 +177,7 @@ function CardDeConto({ img, titulo, descricao, _id, curtidas }: IConto) {
   const valorIdUserLogado = useRecoilValue(idUserserLogado);
 
   useEffect(() => {
-    if (curtidas?.includes(valorIdUserLogado)){
+    if (curtidas?.includes(valorIdUserLogado)) {
       setCurtido(true);
     }
   }, []);
