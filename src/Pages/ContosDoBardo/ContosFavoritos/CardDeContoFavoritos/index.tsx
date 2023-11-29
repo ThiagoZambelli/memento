@@ -1,17 +1,9 @@
 import IConto from "interface/IConto";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import {
-  AiFillRead,
-  AiFillStar,
-  AiOutlineStar,
-  AiOutlineHeart,
-} from "react-icons/ai";
+import { AiFillRead, AiFillStar } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-import { LiaHeartSolid } from "react-icons/lia";
-import { useRecoilValue } from "recoil";
-import { idUserserLogado, logado } from "state/atom";
-import { favoritarConto, likeConto } from "Services/contos";
+import { favoritarConto } from "Services/contos";
 
 interface CardContoProps {
   img: string;
@@ -60,7 +52,7 @@ const CardConto = styled.section<CardContoProps>`
         bottom: 0;
         background-color: rgb(0, 0, 0, .4);
         height: 0;
-        
+        z-index: 999;
         transition: height .4s linear; /* Adicionando uma transição para a altura da div */
         display: flex;
         align-items: flex-start;
@@ -68,7 +60,6 @@ const CardConto = styled.section<CardContoProps>`
         gap: 2rem;        
         backdrop-filter: blur(16px);
         border: .5px solid rgb(0, 0, 0, .6);
-        padding: 0 1rem; 
                
 
         header{
@@ -169,33 +160,25 @@ const CardConto = styled.section<CardContoProps>`
           }
         }
 `;
-interface CardDeContoProps extends IConto {
-  favorito: boolean;
+interface CardDeContoFavoritosProps extends IConto {
+  valor: number;
+  recarregar: (numero: number) => void;
 }
 
-function CardDeConto({ img, titulo, descricao, _id, curtidas, favorito }: CardDeContoProps) {
+function CardDeContoFavoritos({
+  img,
+  titulo,
+  descricao,
+  _id,
+  curtidas,
+  valor,
+  recarregar,
+}: CardDeContoFavoritosProps) {
   const ir = useNavigate();
-  const [curtido, setCurtido] = useState(false);
-  const [favoritado, setFavoritado] = useState(favorito);
-  const estadoLogado = useRecoilValue(logado);
-  const valorIdUserLogado = useRecoilValue(idUserserLogado);
 
-  useEffect(() => {
-    if (curtidas?.includes(valorIdUserLogado)) {
-      setCurtido(true);
-    }
-  }, []);
-  useEffect(() => {
-    setFavoritado(favorito)
-  }, [favorito]);
-
-  const curtir = async () => {
-    await likeConto(_id);
-    setCurtido(!curtido);
-  };
   const favoritar = async () => {
+    recarregar(valor + 1);
     await favoritarConto(_id);
-    setFavoritado(!favoritado);
   };
 
   const ler = () => {
@@ -207,20 +190,9 @@ function CardDeConto({ img, titulo, descricao, _id, curtidas, favorito }: CardDe
         <h3>{titulo}</h3>
       </section>
       <div>
-        {estadoLogado && (
-          <header>
-            {curtido ? (
-              <LiaHeartSolid color="#EA7265" onClick={() => curtir()} />
-            ) : (
-              <AiOutlineHeart onClick={() => curtir()} />
-            )}
-            {favoritado ? (
-              <AiFillStar color="#FFCF3D" onClick={() => favoritar()} />
-            ) : (
-              <AiOutlineStar onClick={() => favoritar()} />
-            )}
-          </header>
-        )}
+        <header>
+          <AiFillStar color="#FFCF3D" onClick={() => favoritar()} />
+        </header>
         <h3>{titulo}</h3>
         <p>{descricao}</p>
         <button onClick={ler}>
@@ -231,4 +203,4 @@ function CardDeConto({ img, titulo, descricao, _id, curtidas, favorito }: CardDe
   );
 }
 
-export default CardDeConto;
+export default CardDeContoFavoritos;

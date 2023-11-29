@@ -1,0 +1,18 @@
+.contosHome {
+    &__cards {
+        padding: 2rem;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        &__vazio{
+            font-size: 2rem;
+            text-decoration: underline;
+        }
+    }
+}
+
+header{
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, .25));
+}
