@@ -6,9 +6,9 @@ $almond: #eae0d5ff;
 $khaki: #c6ac8fff;
 $walnut-brown: #5e503fff;
 
-$cardsGradiente: linear-gradient(137deg, rgba(250,221,126,1) 0%, rgba(232,200,103,1) 8%, rgba(194,194,151,1) 48%);
+$cardsGradiente: linear-gradient(137deg, rgba(250, 221, 126, 1) 0%, rgba(232, 200, 103, 1) 8%, rgba(194, 194, 151, 1) 48%);
 $sideHeader: linear-gradient(132deg, rgba(14, 36, 63, 1) 0%, rgba(12, 51, 87, 1) 50%, rgba(75, 136, 184, 1) 100%);
-$newsGradiente: linear-gradient(342deg, rgba(135,228,212,1) 0%, rgba(216,216,181,1) 50%, rgba(194,194,151,1) 100%);
+$newsGradiente: linear-gradient(342deg, rgba(135, 228, 212, 1) 0%, rgba(216, 216, 181, 1) 50%, rgba(194, 194, 151, 1) 100%);
 // $glass: background-color: rgba(255, 255, 255, 0.25)
 // backdrop-filter: blur(15px);
 
@@ -45,39 +45,39 @@ $gradient-radial: radial-gradient(#0a0908ff, #22333bff, #eae0d5ff, #c6ac8fff, #5
 
 
 // Cores Card
-$dark-color-card:#36462F;
-$dark-color-card1:#43543C;
-$dark-color-card2:#516249;
-$dark-color-card3:#64765B;
+$dark-color-card: #36462F;
+$dark-color-card1: #43543C;
+$dark-color-card2: #516249;
+$dark-color-card3: #64765B;
 
-$ligth-color-card:#D1E3D5;
-$ligth-color-card1:#BACEBF;
-$ligth-color-card2:#99AF9E;
-$ligth-color-card3:#79917E;
+$ligth-color-card: #D1E3D5;
+$ligth-color-card1: #BACEBF;
+$ligth-color-card2: #99AF9E;
+$ligth-color-card3: #79917E;
 
 $alert-color: #C70C0C;
 
 // Cores de Bardo
-$dark-color-bardo:#19383C;
-$dark-color-bardo1:#244549;
-$dark-color-bardo2:#35595D;
-$dark-color-bardo3:#4C7578;
+$dark-color-bardo: #19383C;
+$dark-color-bardo1: #244549;
+$dark-color-bardo2: #35595D;
+$dark-color-bardo3: #4C7578;
 
-$ligth-color-bardo:#C2D0B5;
-$ligth-color-bardo1:#AEBDA1;
-$ligth-color-bardo2:#90A183;
-$ligth-color-bardo3:#738567;
+$ligth-color-bardo: #C2D0B5;
+$ligth-color-bardo1: #AEBDA1;
+$ligth-color-bardo2: #90A183;
+$ligth-color-bardo3: #738567;
 
 // Cores de teste
-$dark-color-pagina:#6A473C;
-$dark-color-pagina1:#7D594C;
-$dark-color-pagina2:#916B5D;
-$dark-color-pagina3:#AA8575;
+$dark-color-pagina: #6A473C;
+$dark-color-pagina1: #7D594C;
+$dark-color-pagina2: #916B5D;
+$dark-color-pagina3: #AA8575;
 
-$ligth-color-pagina:#EFE4BF;
-$ligth-color-pagina1:#DACEA7;
-$ligth-color-pagina2:#BCAE84;
-$ligth-color-pagina3:#9E8E63;
+$ligth-color-pagina: #EFE4BF;
+$ligth-color-pagina1: #DACEA7;
+$ligth-color-pagina2: #BCAE84;
+$ligth-color-pagina3: #9E8E63;
 
 // Comentarios Color
 $comentarios-50: #ffffff;
@@ -91,16 +91,16 @@ $comentarios-900: #3d3d3d;
 $comentarios-950: #292929;
 
 // Landing Page
-$corPrimeiraTela1:#480e30;
-$corPrimeiraTela2:#572545;
-$corPrimeiraTela3:#653b5b;
-$corPrimeiraTela4:#735170;
-$corPrimeiraTela5:#816685;
-$corPrimeiraTela6:#907d99;
-$corPrimeiraTela7:#a093ad;
-$corPrimeiraTela8:#b1aac0;
-$corPrimeiraTela9:#c4c1d3;
-$corPrimeiraTela10:#d8d8e6;
+$corPrimeiraTela1: #480e30;
+$corPrimeiraTela2: #572545;
+$corPrimeiraTela3: #653b5b;
+$corPrimeiraTela4: #735170;
+$corPrimeiraTela5: #816685;
+$corPrimeiraTela6: #907d99;
+$corPrimeiraTela7: #a093ad;
+$corPrimeiraTela8: #b1aac0;
+$corPrimeiraTela9: #c4c1d3;
+$corPrimeiraTela10: #d8d8e6;
 
 // Fontes
 
@@ -115,3 +115,37 @@ $fonteTexto: 'Montserrat', sans-serif;
 $fonteTextoForja: 'Delius Swash Caps', cursive;
 $fonteTituloForja: 'Arapey', serif;
 $fontelandinPage: 'Maitree', serif;
+
+.Teste {
+    -webkit-animation: roll-in-top 0.6s ease-out backwards;
+    animation: roll-in-top 0.6s ease-out backwards;
+}
+/**
+ * ----------------------------------------
+ * animation roll-in-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes roll-in-top {
+    0% {
+      -webkit-transform: translateY(-800px) rotate(-540deg);
+              transform: translateY(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-top {
+    0% {
+      -webkit-transform: translateY(-800px) rotate(-540deg);
+              transform: translateY(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotate(0deg);
+              transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
