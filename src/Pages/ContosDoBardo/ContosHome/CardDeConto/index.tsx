@@ -12,6 +12,7 @@ import { LiaHeartSolid } from "react-icons/lia";
 import { useRecoilValue } from "recoil";
 import { idUserserLogado, logado } from "state/atom";
 import { favoritarConto, likeConto } from "Services/contos";
+import { BsChatSquareHeartFill } from "react-icons/bs";
 
 interface CardContoProps {
   img: string;
@@ -72,9 +73,19 @@ const CardConto = styled.section<CardContoProps>`
                
 
         header{
-              align-self: flex-end;
+              width: 100%;
+              align-items: flex-start;
+              justify-content: flex-end;
               display: flex;
               gap: 1rem;
+
+              span{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: .9rem; 
+                gap: 2px;               
+            }
                          
               svg{
                 width: 24px;
@@ -173,7 +184,14 @@ interface CardDeContoProps extends IConto {
   favorito: boolean;
 }
 
-function CardDeConto({ img, titulo, descricao, _id, curtidas, favorito }: CardDeContoProps) {
+function CardDeConto({
+  img,
+  titulo,
+  descricao,
+  _id,
+  curtidas,
+  favorito,
+}: CardDeContoProps) {
   const ir = useNavigate();
   const [curtido, setCurtido] = useState(false);
   const [favoritado, setFavoritado] = useState(favorito);
@@ -186,7 +204,7 @@ function CardDeConto({ img, titulo, descricao, _id, curtidas, favorito }: CardDe
     }
   }, []);
   useEffect(() => {
-    setFavoritado(favorito)
+    setFavoritado(favorito);
   }, [favorito]);
 
   const curtir = async () => {
@@ -209,6 +227,10 @@ function CardDeConto({ img, titulo, descricao, _id, curtidas, favorito }: CardDe
       <div>
         {estadoLogado && (
           <header>
+            <span>
+              <BsChatSquareHeartFill />
+              {curtidas?.length}
+            </span>
             {curtido ? (
               <LiaHeartSolid color="#EA7265" onClick={() => curtir()} />
             ) : (
