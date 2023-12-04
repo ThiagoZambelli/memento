@@ -31,7 +31,7 @@ function FichaPronta() {
         // Se a API Web Share estiver disponível
         await navigator.share({
           title: `Ficha de personagem!`,
-          text: `Essa é a ficha do ${fichaEscolhida?.nomePersonagem}`,
+          text: `Essa é a ficha de: ${fichaEscolhida?.nomePersonagem} o(a) ${fichaEscolhida?.classe}`,
           url: window.location.href,
         });
       } else {

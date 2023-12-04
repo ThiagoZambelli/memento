@@ -49,7 +49,7 @@ function Ficha() {
           </div>
         </div>
       </div>
-      <button className={styles.paginaFicha__completa} onClick={() => ir(`/ficha/${fichaEscolhida._id}`)}><HiDocumentText /> Ficha Completa</button>
+      <button className={styles.paginaFicha__completa} onClick={() => ir(`/ficha/${fichaEscolhida._id}`)}><HiDocumentText /> Ficha Pronta</button>
       <section className={styles.paginaFicha__ficha}>
         <FichaHeader {...fichaEscolhida} />
         <FichaVida {...fichaEscolhida} />

@@ -13,6 +13,8 @@
         width: 30px;
         height: 30px;
         transition: .4s;
+        margin: 1rem;
+        
         &:hover{
             cursor: pointer;
             transform: scale(1.05);

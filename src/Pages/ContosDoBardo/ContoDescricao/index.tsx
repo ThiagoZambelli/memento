@@ -65,7 +65,7 @@ function ContoDescricao() {
         // Se a API Web Share estiver disponível
         await navigator.share({
           title: `Leia essa incrível história!`,
-          text: `Essa é: ${conto?.titulo}`,
+          text: `Leia essa incrível história: ${conto?.titulo}`,
           url: window.location.href,
         });
       } else {

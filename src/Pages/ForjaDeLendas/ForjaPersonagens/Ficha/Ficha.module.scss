@@ -66,17 +66,23 @@
     }
 
     &__completa{
-        padding: 10px 1rem;
+        padding: 8px .8rem;
         font-size: 1.1rem;
         color: $corPrimeiraTela1;
         background-color: $corPrimeiraTela10;
         border-radius: 2px;
-        margin: .5rem;
+        margin: .8rem;
         border: none;
         display: flex;
         align-items: center;
         gap: 1em;
         box-shadow: 0 0 6px rgba($color: $corPrimeiraTela1, $alpha: .8);
+        transition: .4s;
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+        }
 
         svg{
             color: $corPrimeiraTela1;
