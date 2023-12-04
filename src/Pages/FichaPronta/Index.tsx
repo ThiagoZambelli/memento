@@ -30,8 +30,8 @@ function FichaPronta() {
       if (navigator.share) {
         // Se a API Web Share estiver disponível
         await navigator.share({
-          title: document.title,
-          text: 'Confira esta incrível página!',
+          title: `Ficha de personagem!`,
+          text: `Essa é a ficha do ${fichaEscolhida?.nomePersonagem}`,
           url: window.location.href,
         });
       } else {

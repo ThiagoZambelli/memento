@@ -9,7 +9,7 @@ import LinhaCapitulo from "./LinhaCapitulo";
 import styled from "styled-components";
 import usePegaEstadoModo from "../state/hooks/usePegaEstadoModo";
 import Comentarios from "../Components/Comentarios";
-
+import { FaShareAltSquare } from "react-icons/fa";
 
 interface ModoProps {
   modo: boolean;
@@ -51,13 +51,32 @@ const DescricaoEstilizada = styled.p<ModoProps>`
 
 function ContoDescricao() {
   const [conto, setConto] = useState<IConto>();
-  const [recarregar, setRecarregar] = useState(0)
+  const [recarregar, setRecarregar] = useState(0);
   const idConto = useLocation().pathname.replace(
     "/contos-do-bardo/descricao/",
     ""
   );
   const modoDoEstado = usePegaEstadoModo();
   const [modoDaPagina, setModoDaPagina] = useState<boolean>(modoDoEstado);
+
+  const compartilharConto = async () => {
+    try {
+      if (navigator.share) {
+        // Se a API Web Share estiver disponível
+        await navigator.share({
+          title: `Leia essa incrível história!`,
+          text: `Essa é: ${conto?.titulo}`,
+          url: window.location.href,
+        });
+      } else {
+        // Se a API Web Share não estiver disponível
+        throw new Error("API Web Share não suportada no navegador.");
+      }
+    } catch (error) {
+      // Lidar com erros, por exemplo, mostrar uma mensagem ao usuário
+      console.error("Erro ao compartilhar:", error);
+    }
+  };
 
   const pegaConto = async () => {
     setConto(await getConto(idConto));
@@ -68,11 +87,11 @@ function ContoDescricao() {
   }, [modoDoEstado]);
 
   useEffect(() => {
-    pegaConto();    
+    pegaConto();
   }, []);
 
   useEffect(() => {
-    pegaConto();    
+    pegaConto();
   }, [recarregar]);
 
   return (
@@ -82,6 +101,9 @@ function ContoDescricao() {
       ) : (
         <>
           <section className={styles.container}>
+            <span className={styles.container__share}>
+              <FaShareAltSquare onClick={() => compartilharConto()} />
+            </span>
             <header>
               <ImgEstilizada
                 modo={modoDaPagina}
@@ -110,7 +132,12 @@ function ContoDescricao() {
                 ))}
             </div>
           </section>
-          <Comentarios reacarregar={recarregar} setRecarregar={setRecarregar} idConto={idConto} lista={conto.comentarios}/>
+          <Comentarios
+            reacarregar={recarregar}
+            setRecarregar={setRecarregar}
+            idConto={idConto}
+            lista={conto.comentarios}
+          />
         </>
       )}
     </section>

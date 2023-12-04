@@ -8,6 +8,25 @@
     margin: 0 auto;
     padding: 2rem 0;
     font-family: sans-serif;
+
+    &__share{
+        width: 30px;
+        height: 30px;
+        transition: .4s;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        svg{
+            border-radius: 2px;
+            width: 100%;
+            height: 100%;
+            color: $dark-color-bardo;
+            box-shadow: .5px .5px 0 $black;
+            filter: drop-shadow(0 0 2px $dark-color-bardo2);
+        }
+    }
     
     header{
         display: flex;
