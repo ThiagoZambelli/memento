@@ -1,13 +1,49 @@
 @import 'styles/_variaveis.module.scss';
 
 .contosDoBardo {
+    -webkit-animation: swing-in-right-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-right-fwd 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+
     &__claro {
         background-image: url("/assets/low-contrast-linen.png");
         background-color: $ligth-color-bardo1;
     }
-    
+
     &__escuro {
         background-image: url("/assets/personagensBG.png");
         background-color: $dark-color-bardo1;
     }
 }
+
+@-webkit-keyframes swing-in-right-fwd {
+    0% {
+      -webkit-transform: rotateY(-100deg);
+              transform: rotateY(-100deg);
+      -webkit-transform-origin: right;
+              transform-origin: right;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+      -webkit-transform-origin: right;
+              transform-origin: right;
+      opacity: 1;
+    }
+  }
+  @keyframes swing-in-right-fwd {
+    0% {
+      -webkit-transform: rotateY(-100deg);
+              transform: rotateY(-100deg);
+      -webkit-transform-origin: right;
+              transform-origin: right;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0);
+              transform: rotateY(0);
+      -webkit-transform-origin: right;
+              transform-origin: right;
+      opacity: 1;
+    }
+  }

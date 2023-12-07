@@ -13,7 +13,7 @@ function ContosDoBardo() {
   }, [modoDoEstado]) 
 
   return (
-    <section className={`${!modoDaPagina ? styles.contosDoBardo__claro : styles.contosDoBardo__escuro}`} >
+    <section className={`${styles.contosDoBardo} ${!modoDaPagina ? styles.contosDoBardo__claro : styles.contosDoBardo__escuro}`} >
       <Banner modoClaro={modoDaPagina} />
       <Outlet />
     </section>

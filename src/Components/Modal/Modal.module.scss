@@ -9,22 +9,24 @@
     justify-content: center;
     align-items: center;
     background-color: rgba($color: $corPrimeiraTela9, $alpha: .7);
-    
+
 
     &__modal {
-        animation: fadeInScaleUp .5s ease-out;
+        // animation: fadeInScaleUp .5s ease-out;
+        -webkit-animation: slide-in-elliptic-right-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-elliptic-right-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         display: flex;
         flex-direction: column;
         background-color: $corPrimeiraTela9;
         background-image: url('/assets/modalBg.png');
-        padding: 1rem;        
+        padding: 1rem;
         box-shadow: 4px 4px 6px $corPrimeiraTela9, 5px 5px $corPrimeiraTela1;
-        min-width: 400px;        
+        min-width: 400px;
         border: 1px solid $corPrimeiraTela1;
         border-radius: 0 1rem 1rem 0;
-       
 
-        &__btn{
+
+        &__btn {
             width: 25px;
             height: 25px;
             padding: 0;
@@ -37,8 +39,8 @@
             box-shadow: 2px 2px $corPrimeiraTela2, 3px 3px $black;
             border-radius: 5px;
             transition: box-shadow .5s ease-in-out;
-            
-            svg{
+
+            svg {
                 color: $corPrimeiraTela1;
             }
 
@@ -46,7 +48,8 @@
                 animation: jelly 0.5s;
                 cursor: pointer;
             }
-            &:active{
+
+            &:active {
                 box-shadow: 1px 1px $black;
             }
         }
@@ -60,7 +63,8 @@
             color: $corPrimeiraTela3;
             text-shadow: 2px 2px $corPrimeiraTela1;
             background-color: rgba($color: $corPrimeiraTela5, $alpha: .3);
-            box-shadow: 2px 2px $corPrimeiraTela2, 3px 3px $black;;
+            box-shadow: 2px 2px $corPrimeiraTela2, 3px 3px $black;
+            ;
             font-weight: bold;
         }
 
@@ -111,3 +115,36 @@
         transform: scale(1);
     }
 }
+
+@-webkit-keyframes slide-in-elliptic-right-fwd {
+    0% {
+      -webkit-transform: translateX(800px) rotateY(-30deg) scale(0);
+              transform: translateX(800px) rotateY(-30deg) scale(0);
+      -webkit-transform-origin: -100% 50%;
+              transform-origin: -100% 50%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotateY(0) scale(1);
+              transform: translateX(0) rotateY(0) scale(1);
+      -webkit-transform-origin: -1800px 50%;
+              transform-origin: -1800px 50%;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-elliptic-right-fwd {
+    0% {
+      -webkit-transform: translateX(800px) rotateY(-30deg) scale(0);
+              transform: translateX(800px) rotateY(-30deg) scale(0);
+      -webkit-transform-origin: -100% 50%;
+              transform-origin: -100% 50%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotateY(0) scale(1);
+              transform: translateX(0) rotateY(0) scale(1);
+      -webkit-transform-origin: -1800px 50%;
+              transform-origin: -1800px 50%;
+      opacity: 1;
+    }
+  }
