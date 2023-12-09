@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { PiBookBookmarkDuotone } from 'react-icons/pi'
 import { TiChevronRight } from 'react-icons/ti'
+import ScrollToTop from 'Components/ScrollToTop'
 
 interface TextoEstilizadoProps {
     dialogo: boolean,
@@ -13,10 +14,10 @@ interface ContoEstilizadoProps {
 
 const ContoEstilizado = styled.section<ContoEstilizadoProps>`
         position: fixed;
-        top: 0px;
+        top: 0;
         right: 0;
         min-width: 100vw;
-        height: 100vh;
+        height: 100%;
         background-color: ${props => (!props.modo ? '#C2D0B5' : '#19383C')};        
         display: flex;
         align-items: flex-start;        
@@ -78,6 +79,7 @@ function Capitulo({ modo, onClick, conteudo, id, tituloCap }: ICapituloProps) {
     }
     return (
         <ContoEstilizado modo={modo} >
+            <ScrollToTop />
             <button onClick={onClick}><PiBookBookmarkDuotone /><TiChevronRight /></button>
             <h3>{tituloCap}</h3>
             {conteudo.map(e => (<TextoEstilizado modo={modo} dialogo={testaDialogo(e)}>{e}</TextoEstilizado>))}
