@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 
 
 const Antecedente = lazy(() => import('Pages/ForjaDeLendas/Forja/Antecedente'));
+const Perfil = lazy(() => import('Pages/Perfil'));
 const Classe = lazy(() => import('Pages/ForjaDeLendas/Forja/Classe'));
 const ForjaCriacao = lazy(() => import('Pages/ForjaDeLendas/Forja/ForjaCriacao'));
 const Forja = lazy(() => import('Pages/ForjaDeLendas/Forja/Nomes'));
@@ -29,6 +30,7 @@ function RouteAPP() {
 			<Routes>
 				<Route path="/" element={<PaginaBase />}>
 					<Route index element={<LandingPage />} />
+					<Route path="perfil"element={<Perfil />} />
 					<Route path="news" element={<Home />} />
 					<Route path="contos-do-bardo" element={<ContosDoBardo  />}>
 						<Route index element={<ContosHome />} />

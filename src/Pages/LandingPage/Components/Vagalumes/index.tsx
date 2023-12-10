@@ -20,7 +20,7 @@ const VagalumesStyled = styled.div<VagalumesProps>`
   height: ${({ tamanho }) => tamanho}px;
   background: #ffff00;
   border-radius: 50%;
-  animation: ${blink} 1s infinite, vibrate-1 1.5s linear infinite both;  
+  animation: vibrate-1 1.5s linear infinite both, ${blink} 1s infinite;
   ${({ positionStyle }) => positionStyle}
   animation-delay: ${({ delay }) => delay}s;
   box-shadow: 0 0 6px #ffff00;

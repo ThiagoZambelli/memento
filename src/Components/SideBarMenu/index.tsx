@@ -13,6 +13,7 @@ import useDeslogar from "state/hooks/useDeslogar";
 import { RiUserLine } from "react-icons/ri";
 import { GiExitDoor } from "react-icons/gi";
 import SideCopyrigth from "./SideCopyrigth";
+import { useNavigate } from "react-router-dom";
 
 function SideBarMenu() {
   const estadoSideBar = useEstadoSideBar();
@@ -23,6 +24,7 @@ function SideBarMenu() {
   const estadoLogado = useRecoilValue(logado);
   const nomeUserLogado = useRecoilValue(nomeUserserLogado);
   const aoDeslogar = useDeslogar();
+  const ir = useNavigate();
 
   const deslogar = () => {
     aoDeslogar();
@@ -54,7 +56,7 @@ function SideBarMenu() {
           <AiOutlineClose onClick={abreFecha} />
         </div>
         {estadoLogado && (
-          <div className={styles.sideBar__header__nome}>
+          <div className={styles.sideBar__header__nome} onClick={() => ir('/perfil')}>
             <RiUserLine />
             {nomeUserLogado}
           </div>
