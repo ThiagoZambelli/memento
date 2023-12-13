@@ -2,28 +2,18 @@
 
 .NavPerfil {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: black;
-    color: white;
+    flex-direction: column;    
+    background-color: $corPrimeiraTela2;
+    color: $corPrimeiraTela10;
     align-items: center;
     gap: 1rem;
-    padding: 1rem .2rem;
+    padding: 1rem 0;
+    order: 2;
+    min-width: 300px;
 
     &__img{
-        width: 200px;
+        width: 150px;
         max-width: 80%;
         border-radius: 50%;
-    }
-
-    &__top {
-        width: 100%;
-    }
-
-    &__lateral {
-        width: 300px;
-        height: 100%;
     }
 }

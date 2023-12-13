@@ -115,37 +115,3 @@ $fonteTexto: 'Montserrat', sans-serif;
 $fonteTextoForja: 'Delius Swash Caps', cursive;
 $fonteTituloForja: 'Arapey', serif;
 $fontelandinPage: 'Maitree', serif;
-
-.Teste {
-    -webkit-animation: roll-in-top 0.6s ease-out backwards;
-    animation: roll-in-top 0.6s ease-out backwards;
-}
-/**
- * ----------------------------------------
- * animation roll-in-top
- * ----------------------------------------
- */
- @-webkit-keyframes roll-in-top {
-    0% {
-      -webkit-transform: translateY(-800px) rotate(-540deg);
-              transform: translateY(-800px) rotate(-540deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0) rotate(0deg);
-              transform: translateY(0) rotate(0deg);
-      opacity: 1;
-    }
-  }
-  @keyframes roll-in-top {
-    0% {
-      -webkit-transform: translateY(-800px) rotate(-540deg);
-              transform: translateY(-800px) rotate(-540deg);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0) rotate(0deg);
-              transform: translateY(0) rotate(0deg);
-      opacity: 1;
-    }
-  }

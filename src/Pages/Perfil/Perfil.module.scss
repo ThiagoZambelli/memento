@@ -1,6 +1,22 @@
 @import "styles/_variaveis.module.scss";
 
 .perfil{
+    display: flex;
     width: 100%;
     min-height: 100vh;
+
+    &__top{
+        flex-direction: column;        
+        &__body{
+            order: 2;
+        }
+    }
+    &__lateral{
+        flex-direction: row;
+
+        &__body{
+            order: 1;
+            flex: 1;
+        }
+    }
 }

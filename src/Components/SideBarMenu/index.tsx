@@ -25,6 +25,12 @@ function SideBarMenu() {
   const nomeUserLogado = useRecoilValue(nomeUserserLogado);
   const aoDeslogar = useDeslogar();
   const ir = useNavigate();
+  const fecha = useAtivaSideBar();
+
+	const fechaMenu = () => {
+    ir('/perfil')
+		fecha();
+	}
 
   const deslogar = () => {
     aoDeslogar();
@@ -56,7 +62,7 @@ function SideBarMenu() {
           <AiOutlineClose onClick={abreFecha} />
         </div>
         {estadoLogado && (
-          <div className={styles.sideBar__header__nome} onClick={() => ir('/perfil')}>
+          <div className={styles.sideBar__header__nome} onClick={() => fechaMenu()}>
             <RiUserLine />
             {nomeUserLogado}
           </div>

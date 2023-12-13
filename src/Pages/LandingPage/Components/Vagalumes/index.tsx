@@ -55,7 +55,8 @@ const VagalumesStyled = styled.div<VagalumesProps>`
 `;
 
 function Vagalumes() {
-  const delay = Math.random() * (5 - 2) + 2;
+  // const delay = Math.random() * (5 - 2) + 2;
+  const delay = Math.random() * 1.5;
   const randomPosition = () => {
     const left = Math.random() * 90;
     const top = Math.random() * 90;
