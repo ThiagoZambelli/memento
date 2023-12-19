@@ -4,20 +4,15 @@ import { useRecoilValue } from "recoil";
 import { logado } from "state/atom";
 import styles from "./Perfil.module.scss";
 import NavPerfil from "./NavPerfil";
-import IPerfil from "interface/IPerfil";
-import { getMeuPerfil } from "Services/usuario";
-import { useMediaQuery } from "react-responsive";
+import usePerfilService from "Services/usePerfilService";
+import LoaderPerfil from "Components/LoaderPerfil";
+import ContosFavoritos from "./ContosFavoritos";
+import MeusPersonagens from "./MeusPersonagens";
 
 function Perfil() {
   const ir = useNavigate();
   const estadoLogado = useRecoilValue(logado);
-  const [meuPerfil, setMeuPerfil] = useState<IPerfil>();
-
-  const telaMobile = useMediaQuery({ query: "(max-width: 780px)" });
-
-  const pegaMeuPerfil = async () => {
-    setMeuPerfil(await getMeuPerfil());
-  };
+  const { loading, meuPerfil, pegaMeuPerfil, telaMobile } = usePerfilService();
 
   useEffect(() => {
     if (!estadoLogado) {
@@ -27,9 +22,23 @@ function Perfil() {
   }, []);
 
   return (
-    <section className={`${styles.perfil} ${telaMobile ? styles.perfil__top : styles.perfil__lateral}`} >
-      <NavPerfil meuNome={meuPerfil?.nome!} />
-      <div className={`${telaMobile ? styles.perfil__top__body : styles.perfil__lateral__body}`}>Perfil</div>
+    <section
+      className={`${styles.perfil} ${telaMobile ? styles.perfil__top : styles.perfil__lateral
+        }`}
+    >
+      {!loading ? (
+        <>
+          <NavPerfil meuEmail={meuPerfil?.email!} meuNome={meuPerfil?.nome!} telaMobile={telaMobile} />
+          <div className={`${telaMobile ? styles.perfil__top__body : styles.perfil__lateral__body }`}>
+            <MeusPersonagens />
+            <ContosFavoritos />
+          </div>
+        </>
+      ) : (
+        <div className={styles.loading}>
+          <LoaderPerfil />
+        </div>
+      )}
     </section>
   );
 }

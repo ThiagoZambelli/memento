@@ -1,0 +1,57 @@
+@import 'styles/_variaveis.module.scss';
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    overflow: hidden;
+
+    a {
+
+        width: 100%;
+        padding: .3em .2em;
+        font-size: 2rem;
+        text-decoration: none;
+        color: $corPrimeiraTela10;
+        background-color: rgba($color: $corPrimeiraTela5, $alpha: .2);
+        box-shadow: 0 0 6px rgba($color: #000000, $alpha: .2);
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+
+        -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
+
+@-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
