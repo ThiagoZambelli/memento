@@ -7,8 +7,7 @@ import CardDeContoFavoritos from "./CardDeContoFavoritos";
 
 function ContosFavoritos() {
   const [listaFavoritos, setListaFavoritos] = useState<IConto[]>([]);
-  const [carregar, setCarregar] = useState<number>(1);
-  console.log(listaFavoritos)  
+  const [carregar, setCarregar] = useState<number>(1);   
 
   const pegaLista = async () => {
     setListaFavoritos(await getContosFavoritos());

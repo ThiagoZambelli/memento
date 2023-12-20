@@ -1,4 +1,92 @@
+@import 'styles/_variaveis.module.scss';
+
 .personages {
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    &__titulo {
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        display: flex;
+        gap: 1em;
+        margin: 1em 0;
+        align-self: flex-start;
+        margin-left: 1em;
+        font-size: 3rem;
+        color: $corPrimeiraTela1;
+        text-shadow: 0 1px 0 $corPrimeiraTela5, 0 2px 0 $corPrimeiraTela5, 0 3px 0 $corPrimeiraTela5, 0 4px 0 $corPrimeiraTela4, 0 5px 0 $corPrimeiraTela4;
+
+        svg {
+            filter: drop-shadow(0 3px 0 $corPrimeiraTela5);
+        }
+    }
+
+    &__body {
+        padding: 1rem;
+        display: flex;
+        align-items: flex-start;
+        overflow-x: auto;
+        gap: 2rem;
+
+        span {
+            -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            margin: 1em 0;
+            align-self: flex-start;
+            margin-left: 1em;
+            font-size: 1.5rem;
+            color: $corPrimeiraTela1;
+            text-shadow: 0 1px 0 $corPrimeiraTela5;
+        }
+
+        &::-webkit-scrollbar {
+            width: 2px;
+            height: 5px;
+
+            /* width of the entire scrollbar */
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #d8d8e6;
+            /* color of the tracking area */
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #480e30;
+            /* color of the scroll thumb */
+        }
+
+    }
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

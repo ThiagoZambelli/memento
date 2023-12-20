@@ -8,6 +8,7 @@
     &__top{
         flex-direction: column;        
         &__body{
+            scroll-behavior: smooth;
             order: 2;
         }
     }
@@ -15,6 +16,8 @@
         flex-direction: row;
 
         &__body{
+            padding: 1rem 0;
+            scroll-behavior: smooth;
             order: 1;
             flex: 1;
             height: 100vh;

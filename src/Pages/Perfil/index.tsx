@@ -23,14 +23,26 @@ function Perfil() {
 
   return (
     <section
-      className={`${styles.perfil} ${telaMobile ? styles.perfil__top : styles.perfil__lateral
-        }`}
+      className={`${styles.perfil} ${
+        telaMobile ? styles.perfil__top : styles.perfil__lateral
+      }`}
     >
       {!loading ? (
         <>
-          <NavPerfil meuEmail={meuPerfil?.email!} meuNome={meuPerfil?.nome!} telaMobile={telaMobile} />
-          <div className={`${telaMobile ? styles.perfil__top__body : styles.perfil__lateral__body }`}>
+          <NavPerfil
+            meuEmail={meuPerfil?.email!}
+            meuNome={meuPerfil?.nome!}
+            telaMobile={telaMobile}
+          />
+          <div
+            className={`${
+              telaMobile
+                ? styles.perfil__top__body
+                : styles.perfil__lateral__body
+            }`}
+          >
             <MeusPersonagens />
+            <hr />
             <ContosFavoritos />
           </div>
         </>
