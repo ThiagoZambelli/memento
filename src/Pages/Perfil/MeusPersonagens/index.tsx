@@ -21,7 +21,7 @@ function MeusPersonagens() {
 
   return (
     <div id='personagens' className={styles.personages}>
-      <h2 className={styles.personages__titulo}><FaUsers />Meus Personagens</h2>
+      <h2 className={styles.personages__titulo}>Meus Personagens</h2>
       <div className={styles.personages__body}>
         {lista.length > 0 ? lista.map(e => <CardPersonagem  key={e._id} {...e} />) : <span>Ainda não tem um Personagem?</span>}
       </div>

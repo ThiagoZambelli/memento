@@ -19,8 +19,7 @@ function ContosFavoritos() {
 
   return (
     <div id="contosFavoritos" className={styles.contos}>
-      <h2 className={styles.contos__titulo}>
-        <GiRead />
+      <h2 className={styles.contos__titulo}>        
         Meus Contos Favoritos
       </h2>
       <div className={styles.contos__body}>
