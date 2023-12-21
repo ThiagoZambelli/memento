@@ -176,7 +176,7 @@ function CardDeContoFavoritos({
   
 
   const ler = () => {
-    ir(`./descricao/${_id}`);
+    ir(`/contos-do-bardo/descricao/${_id}`);
   };
   return (
     <CardConto img={img}>

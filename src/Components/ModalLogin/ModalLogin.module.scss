@@ -6,7 +6,12 @@
     justify-content: center;
     flex-direction: column;
     row-gap: 2rem;
-    max-width: 90%;    
+    max-width: 90%;
+    
+    &__containerbtn{
+        height: 90px;
+    }
+
     input{
         box-shadow: 2px 2px $corPrimeiraTela3, 3px 3px $black;;
     }
