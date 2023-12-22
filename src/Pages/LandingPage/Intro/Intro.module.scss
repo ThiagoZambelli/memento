@@ -74,18 +74,20 @@
                 flex-direction: column;
                 gap: 1em;
                 z-index: 2;
-                padding: 1rem .2rem;
+                padding: 0;
                 opacity: 0;
+
 
                 animation: surgirDaDireita 1s ease-out forwards;
 
                 position: relative;
                 overflow: hidden;
                 transition: .5s;
-                border-radius: 10px;
-                -webkit-box-shadow: inset 200px 181px 0px 200px rgba($color: $corPrimeiraTela10, $alpha: .10);
-                -moz-box-shadow: inset 200px 181px 0px 200px rgba($color: $corPrimeiraTela10, $alpha: .10);
-                box-shadow: inset 200px 181px 0px 200px rgba($color: $corPrimeiraTela10, $alpha: .10);
+                border-radius: 13% 87% 10% 90% / 75% 28% 72% 25% ;
+                padding: 4rem 3rem;              
+                
+                background-color: $corPrimeiraTela9;
+                box-shadow: 0 0 2px $corPrimeiraTela9, 0 0 4px $corPrimeiraTela9, 0 0 6px $corPrimeiraTela9, 0 0 8px $corPrimeiraTela9, 0 0 10px $corPrimeiraTela9,0 0 12px $corPrimeiraTela9,0 0 13px $black, 0 0 15px $black;
 
                 &::after {
                     content: '';
@@ -110,6 +112,7 @@
                     color: $corPrimeiraTela1;
                     text-shadow: 0 1px 2px $corPrimeiraTela10;
                     font-weight: bold;
+                   
                 }
             }
         }
@@ -183,6 +186,25 @@
                 &__card {
                     P {
                         font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 720px) {
+    .intro {
+        &__body {          
+
+            &__container {
+                padding: .2rem;               
+
+                &__card {
+                    border-radius: 8% 92% 18% 82% / 89% 13% 87% 11% ;
+                    padding: 2em 1.5em;
+                    margin: 1rem 0; 
+                    P {
+                        font-size: 1rem;
                     }
                 }
             }
