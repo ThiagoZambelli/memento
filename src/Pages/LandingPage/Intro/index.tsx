@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from "./IntroTeste.module.scss";
+import styles from "./Intro.module.scss";
 import Vagalumes from "../Components/Vagalumes";
 import logo from "assets/img/LogoMemento.svg";
 import useAbreModalLogin from "state/hooks/useAbreModalLogin";
@@ -14,8 +14,8 @@ function Intro() {
         const scrollPosition = window.scrollY;
         const triggerPosition = 100;
         const opacity = 1 - Math.min(scrollPosition / triggerPosition, 1);
-        const scale = 1 - Math.min(scrollPosition / triggerPosition, 1) * 0.5;
-        const translateX = -Math.min(scrollPosition / triggerPosition, 1) * 400;
+        const scale = 1 - Math.min(scrollPosition / triggerPosition, 1) * 1;
+        const translateX = -Math.min(scrollPosition / triggerPosition, 1) * 500;
         myDiv.style.opacity = opacity.toString();
         myDiv.style.transform = `scale(${scale}) translateX(${translateX}px)`;
       }

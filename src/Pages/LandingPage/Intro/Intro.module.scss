@@ -3,8 +3,8 @@
 
 .intro {
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(to left, rgba($color: $corPrimeiraTela9, $alpha: .8), rgba($corPrimeiraTela9, $alpha: 0));    
+    height: 98vh;
+    background: linear-gradient(to left, rgba($color: $corPrimeiraTela9, $alpha: .8), rgba($corPrimeiraTela9, $alpha: 0));
     display: flex;
     flex-direction: column;
 
@@ -341,20 +341,24 @@
 }
 
 @media (max-width: 768px) {
-    .intro {        
-        background: linear-gradient(to top, rgba($color: $corPrimeiraTela9, $alpha: .8), rgba($corPrimeiraTela9, $alpha: 0));       
+    .intro {
+        background: linear-gradient(to top, rgba($color: $corPrimeiraTela9, $alpha: .8), rgba($corPrimeiraTela9, $alpha: 0));
         flex-direction: column;
-    
-        &__body {            
+        gap: 2rem;
+
+        &__body {
             flex-direction: column;
-    
+            justify-content: space-between;
+            padding: 1rem 0;
+
             &__container {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-    
+                max-height: 40%;
+
                 &__intro {
                     padding: 0 1em;
                     color: $corPrimeiraTela1;
@@ -367,7 +371,7 @@
                 }
             }
         }
-    
+
         &__footer {
             width: 100%;
             display: flex;
@@ -375,7 +379,7 @@
             justify-content: center;
         }
     }
-    
+
     .logoTxt {
         font-size: 2rem;
         text-transform: uppercase;
@@ -386,14 +390,18 @@
         color: $corPrimeiraTela1;
         text-shadow: 1px 1px 0 $corPrimeiraTela4, 0 0 6px rgba($color: #000000, $alpha: .25);
     }
-    
+
     .logo {
         -webkit-animation: bounce-in-top 1.1s both;
         animation: bounce-in-top 1.1s both;
-    
+
         img {
             width: 150px;
             height: 150px;
         }
     }
-  }
+
+    .btnLogar {
+        margin: 3em 0;
+    }
+}
