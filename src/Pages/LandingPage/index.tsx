@@ -21,7 +21,7 @@ const TelaStyled = styled.section`
 
 function LandingPage() {
   return (
-    <TelaStyled>           
+    <TelaStyled>
       <Intro />
       <SegundaTela />
       <TerceiraTela />      
