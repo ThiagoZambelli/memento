@@ -43,15 +43,19 @@ function Intro() {
           </div>
         </div>
         <div className={styles.intro__body__container}>
-          <p className={styles.intro__body__container__intro}>Sua caixa de ferramentas para construir narrativas épicas.</p>
           <p className={styles.intro__body__container__intro}>
-            Nossa plataforma traz tudo que é necessario para que o unico limite
-            para suas mesas de RPG seja sua criatividade!
+            Sua caixa de ferramentas para construir narrativas épicas!
+          </p>
+          <p className={styles.intro__body__container__intro}>
+            Nossa plataforma oferece tudo o que é necessário para que o único
+            limite para as suas mesas de RPG seja a sua criatividade!
           </p>
         </div>
       </div>
       <div className={styles.intro__footer}>
-        <button onClick={() => abrirModalLogin()} className={styles.btnLogar}>Logar!</button>
+        <button onClick={() => abrirModalLogin()} className={styles.btnLogar}>
+          Logar!
+        </button>
       </div>
     </section>
   );
