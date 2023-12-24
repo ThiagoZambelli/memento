@@ -4,6 +4,7 @@
 .intro {
     width: 100%;
     max-height: 98vh;
+    min-height: 98vh;
     background: linear-gradient(to left, rgba($color: $corPrimeiraTela9, $alpha: .8), rgba($corPrimeiraTela9, $alpha: 0));
     display: flex;
     flex-direction: column;
