@@ -2,25 +2,22 @@ import React, { useEffect } from "react";
 import styles from "./Intro.module.scss";
 import Vagalumes from "../Components/Vagalumes";
 import logo from "assets/img/LogoMemento.svg";
-import useAbreModalLogin from "state/hooks/useAbreModalLogin";
+import IntroBtn from "./IntroBtn";
 
 function Intro() {
-  const abrirModalLogin = useAbreModalLogin();
   useEffect(() => {
     const handleScroll = () => {
       const myDiv = document.getElementById("myDiv");
-
       if (myDiv) {
         const scrollPosition = window.scrollY;
         const triggerPosition = 100;
         const opacity = 1 - Math.min(scrollPosition / triggerPosition, 1);
-        const scale = 1 - Math.min(scrollPosition / triggerPosition, 1) * .5;
+        const scale = 1 - Math.min(scrollPosition / triggerPosition, 1) * 0.5;
         const translateX = -Math.min(scrollPosition / triggerPosition, 1) * 400;
         myDiv.style.opacity = opacity.toString();
         myDiv.style.transform = `scale(${scale}) translateX(${translateX}px)`;
       }
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -29,7 +26,7 @@ function Intro() {
   }, []);
 
   return (
-    <section id="myDiv" className={styles.intro}>
+    <section className={styles.intro} id="myDiv">
       {[...Array(20)].map((_, index) => (
         <Vagalumes key={index} />
       ))}
@@ -53,9 +50,7 @@ function Intro() {
         </div>
       </div>
       <div className={styles.intro__footer}>
-        <button onClick={() => abrirModalLogin()} className={styles.btnLogar}>
-          Logar!
-        </button>
+        <IntroBtn />
       </div>
     </section>
   );
