@@ -14,8 +14,8 @@ function Intro() {
         const scrollPosition = window.scrollY;
         const triggerPosition = 100;
         const opacity = 1 - Math.min(scrollPosition / triggerPosition, 1);
-        const scale = 1 - Math.min(scrollPosition / triggerPosition, 1) * 1;
-        const translateX = -Math.min(scrollPosition / triggerPosition, 1) * 500;
+        const scale = 1 - Math.min(scrollPosition / triggerPosition, 1) * .5;
+        const translateX = -Math.min(scrollPosition / triggerPosition, 1) * 400;
         myDiv.style.opacity = opacity.toString();
         myDiv.style.transform = `scale(${scale}) translateX(${translateX}px)`;
       }
