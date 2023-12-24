@@ -1,6 +1,6 @@
 import Carregamento from "Components/Carregamento";
+import LandingPage from "Pages/LandingPage";
 import PaginaBase from "Pages/PaginaBase";
-import Home from "Pages/Home";
 import PaginaErro from "Pages/PaginaErro";
 import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -17,12 +17,12 @@ const ForjaComum = lazy(() => import('Pages/ForjaDeLendas/ForjaComum'));
 const ForjaHome = lazy(() => import('Pages/ForjaDeLendas/ForjaHome'));
 const ForjaPersonagens = lazy(() => import('Pages/ForjaDeLendas/ForjaPersonagens'));
 const Ficha = lazy(() => import('Pages/ForjaDeLendas/ForjaPersonagens/Ficha'));
-const LandingPage = lazy(() => import('Pages/LandingPage'));
 const ContosDoBardo = lazy(() => import('Pages/ContosDoBardo'));
 const ContosHome = lazy(() => import('Pages/ContosDoBardo/ContosHome'));
 const ContosFavoritos = lazy(() => import('Pages/ContosDoBardo/ContosFavoritos'));
 const ContoDescricao = lazy(() => import('Pages/ContosDoBardo/ContoDescricao'));
 const FichaPronta = lazy(() => import('Pages/FichaPronta/Index'));
+const Home = lazy(() => import('Pages/Home'));
 
 function RouteAPP() {
 	return (
