@@ -5,19 +5,25 @@ import SegundaTela from "./SegundaTela";
 import TerceiraTela from "./TerceiraTela";
 import Intro from "./Intro";
 import LoaderPerfil from "Components/LoaderPerfil";
+import { useMediaQuery } from "react-responsive";
 
-const TelaStyled = styled.section`
+interface TelaMobile {
+  telaMobile: boolean;
+}
+
+const TelaStyled = styled.section<TelaMobile>`
   background-image: url(${bg});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
-  gap: 18rem;
+  gap:  ${props => (props.telaMobile ? '2rem' : '12rem')};
   display: flex;
   flex-direction: column;
   user-select: none;
 `;
+
 const LoadingDiv = styled.div`
   display: flex;
   align-items: center;
@@ -28,6 +34,7 @@ const LoadingDiv = styled.div`
 
 function LandingPage() {
   const [loading, setLoading] = useState(true);
+  const telaMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   useEffect(() => {
     // Simulando um carregamento por 2 segundos
@@ -42,7 +49,7 @@ function LandingPage() {
       <LoaderPerfil />
     </LoadingDiv>
   ) : (
-    <TelaStyled>
+    <TelaStyled telaMobile={telaMobile}>
       <Intro />
       <SegundaTela />
       <TerceiraTela />

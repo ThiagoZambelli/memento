@@ -70,7 +70,8 @@
 }
 
 @media screen and (max-width: 767px) {
-    .segundaTela {       
+    .segundaTela { 
+        background: $corPrimeiraTela8;     
     
         &__texto {      
             
@@ -83,9 +84,7 @@
             }
 
             &::before {                
-                border: none;
-                box-shadow: none;
-                rotate: 0deg;
+                display: none;
             }
         }
     

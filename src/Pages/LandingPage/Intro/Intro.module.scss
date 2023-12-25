@@ -21,14 +21,25 @@
             align-items: center;
             justify-content: center;
 
+            &__introDestaque,
             &__intro {
                 color: $corPrimeiraTela2;
-                text-shadow: 1px 1px 0 $corPrimeiraTela6, 0 0 6px rgba($color: #000000, $alpha: .25);
-                font-size: 1.9rem;
-                line-height: 1.5em;
+                text-shadow: 1px 1px 0 rgba($color: #000000, $alpha: .5), 0 0 6px rgba($color: #000000, $alpha: .3);                
+                
                 text-align: center;
-                -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-                animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                -webkit-animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            }
+
+            &__introDestaque{
+                font-size: 2.5rem;
+                line-height: 1.1em;
+            }
+            &__intro{
+                font-size: 1.8rem;
+                line-height: 1em;
+                padding: .2em;
+                margin-top: 1em;
             }
         }
     }
@@ -267,15 +278,24 @@
                 justify-content: center;
                 max-height: 40%;
 
+                &__introDestaque,
                 &__intro {
-                    padding: 0 1em;
+                    margin-top: 0;                    
                     color: $corPrimeiraTela1;
-                    text-shadow: 1px 1px 0 $corPrimeiraTela6, 0 0 6px rgba($color: #000000, $alpha: .25);
-                    font-size: 1.2rem;
-                    line-height: 1.5em;
+                    text-shadow: 1px 1px 0 $corPrimeiraTela6, 0 0 6px rgba($color: #000000, $alpha: .25);                    
                     text-align: center;
                     -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
                     animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+                }
+                &__introDestaque{
+                    font-size: 1.5rem;
+                    line-height: 1em;
+                    font-weight: bold;
+                }
+                &__intro{
+                    padding:1em;
+                    font-size: 1.2rem;
+                    line-height: 1.3em;
                 }
             }
         }
