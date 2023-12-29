@@ -7,11 +7,13 @@
     justify-content: center;
     background-color: $corPrimeiraTela5;
     flex-direction: column;
-    padding: 2rem .5rem;
+    padding: 4rem .5rem;
     gap: 2rem;
     box-shadow: 0 0 12px rgba($color: #000000, $alpha: .5);
     font-family: $fontelandinPage;
     margin-bottom: 2rem;
+    border-top: 2px solid $corPrimeiraTela1;
+    border-bottom: 2px solid $corPrimeiraTela1;
 
 
     &__header {

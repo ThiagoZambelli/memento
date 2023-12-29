@@ -3,16 +3,19 @@ import styles from "./Contato.module.scss";
 import useOpiniaoService from "Services/useOpiniaoService";
 
 function Contato() {
+  const { enviar, loading } = useOpiniaoService();
   const [nome, setNome] = useState("");
   const [texto, setTexto] = useState("");
-  const [email, setEmail] = useState("");
-  const {enviar,loading} = useOpiniaoService();
+  const [email, setEmail] = useState(""); 
+
+ 
 
   const enviarBtn = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     enviar(nome, email, texto);
     resetar();
   };
+  
   const resetar = () => {
     setNome("");
     setTexto("");
@@ -60,8 +63,16 @@ function Contato() {
           <i></i>
         </div>
         <div className={styles.contato__btns}>
-          <button disabled={loading} className={styles.contato__btns__enviar}>Enviar</button>
-          <button disabled={loading}  onClick={() => resetar()} className={styles.contato__btns__resetar}>Resetar</button>
+          <button disabled={loading} className={styles.contato__btns__enviar}>
+            Enviar
+          </button>
+          <button
+            disabled={loading}
+            onClick={() => resetar()}
+            className={styles.contato__btns__resetar}
+          >
+            Resetar
+          </button>
         </div>
       </form>
     </section>

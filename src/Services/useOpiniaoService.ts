@@ -2,7 +2,7 @@ import { useState } from "react"
 import { postOpiniao } from "./opiniao";
 
 export default function useOpiniaoService(){
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false);    
 
     const enviar = async (nome:string, email:string, texto:string) => {
         setLoading(true);
@@ -13,10 +13,11 @@ export default function useOpiniaoService(){
             console.log(err);            
         }
         setLoading(false);
-    }
+    }    
 
-    return {
+
+    return {        
         loading,
-        enviar
+        enviar,        
     }
 }
