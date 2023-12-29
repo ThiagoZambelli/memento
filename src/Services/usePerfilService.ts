@@ -18,7 +18,8 @@ export default function usePerfilService() {
             setLoading(false);
         }
         catch(err){
-            console.log(err)
+            console.log(err);
+            setLoading(false);
         }
       };
 

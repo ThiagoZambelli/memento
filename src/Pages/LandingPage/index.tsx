@@ -6,6 +6,7 @@ import TerceiraTela from "./TerceiraTela";
 import Intro from "./Intro";
 import LoaderPerfil from "Components/LoaderPerfil";
 import { useMediaQuery } from "react-responsive";
+import Contato from "./Contato";
 
 interface TelaMobile {
   telaMobile: boolean;
@@ -53,6 +54,7 @@ function LandingPage() {
       <Intro />
       <SegundaTela />
       <TerceiraTela />
+      <Contato />
     </TelaStyled>
   );
 }
